@@ -11,8 +11,13 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{ asset('assets/admin/plugins/fontawesome-free/css/all.min.css')}}">
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="{{ asset('assets/admin/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css')}}">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="{{ asset('assets/admin/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  {{-- <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> --}}
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('assets/admin/css/adminlte.min.css')}}">
   <!-- overlayScrollbars -->
@@ -21,6 +26,14 @@
   <link rel="stylesheet" href="{{ asset('assets/admin/datatables/dataTables.bootstrap4.min.css')}}">
   <link rel="stylesheet" href="{{ asset('assets/admin/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
   <link rel="stylesheet" href="{{ asset('assets/admin/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
+
+  
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="{{ asset('assets/admin/plugins/daterangepicker/daterangepicker.css')}}">
+  <!-- summernote -->
+  <link rel="stylesheet" href="{{ asset('assets/admin/plugins/summernote/summernote-bs4.min.css')}}">
+  <!-- Toastr -->
+  {{-- <link rel="stylesheet" href="{{ asset('assets/admin/plugins/toastr/toastr.min.css')}}"> --}}
   
 
 
@@ -134,21 +147,24 @@
 <script src="{{ asset('assets/admin/js/dashboard.js')}}"></script>
 <!-- DataTables  & Plugins -->
 <script src="{{ asset('assets/admin/datatables/jquery.dataTables.min.js')}}"></script>
-<script src="{{ asset('assets/admin/datatablesdataTables.bootstrap4.min.js')}}"></script>
+<script src="{{ asset('assets/admin/datatables/dataTables.bootstrap4.min.js')}}"></script>
 
 <script src="{{ asset('assets/admin/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
 <script src="{{ asset('assets/admin/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
-
-
 <script src="{{ asset('assets/admin/datatables-buttons/js/dataTables.buttons.min.js')}}"></script>
 <script src="{{ asset('assets/admin/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
 <script src="{{ asset('assets/admin/datatables/jszip/jszip.min.js')}}"></script>
 <script src="{{ asset('assets/admin/datatables/pdfmake/pdfmake.min.js')}}"></script>
 <script src="{{ asset('assets/admin/datatables/pdfmake/vfs_fonts.js')}}"></script>
-
 <script src="{{ asset('assets/admin/datatables-buttons/js/buttons.html5.min.js')}}"></script>
 <script src="{{ asset('assets/admin/datatables-buttons/js/buttons.print.min.js')}}"></script>
 <script src="{{ asset('assets/admin/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
+
+
+
+
+
+
 <script>
   // page schroll top
   function pagetop() {
