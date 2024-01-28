@@ -53,21 +53,21 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/forms/advanced.html" class="nav-link">
+            <a href="{{route('admin.category')}}" class="nav-link">
               <i class="far fa-circle nav-icon"></i>
-              <p>Advanced Elements</p>
+              <p>Category</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/forms/editors.html" class="nav-link">
+            <a href="{{route('admin.productCreate')}}" class="nav-link">
               <i class="far fa-circle nav-icon"></i>
-              <p>Editors</p>
+              <p>Product Create</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/forms/validation.html" class="nav-link">
+            <a href="{{route('admin.product')}}" class="nav-link">
               <i class="far fa-circle nav-icon"></i>
-              <p>Validation</p>
+              <p>All Product</p>
             </a>
           </li>
         </ul>

@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\AgentController;
 use App\Http\Controllers\Admin\CountryController;
 use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ProductController;
 
 
 /*------------------------------------------
@@ -54,6 +55,14 @@ Route::group(['prefix' =>'admin/', 'middleware' => ['auth', 'is_admin']], functi
     Route::get('/category/{id}/edit', [CategoryController::class, 'edit']);
     Route::post('/category-update', [CategoryController::class, 'update']);
     Route::get('/category/{id}', [CategoryController::class, 'delete']);
+
+    
+    Route::get('/product', [ProductController::class, 'index'])->name('admin.product');
+    Route::get('/product-create', [ProductController::class, 'create'])->name('admin.productCreate');
+    Route::post('/product', [ProductController::class, 'store']);
+    Route::get('/product/{id}/edit', [ProductController::class, 'edit']);
+    Route::post('/product-update', [ProductController::class, 'update']);
+    Route::get('/product/{id}', [ProductController::class, 'delete']);
 
     
 });
