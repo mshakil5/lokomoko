@@ -15,6 +15,21 @@
           <div class="card-header">
             <h3 class="card-title">Add new Product</h3>
           </div>
+
+          @if(session()->has('success'))
+          <section class="px-4">
+              <div class="row my-3">
+                  <div class="alert alert-success" id="successMessage">{{ session()->get('success') }}</div>
+              </div>
+          </section>
+          @endif
+          @if(session()->has('error'))
+          <section class="px-4">
+              <div class="row my-3">
+                  <div class="alert alert-danger" id="errMessage">{{ session()->get('error') }}</div>
+              </div>
+          </section>
+          @endif
           <!-- /.card-header -->
           <div class="card-body">
             <div class="ermsg"></div>
@@ -26,33 +41,51 @@
                 <div class="col-sm-4">
                   <div class="form-group">
                     <label>Name*</label>
-                    <input type="text" class="form-control" id="name" name="name" required>
+                    <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name">
+                    @error('name')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                   </div>
                 </div>
 
                 <div class="col-sm-4">
                   <div class="form-group">
                     <label>Title</label>
-                    <input type="text" class="form-control" id="title" name="title">
+                    <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title">
                   </div>
                 </div>
                 
                 <div class="col-sm-4">
                   <div class="form-group">
                     <label>Category*</label>
-                    <select name="category_id" id="category_id" class="form-control" required>
+                    <select name="category_id" id="category_id" class="form-control @error('category_id') is-invalid @enderror">
                       <option value="">Select</option>
                       @foreach ($category as $cat)
                         <option value="{{$cat->id}}">{{$cat->name}}</option>
                       @endforeach
                     </select>
+                    
+                    @error('category_id')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+
                   </div>
                 </div>
 
                 <div class="col-sm-12">
                   <div class="form-group">
                     <label>Ingredients*</label>
-                    <input type="text" class="form-control" id="inredient" name="inredient" required>
+                    <input type="text" class="form-control @error('inredient') is-invalid @enderror" id="inredient" name="inredient">
+                    
+                    @error('inredient')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                   </div>
                 </div>
                 
@@ -70,13 +103,26 @@
                 <div class="col-sm-6">
                   <div class="form-group">
                     <label>Small Image*</label>
-                    <input type="file" class="form-control" id="image" name="image" required>
+                    <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image">
+                    
+                    @error('image')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group">
                     <label>Large Image*</label>
-                    <input type="file" class="form-control" id="big_image" name="big_image" required>
+                    <input type="file" class="form-control @error('big_image') is-invalid @enderror" id="big_image" name="big_image">
+                    
+                    @error('big_image')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                   </div>
                 </div>
               </div>
@@ -91,10 +137,15 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                      <textarea id="description" name="description" cols="30" rows="10" required>
-                        
+                      <textarea id="description" name="description" cols="30" rows="10"  class="form-control @error('description') is-invalid @enderror">
                         
                       </textarea>
+                      
+                      @error('description')
+                          <span class="invalid-feedback" role="alert">
+                              <strong>{{ $message }}</strong>
+                          </span>
+                      @enderror
                     </div>
                   </div>
                 </div>

@@ -25,13 +25,33 @@
             <div class="card-header">
               <h3 class="card-title">All Data</h3>
             </div>
+
+            @if(session()->has('success'))
+            <section class="px-4">
+                <div class="alert alert-success row my-3">
+                    <div id="successMessage">{{ session()->get('success') }}</div>
+                </div>
+            </section>
+            @endif
+            @if(session()->has('error'))
+            <section class="px-4">
+                <div class="alert alert-danger row my-3">
+                    <div class="" id="errMessage">{{ session()->get('error') }}</div>
+                </div>
+            </section>
+            @endif
+
+
             <!-- /.card-header -->
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>Sl</th>
-                  <th>Name</th>
+                  <th>Product Name</th>
+                  <th>Category</th>
+                  <th>Ingredients</th>
+                  <th>Image</th>
                   <th>Action</th>
                 </tr>
                 </thead>
@@ -40,6 +60,13 @@
                   <tr>
                     <td style="text-align: center">{{ $key + 1 }}</td>
                     <td style="text-align: center">{{$data->name}}</td>
+                    <td style="text-align: center">{{$data->category->name}}</td>
+                    <td style="text-align: center">{{$data->inredient}}</td>
+                    <td style="text-align: center">
+                      @if ($data->image)
+                      <img src="{{asset('images/product/'.$data->image)}}" height="120px" width="220px" alt="">
+                      @endif  
+                    </td>
                     <td style="text-align: center">
                       <a id="EditBtn" rid="{{$data->id}}"><i class="fa fa-edit" style="color: #2196f3;font-size:16px;"></i></a>
                       <a id="deleteBtn" rid="{{$data->id}}"><i class="fa fa-trash-o" style="color: red;font-size:16px;"></i></a>
