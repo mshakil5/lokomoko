@@ -18,15 +18,15 @@
           <!-- /.card-header -->
           <div class="card-body">
             <div class="ermsg"></div>
-            <form id="createThisForm">
+            <form id="createThisForm" action="{{ route('admin.productStore') }}" method="POST" enctype="multipart/form-data">
               @csrf
               <input type="hidden" class="form-control" id="codeid" name="codeid">
               <div class="row">
 
                 <div class="col-sm-4">
                   <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" class="form-control" id="name" name="name">
+                    <label>Name*</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
                   </div>
                 </div>
 
@@ -39,8 +39,8 @@
                 
                 <div class="col-sm-4">
                   <div class="form-group">
-                    <label>Category</label>
-                    <select name="category_id" id="category_id" class="form-control">
+                    <label>Category*</label>
+                    <select name="category_id" id="category_id" class="form-control" required>
                       <option value="">Select</option>
                       @foreach ($category as $cat)
                         <option value="{{$cat->id}}">{{$cat->name}}</option>
@@ -51,8 +51,8 @@
 
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <label>Ingredients</label>
-                    <input type="text" class="form-control" id="inredient" name="inredient">
+                    <label>Ingredients*</label>
+                    <input type="text" class="form-control" id="inredient" name="inredient" required>
                   </div>
                 </div>
                 
@@ -67,16 +67,16 @@
                   </div>
                 </div>
 
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" class="form-control" id="name" name="name">
+                    <label>Small Image*</label>
+                    <input type="file" class="form-control" id="image" name="image" required>
                   </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" class="form-control" id="name" name="name">
+                    <label>Large Image*</label>
+                    <input type="file" class="form-control" id="big_image" name="big_image" required>
                   </div>
                 </div>
               </div>
@@ -86,13 +86,14 @@
                   <div class="card card-outline card-info">
                     <div class="card-header">
                       <h3 class="card-title">
-                        Description
+                        Description*
                       </h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                      <textarea id="description" name="description">
-                        Place <em>some</em> <u>text</u> <strong>here</strong>
+                      <textarea id="description" name="description" cols="30" rows="10" required>
+                        
+                        
                       </textarea>
                     </div>
                   </div>
@@ -103,15 +104,15 @@
               
 
               
-            </form>
           </div>
 
           
           <!-- /.card-body -->
           <div class="card-footer">
-            <button type="submit" id="addBtn" class="btn btn-secondary" value="Create">Create</button>
+            <button type="submit" class="btn btn-secondary" value="Create">Create</button>
             <button type="submit" id="FormCloseBtn" class="btn btn-default">Cancel</button>
           </div>
+        </form>
           <!-- /.card-footer -->
           <!-- /.card-body -->
         </div>

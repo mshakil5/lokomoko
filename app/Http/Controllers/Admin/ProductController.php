@@ -29,11 +29,8 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
-        if(empty($request->product_name)){
-            $message ="<div class='alert alert-warning'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>Please fill \"Product Name \" field..!</b></div>";
-            return response()->json(['status'=> 303,'message'=>$message]);
-            exit();
-        }
+        
+        dd($request->all());
 
         $data = new Product;
         // image
