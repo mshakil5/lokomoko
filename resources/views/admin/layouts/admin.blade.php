@@ -144,7 +144,7 @@
 <!-- AdminLTE App -->
 <script src="{{ asset('assets/admin/js/adminlte.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="{{ asset('assets/admin/js/dashboard.js')}}"></script>
+{{-- <script src="{{ asset('assets/admin/js/dashboard.js')}}"></script> --}}
 <!-- DataTables  & Plugins -->
 <script src="{{ asset('assets/admin/datatables/jquery.dataTables.min.js')}}"></script>
 <script src="{{ asset('assets/admin/datatables/dataTables.bootstrap4.min.js')}}"></script>
