@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Brand;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Pack;
 use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
@@ -148,7 +149,74 @@ class ProductController extends Controller
     public function productQty($id)
     {
         $product = Product::where('id',$id)->first();
-        $data = Brand::orderby('id','DESC')->get();
+        $data = Pack::orderby('id','DESC')->get();
         return view('admin.product.productqty', compact('data','product'));
     }
+
+    public function productPackStore(Request $request)
+    {
+        if(empty($request->title)){
+            $message ="<div class='alert alert-warning'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>Please fill \"Title Name \" field..!</b></div>";
+            return response()->json(['status'=> 303,'message'=>$message]);
+            exit();
+        }
+        $data = new Pack();
+        $data->title = $request->title;
+        $data->price = $request->price;
+        $data->qty = $request->qty;
+        $data->product_id = $request->product_id;
+        $data->note = $request->note;
+        $data->created_by = Auth::user()->id;
+        if ($data->save()) {
+            $message ="<div class='alert alert-success'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>Data Create Successfully.</b></div>";
+            return response()->json(['status'=> 300,'message'=>$message]);
+        }else{
+            return response()->json(['status'=> 303,'message'=>'Server Error!!']);
+        }
+    }
+
+    public function productPackedit($id)
+    {
+        $where = [
+            'id'=>$id
+        ];
+        $info = Pack::where($where)->get()->first();
+        return response()->json($info);
+    }
+
+    public function productPackUpdate(Request $request)
+    {
+        if(empty($request->title)){
+            $message ="<div class='alert alert-warning'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>Please fill \"Title Name \" field..!</b></div>";
+            return response()->json(['status'=> 303,'message'=>$message]);
+            exit();
+        }
+        $data = Pack::find($request->codeid);
+        $data->title = $request->title;
+        $data->price = $request->price;
+        $data->qty = $request->qty;
+        $data->product_id = $request->product_id;
+        $data->note = $request->note;
+        $data->updated_by = Auth::user()->id;
+        if ($data->save()) {
+            $message ="<div class='alert alert-success'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>Data Updated Successfully.</b></div>";
+            return response()->json(['status'=> 300,'message'=>$message]);
+        }else{
+            return response()->json(['status'=> 303,'message'=>'Server Error!!']);
+        }
+    }
+
+    public function productPackDelete($id)
+    {
+
+        if(Pack::destroy($id)){
+            return response()->json(['success'=>true,'message'=>'Data has been deleted successfully']);
+        }else{
+            return response()->json(['success'=>false,'message'=>'Delete Failed']);
+        }
+    }
+
+
+
+
 }

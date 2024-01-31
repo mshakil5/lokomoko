@@ -8,6 +8,7 @@
       <div class="row">
         <div class="col-2">
             <button type="button" class="btn btn-secondary my-3" id="newBtn">Add new</button>
+            <a class="btn btn-secondary my-3" href="{{route('admin.product')}}">Back</a>
         </div>
       </div>
     </div>
@@ -37,8 +38,26 @@
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" class="form-control" id="name" name="name">
+                        <label>Title</label>
+                        <input type="text" class="form-control" id="title" name="title">
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label>Quantity</label>
+                        <input type="number" class="form-control" id="qty" name="qty">
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label>Price</label>
+                        <input type="number" class="form-control" id="price" name="price">
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label>Note</label>
+                        <input type="text" class="form-control" id="note" name="note">
                       </div>
                     </div>
                   </div>
@@ -74,7 +93,7 @@
 
           <div class="card card-secondary">
             <div class="card-header">
-              <h3 class="card-title">All Data</h3>
+              <h3 class="card-title">{{$product->name}}'s Pack List</h3>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
@@ -82,7 +101,10 @@
                 <thead>
                 <tr>
                   <th>Sl</th>
-                  <th>Name</th>
+                  <th>Title</th>
+                  <th>Qty</th>
+                  <th>Price</th>
+                  <th>Note</th>
                   <th>Action</th>
                 </tr>
                 </thead>
@@ -90,7 +112,10 @@
                   @foreach ($data as $key => $data)
                   <tr>
                     <td style="text-align: center">{{ $key + 1 }}</td>
-                    <td style="text-align: center">{{$data->name}}</td>
+                    <td style="text-align: center">{{$data->title}}</td>
+                    <td style="text-align: center">{{$data->qty}}</td>
+                    <td style="text-align: center">{{$data->price}}</td>
+                    <td style="text-align: center">{{$data->note}}</td>
                     <td style="text-align: center">
                       <a id="EditBtn" rid="{{$data->id}}"><i class="fa fa-edit" style="color: #2196f3;font-size:16px;"></i></a>
                       <a id="deleteBtn" rid="{{$data->id}}"><i class="fa fa-trash-o" style="color: red;font-size:16px;"></i></a>
@@ -151,14 +176,20 @@
       //header for csrf-token is must in laravel
       $.ajaxSetup({ headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') } });
       //
-      var url = "{{URL::to('/admin/brand')}}";
-      var upurl = "{{URL::to('/admin/brand-update')}}";
+      var url = "{{URL::to('/admin/product-pack')}}";
+      var upurl = "{{URL::to('/admin/product-pack-update')}}";
       // console.log(url);
       $("#addBtn").click(function(){
       //   alert("#addBtn");
           if($(this).val() == 'Create') {
               var form_data = new FormData();
-              form_data.append("name", $("#name").val());
+              form_data.append("title", $("#title").val());
+              form_data.append("qty", $("#qty").val());
+              form_data.append("price", $("#price").val());
+              form_data.append("note", $("#note").val());
+              form_data.append("product_id", $("#product_id").val());
+              
+
               $.ajax({
                 url: url,
                 method: "POST",
@@ -182,7 +213,11 @@
           //Update
           if($(this).val() == 'Update'){
               var form_data = new FormData();
-              form_data.append("name", $("#name").val());
+              form_data.append("title", $("#title").val());
+              form_data.append("qty", $("#qty").val());
+              form_data.append("price", $("#price").val());
+              form_data.append("note", $("#note").val());
+              form_data.append("product_id", $("#product_id").val());
               form_data.append("codeid", $("#codeid").val());
               
               $.ajax({
@@ -246,7 +281,11 @@
         });
       //Delete  
       function populateForm(data){
-          $("#name").val(data.name);
+          $("#title").val(data.title);
+          $("#qty").val(data.qty);
+          $("#price").val(data.price);
+          $("#note").val(data.note);
+          $("#product_id").val(data.product_id);
           $("#codeid").val(data.id);
           $("#addBtn").val('Update');
           $("#addBtn").html('Update');
