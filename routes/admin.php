@@ -64,6 +64,9 @@ Route::group(['prefix' =>'admin/', 'middleware' => ['auth', 'is_admin']], functi
     Route::post('/product-update', [ProductController::class, 'update'])->name('admin.productUpdate');
     Route::get('/product/{id}', [ProductController::class, 'delete']);
 
+    // add product pack 
+    Route::get('/product-qty/{id}', [ProductController::class, 'productQty'])->name('admin.addqty');
+
     
 });
   

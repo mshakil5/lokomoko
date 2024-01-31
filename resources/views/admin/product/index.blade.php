@@ -53,6 +53,7 @@
                   <th>Ingredients</th>
                   <th>Image</th>
                   <th>Large Image</th>
+                  <th>Quantity</th>
                   <th>Action</th>
                 </tr>
                 </thead>
@@ -72,6 +73,9 @@
                       @if ($data->big_image)
                       <img src="{{asset('images/product/'.$data->big_image)}}" height="120px" width="220px" alt="">
                       @endif  
+                    </td>
+                    <td style="text-align: center">
+                      <a class="btn btn-secondary my-3" href="{{route('admin.addqty', $data->id)}}">Add Qty</a>
                     </td>
                     <td style="text-align: center">
                       <a href="{{route('admin.productEdit', $data->id)}}"><i class="fa fa-edit" style="color: #2196f3;font-size:16px;"></i></a>

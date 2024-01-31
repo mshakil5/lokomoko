@@ -143,4 +143,12 @@ class ProductController extends Controller
             return response()->json(['success'=>false,'message'=>'Delete Failed']);
         }
     }
+
+
+    public function productQty($id)
+    {
+        $product = Product::where('id',$id)->first();
+        $data = Brand::orderby('id','DESC')->get();
+        return view('admin.product.productqty', compact('data','product'));
+    }
 }
