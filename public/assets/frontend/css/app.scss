@@ -1,0 +1,632 @@
+    // variables
+
+
+    $primary: #418043;
+    $secondary: #1E3A58 !important;
+    $ternary: #1E3A58 !important;
+    $white: #fff;
+    $black: #000000;
+
+
+
+
+    // import fonts
+
+    @font-face {
+        font-family: "noto-sans", sans-serif;
+        src: url(../fonts/Noto\ Sans.woff2);
+    }
+
+    @font-face {
+        font-family: "staatliches";
+        src: url(../fonts/Staatliches-Regular.ttf);
+    }
+
+    .statliches {
+        font-family: "staatliches", sans-serif !important;
+        letter-spacing: 3.2px;
+    }
+
+    .bg-breadcrumb {
+        background: #F2F7F6;
+    }
+
+    // @font-face {
+    //     font-family: "poppins-bold";
+    //     src: url(../fonts/Poppins-Bold.otf);
+    // }
+
+    // @font-face {
+    //     font-family: "poppins-Light";
+    //     src: url(../fonts/Poppins-Light.otf);
+    // }
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: "noto-sans", sans-serif;
+        box-sizing: border-box;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    // needable  classes 
+
+    .txt-primary {
+        color: $primary;
+    }
+
+    .txt-secondary {
+        color: $secondary;
+    }
+
+    .txt-ternary {
+        color: $ternary;
+    }
+
+    .bg-priamry {
+        background: $primary ;
+    }
+
+    .bg-secondary {
+        background: $secondary ;
+    }
+
+    .bg-ternary {
+        background: $ternary ;
+    }
+
+
+    body {
+        font-family: "noto-sans", sans-serif;
+
+    }
+
+    .section-title {
+        font-family: "staatliches";
+        color: $black;
+        font-size: 45px;
+        margin-bottom: 15px;
+    }
+
+    .sub-title {
+        font-size: 17px;
+        max-width: 70%;
+        color: #333333;
+        line-height: 1.6;
+
+        @media(max-width:768px) {
+            max-width: 90%;
+        }
+    }
+
+    //   navbar css
+
+    .site-header {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 2;
+
+        &.active {
+            background: $white;
+
+            .navCustom {
+                .nav-item {
+                    .nav-link {
+                        color: $black;
+
+                        &:hover {
+                            color: $primary;
+                        }
+
+                        &.active {
+                            color: $primary;
+
+                        }
+                    }
+
+                    .btn-default {
+                        background: #4fa852;
+                        color: $white;
+
+                        &:hover {
+                            background: $primary;
+                        }
+                    }
+
+                    .dropdown-item {
+                        &:hover {
+                            background-color: $primary ;
+                            color: $white;
+                        }
+
+                        &.active {
+                            background-color: $primary;
+                            color: $white;
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        .navbar-brand {
+            img {
+                @media(max-width:375px) {
+                    width: 200px;
+                }
+            }
+        }
+
+        .navCustom {
+            .nav-item {
+                .nav-link {
+                    margin-right: 0;
+                    font-size: 17px;
+                    line-height: 1.3;
+                    color: #ffffffb3;
+                    padding: 8px 22px;
+                    border-radius: 4px;
+                    font-weight: 700;
+                    font-family: "noto-sans", sans-serif;
+                    text-transform: capitalize;
+
+                    @media(max-width:1024px) {
+                        font-size: 14px;
+                    }
+
+                    &:hover {
+                        color: $white;
+                    }
+
+                    &.active {
+                        color: $white;
+                    }
+                }
+
+                .dropdown-item {
+                    &:hover {
+                        background-color: $primary ;
+                        color: $white;
+                    }
+
+                    &.active {
+                        background-color: $primary;
+                        color: $white;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    //banner
+
+    .banner {
+        min-height: 110vh;
+        background-image: linear-gradient(90deg, #212334a1, rgb(9 9 54 / 47%)), url(../images/banner-bg.jpg);
+        background-position: center top;
+    }
+
+    .featured-product {
+        .container {
+            transform: translateY(-70px);
+        }
+
+        .row {
+            .product-col {
+                text-align: center;
+
+                &:nth-child(1) {
+                    .featured-product-box {
+                        background: #418043;
+                    }
+                }
+
+                &:nth-child(2) {
+                    .featured-product-box {
+                        background: #377139;
+                    }
+                }
+
+                &:nth-child(3) {
+                    .featured-product-box {
+                        background: #2F6731;
+                    }
+                }
+
+                .featured-product-box {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    row-gap: 30px;
+                    padding: 55px;
+
+                    .title {
+                        font-size: 2.3rem;
+                        font-family: "staatliches";
+                        color: #fff;
+                        line-height: 1.1;
+                    }
+
+                    .desc {
+                        font-size: 16px;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+    }
+
+
+    .flavour {
+        .flavour-box {
+            background-color: #F2F7F6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            row-gap: 30px;
+            padding: 55px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+
+            .title {
+                font-size: 2.3rem;
+                font-family: "staatliches";
+
+                line-height: 1.1;
+            }
+
+            .desc {
+                font-size: 16px;
+            }
+
+        }
+    }
+
+
+    .revolution {
+        background-image: url(../images/vegetables-background.svg), linear-gradient(#0c0c0c, #000000);
+        background-size: cover;
+        height: 60vh;
+    }
+
+    .default {
+        padding: 90px 0;
+    }
+
+    .w-75 {
+        width: 75% !important;
+        max-width: unset;
+    }
+
+    .occation {
+        .photobox {
+            margin-bottom: 25px;
+
+            .photo {
+                position: relative;
+
+                img {
+                    transition: all 0.2s ease-in-out;
+
+                }
+
+                .info {
+                    position: absolute;
+                    bottom: 0;
+                    margin: 0 auto;
+                    background: white;
+                    left: 30px;
+                    right: 30px;
+                    bottom: 30px;
+                    padding: 45px;
+
+                }
+
+                &:hover {
+
+                    img {
+                        filter: brightness(0.6);
+                    }
+
+                }
+            }
+        }
+    }
+
+
+    .quick-menu {
+        background-image: url(../images/bg-burger.png), linear-gradient(#0c0c0c, #000000);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .menu-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+
+        img {
+            width: 115px;
+            height: 115px;
+        }
+
+        .inner {
+            width: 100%;
+
+            .box {
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    border: 2px dashed grey;
+                    position: absolute;
+                    top: 12px;
+                    width: calc(100% - 240px);
+                    margin: 0 auto;
+                    left: 53px;
+                    right: 0;
+                }
+
+                h3 {
+                    font-family: "staatliches";
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .products {
+        a {
+            &:hover {
+                .title {
+                    color: $primary !important;
+                }
+            }
+        }
+    }
+
+    .shop-all {
+        min-height: 35vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #F2F7F6;
+        margin-top: 77px;
+    }
+
+    .footer-top {
+
+        background-image: linear-gradient(rgb(12 12 12 / 56%), rgb(8 7 7 / 64%)), url(../images/Litt-Cocktail-Mixers-India-5.jpg);
+        /* background-size: 102% 178%; */
+        background-position: center center;
+        transform: translateY(73px);
+    }
+
+
+    .select-styles {
+        padding: 15px 0;
+        border: 0;
+        border-bottom: 2px solid #E6F0EE;
+        border-radius: 0;
+        outline: 0;
+        box-shadow: none;
+    }
+
+    .select-styles:focus {
+        outline: 0;
+        box-shadow: none;
+        border-bottom: 2px solid $primary;
+    }
+
+
+    .product-details{
+      .counter{
+        border: 1px solid $primary; 
+        display: flex;
+        padding: 12px;
+        .count{
+            height: 30px;
+            width: 30px;
+            display: flex;
+            align-items: center;justify-content: center;
+            color: $black;
+            font-size: 20px;
+            cursor: pointer;
+            gap: 15px;
+            &:hover{
+                background: $primary;
+                color: $white;
+            }
+        }
+        .count-val{
+            height: 30px;
+            width: 40px;
+            display: flex;
+            align-items: center;justify-content: center;
+            color: $black; 
+        }
+      }  
+    }
+
+    #nav-tab .nav-link{
+        font-size: 13px;
+    color: #1b1b1b;
+    font-weight: 600;
+    border: 0;
+    border-bottom: 3px solid transparent;
+    &.active{ 
+        border-bottom: 3px solid $primary;
+    }
+     
+    }
+
+    // site Footer 
+
+    footer {
+        background-image: url(../images/footer-vegetables-background.svg), linear-gradient(#0c0c0c, #000000);
+        background-size: cover;
+
+        ul {
+            padding: 0;
+
+            li {
+                list-style: none;
+
+                a {
+                    color: $white;
+                    line-height: 2;
+                    font-weight: 600;
+
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    //  Slick slider css
+
+
+    .slick-track {
+        padding: 10px 0;
+    }
+
+    .slick-next {
+        height: 35px !important;
+        width: 35px !important;
+        background: $primary;
+
+        &:hover {
+            background: $secondary;
+        }
+    }
+
+    .slick-prev {
+        height: 35px !important;
+        width: 35px !important;
+        background: $primary;
+
+        &:hover {
+            background: $secondary;
+        }
+    }
+
+    .slick-dots li button {
+        background: lightgrey !important;
+
+        &:before {
+            opacity: 0 !important;
+        }
+    }
+
+    .slick-dots {
+        li {
+            &.slick-active {
+                button {
+                    background: $primary ;
+
+                }
+            }
+        }
+    }
+
+    .carousel-indicators {
+        bottom: 15px;
+
+        button {
+            height: 10px !important;
+            width: 10px !important;
+            border-radius: 50%;
+            border: 2px solid #fff !important;
+
+        }
+    }
+
+    //  Button classes
+
+    .btn-default {
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: $black;
+        background: $white;
+        padding: 13px 30px;
+        -webkit-transition: all 0.3s linear;
+        -webkit-transition: 0.3s linear;
+        -webkit-transition: 0.2s linear;
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+        text-decoration: none;
+        text-transform: capitalize;
+
+        &:hover {
+            background: $primary;
+            color: $white;
+        }
+    }
+
+    .btn-default-dark {
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: $black;
+        background: #242424;
+        padding: 13px 30px;
+        -webkit-transition: all 0.3s linear;
+        -webkit-transition: 0.3s linear;
+        -webkit-transition: 0.2s linear;
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+        text-decoration: none;
+        text-transform: capitalize;
+
+        &:hover {
+            background: $primary;
+            color: $white;
+        }
+    }
+
+    .btn-primary {
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: #ffffff;
+        background: $primary;
+        padding: 13px 30px;
+        -webkit-transition: all 0.3s ease-in;
+        -webkit-transition: 0.3s ease-in;
+        -webkit-transition: 0.2s ease-in;
+        -webkit-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in;
+        text-decoration: none;
+        text-transform: capitalize;
+        border-color: $primary ;
+
+        &:hover {
+            background: lighten($primary, $amount: 12%) !important;
+            color: $white !important;
+            border-color: $primary ;
+        }
+    }
