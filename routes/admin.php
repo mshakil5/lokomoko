@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\CountryController;
 use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\CompanyDetailController;
 
 
 /*------------------------------------------
@@ -71,6 +72,10 @@ Route::group(['prefix' =>'admin/', 'middleware' => ['auth', 'is_admin']], functi
     Route::post('/product-pack-update', [ProductController::class, 'productPackUpdate']);
     Route::get('/product-pack/{id}', [ProductController::class, 'productPackDelete']);
 
+
+    // company information
+    Route::get('/company-detail', [CompanyDetailController::class, 'index'])->name('admin.companyDetail');
+    Route::post('/company-detail', [CompanyDetailController::class, 'update'])->name('admin.companyDetails');
     
 });
   

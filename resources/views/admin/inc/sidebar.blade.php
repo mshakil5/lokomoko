@@ -72,6 +72,17 @@
           </li>
         </ul>
       </li>
+
+
+      
+      <li class="nav-item">
+        <a href="{{route('admin.companyDetail')}}" class="nav-link {{ (request()->is('admin/company-detail*')) ? 'active' : '' }}">
+          <i class="nav-icon fas fa-th"></i>
+          <p>
+            Company Info
+          </p>
+        </a>
+      </li>
       
       
       
