@@ -168,9 +168,9 @@
             <div class="col-lg-6">
                 <div class="photobox">
                     <div class="photo">
-                        <img src="{{ asset('assets/frontend/images/occassion1.jpg')}}" class="img-fluid" alt="">
-                        <div class="info ">
-                            <div class="text-center bg-white">
+                        <img src="{{ asset('product/Private-Party.jpg')}}" class="img-fluid" alt="">
+                        <div class="info " style="right: 30px">
+                            <div class="text-center">
                                 <h3 class="statliches text-center">Private Party</h3>
                                 <p class="sub-title text-center mx-auto w-75">Who does not like to mix their drinks at a party? Become your own bartender and enjoy the most fascinating cocktail mixes by Litt.</p>
                             </div>
@@ -182,9 +182,9 @@
             <div class="col-lg-6">
                 <div class="photobox">
                     <div class="photo">
-                        <img src="{{ asset('assets/frontend/images/occassion2.webp')}}" class="img-fluid" alt="">
-                        <div class="info ">
-                            <div class="text-center bg-white">
+                        <img src="{{ asset('product/Wedding-Reception.jpg')}}" class="img-fluid" alt="">
+                        <div class="info " style="left: 30px">
+                            <div class="text-center">
                                 <h3 class="statliches text-center">Wedding Reception</h3>
                                 <p class="sub-title text-center mx-auto w-75">This is a perfect time for celebration. With exciting non-alcoholic mixes from Litt, you can be sure that everybody is in high spirits during the joyous moments.</p>
                             </div>
@@ -196,9 +196,9 @@
             <div class="col-lg-6">
                 <div class="photobox">
                     <div class="photo">
-                        <img src="{{ asset('assets/frontend/images/occassion4.jpg')}}" class="img-fluid" alt="">
-                        <div class="info ">
-                            <div class="text-center bg-white">
+                        <img src="{{ asset('product/Corporate-Event.jpg')}}" class="img-fluid" alt="">
+                        <div class="info " style="right: 30px">
+                            <div class="text-center">
                                 <h3 class="statliches text-center">Corporate Event</h3>
                                 <p class="sub-title text-center mx-auto w-75">You need to act sober but enjoy the splendid variety of Litt non-alcoholic mixers. This finely crafted mix will ensure that you are on top of your game.</p>
                             </div>
@@ -210,8 +210,8 @@
             <div class="col-lg-6">
                 <div class="photobox">
                     <div class="photo">
-                        <img src="{{ asset('assets/frontend/images/occassion5.webp')}}" class="img-fluid" alt="">
-                        <div class="info ">
+                        <img src="{{ asset('product/Birthday-Party.jpg')}}" class="img-fluid" alt="">
+                        <div class="info " style="left: 30px">
                             <div class="text-center">
                                 <h3 class="statliches text-center">Birthday Party</h3>
                                 <p class="sub-title text-center mx-auto w-75">Birthday parties are always special and Litt mixers will ensure that the atmosphere is charged with excitement and high-spirited conversation.</p>
@@ -244,7 +244,7 @@
                 <!-- loop start -->
 
                 <div class="menu-row">
-                    <img src="{{ asset('assets/frontend/images/products/9.png')}}" alt="">
+                    <img src="{{ asset('product/blue-2.png')}}" alt="">
                     <div class="inner">
                         <div class="box">
                             <h3>Blue Lagoon</h3>
@@ -255,7 +255,7 @@
                 </div>
 
                 <div class="menu-row">
-                    <img src="{{ asset('assets/frontend/images/products/10.png')}}" alt="">
+                    <img src="{{ asset('product/mojito.png')}}" alt="">
                     <div class="inner">
                         <div class="box">
                             <h3>Hurricane</h3>
@@ -266,7 +266,7 @@
                 </div>
 
                 <div class="menu-row">
-                    <img src="{{ asset('assets/frontend/images/products/11.png')}}" alt="">
+                    <img src="{{ asset('product/red-1.png')}}" alt="">
                     <div class="inner">
                         <div class="box">
                             <h3>Virgin Mojito</h3>
@@ -276,17 +276,7 @@
                     </div>
                 </div>
 
-                <div class="menu-row">
-                    <img src="{{ asset('assets/frontend/images/products/12.png')}}" alt="">
-                    <div class="inner">
-                        <div class="box">
-                            <h3>Cosmopolitan</h3>
-                            <h3>RS.120</h3>
-                        </div>
-                        <h5 class="text-muted mb-0">Cranberry + Lemon + Orange</p>
-                    </div>
-                </div>
-
+                
             </div>
 
         </div>
