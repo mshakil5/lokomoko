@@ -57,7 +57,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="btn-default" aria-current="page" href="{{route('homepage')}}">
-                                get litt now
+                                get lokomoko now
                             </a>
                         </li>
 

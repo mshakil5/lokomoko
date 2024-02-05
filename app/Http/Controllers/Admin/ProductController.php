@@ -149,7 +149,7 @@ class ProductController extends Controller
     public function productQty($id)
     {
         $product = Product::where('id',$id)->first();
-        $data = Pack::orderby('id','DESC')->get();
+        $data = Pack::where('product_id',$id)->orderby('id','DESC')->get();
         return view('admin.product.productqty', compact('data','product'));
     }
 
