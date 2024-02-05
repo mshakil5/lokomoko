@@ -161,7 +161,7 @@
           <!-- /.card-body -->
           <div class="card-footer">
             <button type="submit" class="btn btn-secondary" value="Create">Create</button>
-            <button type="submit" id="FormCloseBtn" class="btn btn-default">Cancel</button>
+            <a href="{{route('admin.product')}}" class="btn btn-default">Cancel</a>
           </div>
         </form>
           <!-- /.card-footer -->
