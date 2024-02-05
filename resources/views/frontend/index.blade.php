@@ -82,9 +82,9 @@
             </div>
         </div>
         <div class="row py-5">
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="flavour-box">
-                    <img src="{{ asset('assets/frontend/images/products/5.png')}}" class="w-100 " alt="">
+                    <img src="{{ asset('product/6.png')}}" class="w-100 " alt="">
                     <div class="title">Blue Lagoon</div>
                     <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam fugiat harum
                         nesciunt quasi recusandae accusamus adipisci dicta nemo tenetur voluptatibus modi architecto
@@ -92,9 +92,9 @@
                     <a href="" class="btn-primary fw-bold">know more</a>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="flavour-box">
-                    <img src="{{ asset('assets/frontend/images/products/6.png')}}" class="w-100" alt="">
+                    <img src="{{ asset('product/7.png')}}" class="w-100" alt="">
                     <div class="title">Hurricane</div>
                     <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam fugiat harum
                         nesciunt quasi recusandae accusamus adipisci dicta nemo tenetur voluptatibus modi architecto
@@ -102,9 +102,9 @@
                     <a href="" class="btn-primary fw-bold">know more</a>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="flavour-box">
-                    <img src="{{ asset('assets/frontend/images/products/7.png')}}" class="w-100" alt="">
+                    <img src="{{ asset('product/red.png')}}" class="w-100" alt="">
                     <div class="title">Cosmopolitan</div>
                     <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam fugiat harum
                         nesciunt quasi recusandae accusamus adipisci dicta nemo tenetur voluptatibus modi architecto
@@ -112,7 +112,9 @@
                     <a href="" class="btn-primary fw-bold">know more</a>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+
+
+            {{-- <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                 <div class="flavour-box">
                     <img src="{{ asset('assets/frontend/images/products/8.png')}}" class="w-100" alt="">
                     <div class="title">Virgin Mojito</div>
@@ -121,7 +123,7 @@
                         inventore, cum facilis?</div>
                     <a href="" class="btn-primary fw-bold">know more</a>
                 </div>
-            </div>
+            </div> --}}
 
         </div>
     </div>
@@ -166,7 +168,7 @@
             <div class="col-lg-6">
                 <div class="photobox">
                     <div class="photo">
-                        <img src="{{ asset('assets/frontend/images/ocasion-image-1.webp')}}" class="img-fluid" alt="">
+                        <img src="{{ asset('assets/frontend/images/occassion1.jpg')}}" class="img-fluid" alt="">
                         <div class="info ">
                             <div class="text-center bg-white">
                                 <h3 class="statliches text-center">Private Party</h3>
@@ -180,7 +182,7 @@
             <div class="col-lg-6">
                 <div class="photobox">
                     <div class="photo">
-                        <img src="{{ asset('assets/frontend/images/ocasion-image-2.webp')}}" class="img-fluid" alt="">
+                        <img src="{{ asset('assets/frontend/images/occassion2.webp')}}" class="img-fluid" alt="">
                         <div class="info ">
                             <div class="text-center bg-white">
                                 <h3 class="statliches text-center">Wedding Reception</h3>
@@ -194,7 +196,7 @@
             <div class="col-lg-6">
                 <div class="photobox">
                     <div class="photo">
-                        <img src="{{ asset('assets/frontend/images/ocasion-image-3.webp')}}" class="img-fluid" alt="">
+                        <img src="{{ asset('assets/frontend/images/occassion4.jpg')}}" class="img-fluid" alt="">
                         <div class="info ">
                             <div class="text-center bg-white">
                                 <h3 class="statliches text-center">Corporate Event</h3>
@@ -208,9 +210,9 @@
             <div class="col-lg-6">
                 <div class="photobox">
                     <div class="photo">
-                        <img src="{{ asset('assets/frontend/images/ocasion-image-4.webp')}}" class="img-fluid" alt="">
+                        <img src="{{ asset('assets/frontend/images/occassion5.webp')}}" class="img-fluid" alt="">
                         <div class="info ">
-                            <div class="text-center bg-white">
+                            <div class="text-center">
                                 <h3 class="statliches text-center">Birthday Party</h3>
                                 <p class="sub-title text-center mx-auto w-75">Birthday parties are always special and Litt mixers will ensure that the atmosphere is charged with excitement and high-spirited conversation.</p>
                             </div>
