@@ -84,7 +84,7 @@
         <div class="row py-5">
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="flavour-box">
-                    <img src="{{ asset('product/6.png')}}" class="w-100 " alt="">
+                    <img src="{{ asset('product/blue-2.png')}}" class="w-100 " alt="">
                     <div class="title">Blue Lagoon</div>
                     <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam fugiat harum
                         nesciunt quasi recusandae accusamus adipisci dicta nemo tenetur voluptatibus modi architecto
@@ -94,7 +94,7 @@
             </div>
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="flavour-box">
-                    <img src="{{ asset('product/7.png')}}" class="w-100" alt="">
+                    <img src="{{ asset('product/mojito.png')}}" class="w-100" alt="">
                     <div class="title">Hurricane</div>
                     <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam fugiat harum
                         nesciunt quasi recusandae accusamus adipisci dicta nemo tenetur voluptatibus modi architecto
@@ -104,7 +104,7 @@
             </div>
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="flavour-box">
-                    <img src="{{ asset('product/red.png')}}" class="w-100" alt="">
+                    <img src="{{ asset('product/red-1.png')}}" class="w-100" alt="">
                     <div class="title">Cosmopolitan</div>
                     <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam fugiat harum
                         nesciunt quasi recusandae accusamus adipisci dicta nemo tenetur voluptatibus modi architecto
