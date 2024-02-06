@@ -183,6 +183,46 @@
 </section>
 
 
+<section class="quick-menu default d-flex align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center ">
+                <div class="section-title text-center text-white">
+                    Quick menu
+                </div>
+                <div class="sub-title text-center mx-auto mb-5  text-white">
+                    Litt is a ready-to-serve Sparkling, Alcohol-Free Mixer. It is a fun lifestyle alternative –
+                    enjoy on every occasion!
+                </div>
+            </div>
+
+            <div class="col-md-8 mx-auto">
+                <!-- loop start -->
+                @foreach ($products as $item)
+                <div class="menu-row">
+                    <img src="{{ asset('images/product/'.$item->image)}}" alt="">
+                    <div class="inner">
+                        <div class="box">
+                            <h3>{{ $item->name }}</h3>
+                            <h3>RS.{{ $item->price }}</h3>
+                        </div>
+                        <h5 class="text-muted mb-0">{{ $item->inredient }}</p>
+                    </div>
+                </div>
+
+                @endforeach
+                
+
+
+                
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
 
 
 <section class="flavour default pb-4">
