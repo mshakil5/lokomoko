@@ -25,48 +25,6 @@
 </section>
 
 
-<section class="featured-product bg-white">
-    <div class="container">
-        <div class="row gx-0">
-            <div class="col-lg-4 product-col">
-                <div class="featured-product-box">
-                    <img src="{{ asset('assets/frontend/images/products/2.png')}}" class="w-50" alt="">
-                    <div class="title">Quality <br>
-                        Ingredients</div>
-                    <div class="desc">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam consequuntur magni
-                        dolores sint id consequatur nostrum doloribus cum ipsam eveniet inventore repellat,
-                        molestiae, sequi error.
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 product-col">
-                <div class="featured-product-box">
-                    <img src="{{ asset('assets/frontend/images/products/3.png')}}" class="w-50" alt="">
-                    <div class="title">Natural <br>
-                        Sugar</div>
-                    <div class="desc">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam consequuntur magni
-                        dolores sint id consequatur nostrum doloribus cum ipsam eveniet inventore repellat,
-                        molestiae, sequi error.
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 product-col">
-                <div class="featured-product-box">
-                    <img src="{{ asset('assets/frontend/images/products/1.png')}}" class="w-50" alt="">
-                    <div class="title">Fewer <br>
-                        Calories</div>
-                    <div class="desc">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam consequuntur magni
-                        dolores sint id consequatur nostrum doloribus cum ipsam eveniet inventore repellat,
-                        molestiae, sequi error.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 
 <section class="flavour py-5">
@@ -81,18 +39,27 @@
                 even a little bit spicy, we have a mixer that will suit your taste.
             </div>
         </div>
+        @if ($products->count() > 0)
+        
+        @endif
+
         <div class="row py-5">
+
+
+
+            
+
+            @foreach ($products as $item)
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="flavour-box">
-                    <img src="{{ asset('product/blue-2.png')}}" class="w-100 " alt="">
-                    <div class="title">Blue Lagoon</div>
-                    <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam fugiat harum
-                        nesciunt quasi recusandae accusamus adipisci dicta nemo tenetur voluptatibus modi architecto
-                        inventore, cum facilis?</div>
-                    <a href="" class="btn-primary fw-bold">know more</a>
+                    <img src="{{ asset('images/product/'.$item->image)}}" class="w-100 " alt="">
+                    <div class="title">{{ $item->name }}</div>
+                    <div class="desc">{!! $item->description !!}</div>
+                    <a href="{{route('productDetails', $item->id)}}" class="btn-primary fw-bold">know more</a>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+            @endforeach
+            {{-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="flavour-box">
                     <img src="{{ asset('product/mojito.png')}}" class="w-100" alt="">
                     <div class="title">Hurricane</div>
@@ -111,19 +78,10 @@
                         inventore, cum facilis?</div>
                     <a href="" class="btn-primary fw-bold">know more</a>
                 </div>
-            </div>
-
-
-            {{-- <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                <div class="flavour-box">
-                    <img src="{{ asset('assets/frontend/images/products/8.png')}}" class="w-100" alt="">
-                    <div class="title">Virgin Mojito</div>
-                    <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam fugiat harum
-                        nesciunt quasi recusandae accusamus adipisci dicta nemo tenetur voluptatibus modi architecto
-                        inventore, cum facilis?</div>
-                    <a href="" class="btn-primary fw-bold">know more</a>
-                </div>
             </div> --}}
+
+
+            
 
         </div>
     </div>
@@ -227,61 +185,7 @@
 
 
 
-<section class="quick-menu default d-flex align-items-center">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center ">
-                <div class="section-title text-center text-white">
-                    Quick menu
-                </div>
-                <div class="sub-title text-center mx-auto mb-5  text-white">
-                    Litt is a ready-to-serve Sparkling, Alcohol-Free Mixer. It is a fun lifestyle alternative –
-                    enjoy on every occasion!
-                </div>
-            </div>
 
-            <div class="col-md-8 mx-auto">
-                <!-- loop start -->
-
-                <div class="menu-row">
-                    <img src="{{ asset('product/blue-2.png')}}" alt="">
-                    <div class="inner">
-                        <div class="box">
-                            <h3>Blue Lagoon</h3>
-                            <h3>RS.120</h3>
-                        </div>
-                        <h5 class="text-muted mb-0">Blue Curacao + Lemonade</p>
-                    </div>
-                </div>
-
-                <div class="menu-row">
-                    <img src="{{ asset('product/mojito.png')}}" alt="">
-                    <div class="inner">
-                        <div class="box">
-                            <h3>Hurricane</h3>
-                            <h3>RS.120</h3>
-                        </div>
-                        <h5 class="text-muted mb-0">Passion Fruit + Lime</p>
-                    </div>
-                </div>
-
-                <div class="menu-row">
-                    <img src="{{ asset('product/red-1.png')}}" alt="">
-                    <div class="inner">
-                        <div class="box">
-                            <h3>Virgin Mojito</h3>
-                            <h3>RS.120</h3>
-                        </div>
-                        <h5 class="text-muted mb-0">Mint + Lemon</p>
-                    </div>
-                </div>
-
-                
-            </div>
-
-        </div>
-    </div>
-</section>
 
 <section class="flavour default pb-4">
     <div class="container">
@@ -295,10 +199,15 @@
                 even a little bit spicy, we have a mixer that will suit your taste.
             </div>
         </div>
+
+
+        
+
         <div class="row pt-5">
+
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="flavour-box">
-                    <img src="{{ asset('assets/frontend/images/profiles/1.jpg')}}" width="100" class=" rounded-circle" alt="">
+                    <img src="{{ asset('assets/frontend/images/profiles/2.jpg')}}" width="100" class=" rounded-circle" alt="">
                     <div class="title">Blue Lagoon</div>
                     <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam fugiat harum
                         nesciunt quasi recusandae accusamus adipisci dicta nemo tenetur voluptatibus modi architecto
@@ -309,6 +218,7 @@
                     </div>
                 </div>
             </div>
+            
 
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="flavour-box">
@@ -338,6 +248,7 @@
             </div>
 
         </div>
+        
     </div>
 </section>
 

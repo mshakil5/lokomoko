@@ -10,7 +10,7 @@ class FrontendController extends Controller
     public function index()
     {
         $products = Product::orderby('id', 'DESC')->limit(3)->get();
-        return view('frontend.index');
+        return view('frontend.index', compact('products'));
         
     }
 
@@ -29,6 +29,12 @@ class FrontendController extends Controller
     public function shop()
     {
         return view('frontend.shop');
+        
+    }
+
+    public function productDetails()
+    {
+        return view('frontend.productdetails');
         
     }
 }
