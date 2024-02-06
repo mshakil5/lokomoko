@@ -210,8 +210,9 @@
 
     .banner {
         min-height: 110vh;
-        background-image: linear-gradient(90deg, #212334a1, rgb(9 9 54 / 47%)), url(../images/banner-bg.jpg);
-        background-position: center top;
+        background-image: linear-gradient(90deg, rgb(45 33 52 / 0%), rgb(9 9 54 / 11%)), url(../images/banner-bg.jpg);
+        background-size: cover;
+        background-position: center center;
     }
 
     .featured-product {
@@ -296,7 +297,7 @@
 
 
     .revolution {
-        background-image: url(../images/vegetables-background.svg), linear-gradient(#0c0c0c, #000000);
+        background-image: url(../images/vegetables-background.jpg), linear-gradient(#0c0c0c, #000000);
         background-size: cover;
         height: 60vh;
     }
@@ -331,6 +332,16 @@
                     right: 30px;
                     bottom: 30px;
                     padding: 45px;
+
+                    &.left {
+                        left: 0 !important;
+                        background: #ffffffba;
+                    }
+
+                    &.right {
+                        right: 0 !important;
+                        background: #ffffffba;
+                    }
 
                 }
 
@@ -417,8 +428,8 @@
 
         background-image: linear-gradient(rgb(12 12 12 / 56%), rgb(8 7 7 / 64%)), url(../images/Litt-Cocktail-Mixers-India-5.jpg);
         /* background-size: 102% 178%; */
-        background-position: center center;
         transform: translateY(73px);
+        background-size: auto;
     }
 
 
@@ -438,52 +449,58 @@
     }
 
 
-    .product-details{
-      .counter{
-        border: 1px solid $primary; 
-        display: flex;
-        padding: 12px;
-        .count{
-            height: 30px;
-            width: 30px;
+    .product-details {
+        .counter {
+            border: 1px solid $primary;
             display: flex;
-            align-items: center;justify-content: center;
-            color: $black;
-            font-size: 20px;
-            cursor: pointer;
-            gap: 15px;
-            &:hover{
-                background: $primary;
-                color: $white;
+            padding: 12px;
+
+            .count {
+                height: 30px;
+                width: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $black;
+                font-size: 20px;
+                cursor: pointer;
+                gap: 15px;
+
+                &:hover {
+                    background: $primary;
+                    color: $white;
+                }
+            }
+
+            .count-val {
+                height: 30px;
+                width: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $black;
             }
         }
-        .count-val{
-            height: 30px;
-            width: 40px;
-            display: flex;
-            align-items: center;justify-content: center;
-            color: $black; 
-        }
-      }  
     }
 
-    #nav-tab .nav-link{
+    #nav-tab .nav-link {
         font-size: 13px;
-    color: #1b1b1b;
-    font-weight: 600;
-    border: 0;
-    border-bottom: 3px solid transparent;
-    &.active{ 
-        border-bottom: 3px solid $primary;
-    }
-     
+        color: #1b1b1b;
+        font-weight: 600;
+        border: 0;
+        border-bottom: 3px solid transparent;
+
+        &.active {
+            border-bottom: 3px solid $primary;
+        }
+
     }
 
     // site Footer 
 
     footer {
-        background-image: url(../images/footer-vegetables-background.svg), linear-gradient(#0c0c0c, #000000);
-        background-size: cover;
+        background-image: url(../images/footer-bg.jpg), linear-gradient(#0c0c0c, #000000);
+        background-size: 100% 100%;
 
         ul {
             padding: 0;

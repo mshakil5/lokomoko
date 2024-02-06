@@ -145,8 +145,9 @@ body {
 
 .banner {
   min-height: 110vh;
-  background-image: linear-gradient(90deg, rgba(33, 35, 52, 0.631372549), rgba(9, 9, 54, 0.47)), url(../images/banner-bg.jpg);
-  background-position: center top;
+  background-image: linear-gradient(90deg, rgba(45, 33, 52, 0), rgba(9, 9, 54, 0.11)), url(../images/banner-bg.jpg);
+  background-size: cover;
+  background-position: center center;
 }
 
 .featured-product .container {
@@ -190,7 +191,7 @@ body {
   align-items: center;
   justify-content: space-around;
   row-gap: 30px;
-  padding: 15px;
+  padding: 55px;
   color: #333;
   text-align: center;
   margin-bottom: 10px;
@@ -205,7 +206,7 @@ body {
 }
 
 .revolution {
-  background-image: url(../images/web_bg2.jpg), linear-gradient(#0c0c0c, #000000);
+  background-image: url(../images/vegetables-background.jpg), linear-gradient(#0c0c0c, #000000);
   background-size: cover;
   height: 60vh;
 }
@@ -238,9 +239,6 @@ body {
   bottom: 30px;
   padding: 45px;
 }
-.occation .photobox .photo:hover img {
-  filter: brightness(0.6);
-}
 .occation .photobox .photo .info.left {
   left: 0 !important;
   background: rgba(255, 255, 255, 0.7294117647);
@@ -249,8 +247,12 @@ body {
   right: 0 !important;
   background: rgba(255, 255, 255, 0.7294117647);
 }
+.occation .photobox .photo:hover img {
+  filter: brightness(0.6);
+}
+
 .quick-menu {
-  background-image: url(../images/web_bg.jpg), linear-gradient(#0c0c0c, #000000);
+  background-image: url(../images/bg-burger.png), linear-gradient(#0c0c0c, #000000);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -305,10 +307,10 @@ body {
 }
 
 .footer-top {
-  background-image: linear-gradient(rgba(12, 12, 12, 0.56), rgba(8, 7, 7, 0.64)), url(../images/web_bg2.jpg);
+  background-image: linear-gradient(rgba(12, 12, 12, 0.56), rgba(8, 7, 7, 0.64)), url(../images/Litt-Cocktail-Mixers-India-5.jpg);
   /* background-size: 102% 178%; */
-  background-position: center center;
   transform: translateY(73px);
+  background-size: auto;
 }
 
 .select-styles {
@@ -367,8 +369,8 @@ body {
 }
 
 footer {
-  background-image: url(../images/web_bg2.jpg), linear-gradient(#0c0c0c, #000000);
-  background-size: cover;
+  background-image: url(../images/footer-bg.jpg), linear-gradient(#0c0c0c, #000000);
+  background-size: 100% 100%;
 }
 footer ul {
   padding: 0;
