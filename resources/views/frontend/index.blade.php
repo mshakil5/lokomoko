@@ -8,10 +8,9 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="title display-1 fw-bold text-uppercase text-white statliches">
-                    BRING AMAZING REVOLUTION IN <br> HOUSE PARTIES
+                    Lokomoko <br> Moktails
                 </div>
-                <h5 class="text-white my-4">Litt Non-alcoholic sparkling Mixers were born for the very purpose of
-                    bringing the amazing Revolution to home parties.</h5>
+                <h5 class="text-white my-4">Crafting Refreshing Mocktails, Where Every Sip IS A Burst Of Flavor Without The Buzz.</h5>
                 <div class="d-flex ">
                     <a href="" class="btn-primary me-3">get started</a>
                     <a href="" class="btn-default me-3 d-flex align-items-center">know more
