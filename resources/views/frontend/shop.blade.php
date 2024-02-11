@@ -14,7 +14,7 @@
             
             @foreach (\App\Models\Product::orderby('id','DESC')->get() as $product)
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12  text-center mb-5"> 
-                <a href="#" class="text-decoration-none d-block pt-4 position-relative">
+                <a href="{{route('productDetails', $product->slug)}}" class="text-decoration-none d-block pt-4 position-relative">
                     <span class="badge bg-success text-uppercase  position-absolute top-0 start-0 fs-6 fw-normal py-2 rounded-1 ">Sale!</span>
                     <div >
                         <img src="{{ asset('images/product/'.$product->image)}}" class="img-fluid mb-5">
@@ -23,7 +23,7 @@
                         <h6 class="text-dark my-3 fw-bold">₹432 – ₹1,152 </h6>
                     </div> 
                 </a> 
-                <a href="" class="btn-primary py-3 mt-3 d-inline-block">Select option</a> 
+                <a href="{{route('productDetails', $product->slug)}}" class="btn-primary py-3 mt-3 d-inline-block">Select option</a> 
             </div>
 
             @endforeach

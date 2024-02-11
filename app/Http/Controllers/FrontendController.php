@@ -32,9 +32,11 @@ class FrontendController extends Controller
         
     }
 
-    public function productDetails()
+    public function productDetails($slug)
     {
-        return view('frontend.productdetails');
+        $product = Product::with('pack')->where('slug', $slug)->first();
+        // dd($product);
+        return view('frontend.productdetails',compact('product'));
         
     }
 }

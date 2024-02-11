@@ -18,4 +18,9 @@ class Product extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    public function pack()
+    {
+        return $this->hasMany(Pack::class);
+    }
 }

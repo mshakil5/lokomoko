@@ -35,7 +35,7 @@ Route::get('/', [FrontendController::class, 'index'])->name('homepage');
 Route::get('/about', [FrontendController::class, 'about'])->name('about');
 Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
 Route::get('/shop', [FrontendController::class, 'shop'])->name('shop');
-Route::get('/product/{id}', [FrontendController::class, 'productDetails'])->name('productDetails');
+Route::get('/product/{slug}', [FrontendController::class, 'productDetails'])->name('productDetails');
   
 /*------------------------------------------
 --------------------------------------------
