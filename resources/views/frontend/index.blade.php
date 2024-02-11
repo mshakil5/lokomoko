@@ -206,7 +206,7 @@
                             <h3>{{ $item->name }}</h3>
                             <h3>RS.20</h3>
                         </div>
-                        <h5 class="text-muted mb-0">{{ $item->inredient }}</p>
+                        <h5 class="text-muted mb-0">{{ $item->ingredient }}</p>
                     </div>
                 </div>
 

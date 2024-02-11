@@ -79,9 +79,9 @@
                 <div class="col-sm-12">
                   <div class="form-group">
                     <label>Ingredients*</label>
-                    <input type="text" class="form-control @error('inredient') is-invalid @enderror" id="inredient" name="inredient" value="{{$data->inredient}}">
+                    <input type="text" class="form-control @error('ingredient') is-invalid @enderror" id="ingredient" name="ingredient" value="{{$data->ingredient}}">
                     
-                    @error('inredient')
+                    @error('ingredient')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>

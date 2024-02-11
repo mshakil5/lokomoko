@@ -66,7 +66,7 @@
                     </td>
                     <td style="text-align: center">{{$data->name}}</td>
                     <td style="text-align: center">{{$data->category->name}}</td>
-                    <td style="text-align: center">{{$data->inredient}}</td>
+                    <td style="text-align: center">{{$data->ingredient}}</td>
                     <td style="text-align: center">
                       @if ($data->image)
                       <img src="{{asset('images/product/'.$data->image)}}" height="120px" width="220px" alt="">

@@ -8,6 +8,7 @@ use App\Models\Brand;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Pack;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
@@ -34,7 +35,7 @@ class ProductController extends Controller
         $rules = [
             'name' => 'required|max:190',
             'category_id' => 'required',
-            'inredient' => 'required',
+            'ingredient' => 'required',
             'description' => 'required',
             'image' => 'required|mimes:jpeg,png,jpg,gif,svg,pdf|max:8048',
         ];
@@ -44,7 +45,7 @@ class ProductController extends Controller
         ];
         $this->validate($request, $rules, $customMessages);
         // dd($request->all());
-
+        $slug = Str::slug($request->name);
         $data = new Product;
         // image
         if ($request->image) {
@@ -63,10 +64,11 @@ class ProductController extends Controller
 
         // end
         $data->name = $request->name;
+        $data->slug = $slug;
         $data->brand_id = $request->brand_id;
         $data->category_id = $request->category_id;
         $data->description = $request->description;
-        $data->inredient = $request->inredient;
+        $data->ingredient = $request->ingredient;
         $data->title = $request->title;
         $data->created_by = Auth::user()->id;
         if ($data->save()) {
@@ -94,7 +96,7 @@ class ProductController extends Controller
         $rules = [
             'name' => 'required|max:190',
             'category_id' => 'required',
-            'inredient' => 'required',
+            'ingredient' => 'required',
             'description' => 'required',
         ];
         $customMessages = [
@@ -104,6 +106,7 @@ class ProductController extends Controller
         $this->validate($request, $rules, $customMessages);
 
 
+        $slug = Str::slug($request->name);
         $data = Product::find($request->codeid);
         // image
         if ($request->image) {
@@ -122,10 +125,11 @@ class ProductController extends Controller
 
         // end
         $data->name = $request->name;
+        $data->slug = $slug;
         $data->brand_id = $request->brand_id;
         $data->category_id = $request->category_id;
         $data->description = $request->description;
-        $data->inredient = $request->inredient;
+        $data->ingredient = $request->ingredient;
         $data->title = $request->title;
         $data->updated_by = Auth::user()->id;
         if ($data->save()) {
