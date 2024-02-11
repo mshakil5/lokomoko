@@ -204,7 +204,7 @@
                     <div class="inner">
                         <div class="box">
                             <h3>{{ $item->name }}</h3>
-                            <h3>RS.{{ $item->price }}</h3>
+                            <h3>RS.20</h3>
                         </div>
                         <h5 class="text-muted mb-0">{{ $item->inredient }}</p>
                     </div>
@@ -225,7 +225,7 @@
 
 
 
-<section class="flavour default pb-4">
+<section class="flavour default pb-4" style="display: none">
     <div class="container">
         <div class="row">
             <div class="section-title text-center">

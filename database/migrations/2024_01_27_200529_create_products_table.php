@@ -21,8 +21,9 @@ return new class extends Migration
             $table->string('title',255)->nullable();
             $table->string('image')->nullable();
             $table->string('big_image')->nullable();
+            $table->double('price', 10,2)->default(0);
             $table->string('stock_qty')->default(0);
-            $table->string('inredient',255)->nullable();
+            $table->longText('ingredient')->nullable();
             $table->longText('description')->nullable();
             $table->string('slug')->nullable();
             $table->string('status')->default(0);

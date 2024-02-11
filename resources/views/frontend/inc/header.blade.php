@@ -19,23 +19,26 @@
                         <li class="nav-item">
                             <a class="nav-link  " aria-current="page" href="{{route('about')}}">About</a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link  " aria-current="page" href="{{route('shop')}}">Shop</a>
-                        </li>
+                        </li> --}}
 
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="{{route('homepage')}}" role="button" data-bs-toggle="dropdown"
+                            <a class="nav-link dropdown-toggle" href="{{route('shop')}}" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Shop
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                
+                                @foreach (\App\Models\Product::select('id', 'name')->get() as $product)
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#">{{$product->name}}</a></li>
+                                @endforeach
+                                
+                                
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -56,7 +59,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn-default" aria-current="page" href="{{route('homepage')}}">
+                            <a class="btn-default" aria-current="page" href="{{route('shop')}}">
                                 get lokomoko now
                             </a>
                         </li>

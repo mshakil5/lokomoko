@@ -11,20 +11,23 @@
 <section class="products default">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12  text-center mb-5"> 
+            
+            @foreach (\App\Models\Product::orderby('id','DESC')->get() as $product)
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12  text-center mb-5"> 
                 <a href="#" class="text-decoration-none d-block pt-4 position-relative">
                     <span class="badge bg-success text-uppercase  position-absolute top-0 start-0 fs-6 fw-normal py-2 rounded-1 ">Sale!</span>
                     <div >
-                        <img src="{{ asset('assets/frontend/images/products/5.png')}}" class="img-fluid mb-5">
+                        <img src="{{ asset('images/product/'.$product->image)}}" class="img-fluid mb-5">
                         <h5 class="title statliches text-dark text-decoration-none" style="letter-spacing: 0.2px;">
-                            Assorted Non-alcoholic Sparkling
-                            Cocktail Mixers</h5>
+                            {{$product->name}}</h5>
                         <h6 class="text-dark my-3 fw-bold">₹432 – ₹1,152 </h6>
                     </div> 
                 </a> 
                 <a href="" class="btn-primary py-3 mt-3 d-inline-block">Select option</a> 
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12  text-center mb-5"> 
+
+            @endforeach
+            {{-- <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12  text-center mb-5"> 
                 <a href="#" class="text-decoration-none d-block pt-4 position-relative">
                     <span class="badge bg-success text-uppercase  position-absolute top-0 start-0 fs-6 fw-normal py-2 rounded-1 ">Sale!</span>
                     <div >
@@ -114,7 +117,7 @@
                     </div> 
                 </a> 
                 <a href="" class="btn-primary py-3 mt-3 d-inline-block">Select option</a> 
-            </div>
+            </div> --}}
        
         </div>
     </div>
