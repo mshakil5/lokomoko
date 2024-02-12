@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
   
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CartController;
   
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +34,7 @@ Route::get('/clear', function() {
   
 Auth::routes();
 Route::get('/', [FrontendController::class, 'index'])->name('homepage');
+Route::get('/clear-session', [FrontendController::class, 'clearAllSessionData'])->name('clearSessionData');
 Route::get('/about', [FrontendController::class, 'about'])->name('about');
 Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
 Route::get('/shop', [FrontendController::class, 'shop'])->name('shop');
@@ -39,7 +42,8 @@ Route::get('/product/{slug}', [FrontendController::class, 'productDetails'])->na
   
 
 
-Route::get('/get-product-price', [FrontendController::class, 'getPackDetails']);
+Route::post('/get-product-price', [ProductController::class, 'getPackDetails']);
+Route::post('/add-to-cart', [CartController::class, 'addToCart'])->name('addToCard');
 
 
 /*------------------------------------------

@@ -16,29 +16,51 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <h3 class="statliches text-black mb-4">{{$product->name}} </h3>
-                <h4 class="statliches text-black mb-4">₹{{$product->pack()->orderBy('price', 'asc')->first()->price}} – ₹{{$product->pack()->orderBy('price', 'desc')->first()->price}}</h4>
-                <h3 class="statliches text-black mb-4 ">Highlights</h3>
-                <h6 class=" text-black mb-4">{{$product->ingredient}}</h6>
-                <hr class="opacity-25 my-5">
-                <h6 class=" text-black mb-4">Qty</h6>
-                <select class="form-control select-styles mb-5" id="pack" name="pack">
-                    @foreach ($product->pack as $pack)
-                    <option value="{{$pack->id}}">{{$pack->title}}</option>
-                    @endforeach
-                </select>
-                {{-- hidden items  --}}
-                <input type="hidden" name="pack_id" id="pack_id" value="{{$product->pack()->orderBy('price', 'asc')->first()->id}}">
-                {{-- hidden items  --}}
-                <h4 class="statliches  text-dark mb-4 ">₹<span id="priceShow">{{$product->pack()->orderBy('price', 'asc')->first()->price}}</span></h4>
-                <div class="d-flex d-block ">
-                    <div class="counter ">
-                        <div class="count">-</div>
-                        <div class="count-val  ">1</div>
-                        <div class="count">+</div>
+                @if(session()->has('success'))
+                    <div class="alert alert-success">
+                        {{ session()->get('success') }}
                     </div>
-                    <a href="" class="btn-primary w-100 text-center d-flex align-items-center justify-content-center"> Add to cart</a>
-                </div>
+                @endif
+                
+                <form action="{{route('addToCard')}}" method="post">
+                @csrf
+
+                
+                    <h3 class="statliches text-black mb-4">{{$product->name}} </h3>
+                    <h4 class="statliches text-black mb-4">₹{{$product->pack()->orderBy('price', 'asc')->first()->price}} – ₹{{$product->pack()->orderBy('price', 'desc')->first()->price}}</h4>
+                    <h3 class="statliches text-black mb-4 ">Highlights</h3>
+                    <h6 class=" text-black mb-4">{{$product->ingredient}}</h6>
+                    <hr class="opacity-25 my-5">
+                    <h6 class=" text-black mb-4">Qty</h6>
+                    <select class="form-control select-styles mb-5" id="pack" name="pack">
+                        @foreach ($product->pack as $pack)
+                        <option value="{{$pack->id}}">{{$pack->title}}</option>
+                        @endforeach
+                    </select>
+                    {{-- hidden items  --}}
+                    <input type="hidden" name="product_id" id="product_id" value="{{$product->id}}">
+                    <input type="hidden" name="pack_id" id="pack_id" value="{{$product->pack()->orderBy('id', 'asc')->first()->id}}">
+                    <input type="hidden" name="pack_price_per_unit" id="pack_price_per_unit" value="{{$product->pack()->orderBy('id', 'asc')->first()->price}}">
+                    <input type="hidden" name="qty" id="qty" value="1">
+
+                    <input type="hidden" name="pack_price" id="pack_price" value="{{$product->pack()->orderBy('id', 'asc')->first()->price}}">
+                    {{-- hidden items  --}}
+
+
+                    <h4 class="statliches  text-dark mb-4 ">₹<span id="priceShow">{{$product->pack()->orderBy('price', 'asc')->first()->price}}</span></h4>
+
+                    <div class="d-flex d-block ">
+                        <div class="counter ">
+                            <div class="count minus">-</div>
+                            <div class="count-val  " id="qtyshow">1</div>
+                            <div class="count add">+</div>
+                        </div>
+                        {{-- <a href="" class="btn-primary w-100 text-center d-flex align-items-center justify-content-center"> Add to cart</a> --}}
+                        <button type="submit" class="btn-primary w-100 text-center d-flex align-items-center justify-content-center">Add to cart</button>
+                    </div>
+
+                </form>
+
                 <hr class="opacity-25 my-5">
                 <h6 class="mt-4 text-black statliches mb-4">
                     SKU: N/A <br>
@@ -160,6 +182,58 @@
 
 @section('script')
 <script>
+
+$(function()
+        {
+            // parent increase function start
+            $(".add").click(function()
+            {
+                var currentVal = parseInt($("#qty").val());
+                var unitprice = $("#pack_price_per_unit").val();
+                
+                var priceperunit = (currentVal+1)*unitprice;
+                var amt = parseFloat(priceperunit);
+                
+                
+                if (currentVal != NaN)
+                {
+                    $("#qty").val(currentVal + 1);
+                    $("#qtyshow").html(currentVal + 1);
+                    $("#priceShow").html(amt);
+                    $("#pack_price").val(amt.toFixed(2));
+                }
+            });
+            // parent increase function end
+
+            // parent decrease function start
+            $(".minus").click(function()
+            {
+                var currentVal = parseInt($("#qty").val());
+                var unitprice = $("#pack_price_per_unit").val();
+
+                if (currentVal < 2) {
+                    var currentVal = 2;
+                }
+                
+                var priceperunit = (currentVal-1)*unitprice;
+                var amt = parseFloat(priceperunit);
+                
+                
+                if (currentVal != NaN)
+                {
+                    $("#qty").val(currentVal - 1);
+                    $("#qtyshow").html(currentVal - 1);
+                    $("#priceShow").html(amt);
+                    $("#pack_price").val(amt.toFixed(2));
+                }
+            });
+            // parent decrease function end
+        });
+
+
+
+
+
     $(document).ready(function () {
         
         
@@ -170,21 +244,26 @@
 
           // category wise product show
         $("body").delegate("#pack","change",function () {
-            var url = "{{URL::to('/get-product-price')}}";
+            var packurl = "{{URL::to('/get-product-price')}}";
             var id = $('#pack').val();
-            console.log(id);
+            // console.log(id);
             var form_data = new FormData();			
             form_data.append("id", id);
 
             $.ajax({
-                url:searchurl,
+                url:packurl,
                 method: "POST",
                 type: "POST",
                 contentType: false,
                 processData: false,
                 data:form_data,
                 success: function(d){
-                    $("#get_product").html(d.product);
+                    console.log(d);
+                    var qty = $('#qty').val();
+                    $("#pack_id").val(d.id);
+                    $("#pack_price_per_unit").val(d.price);
+                    $("#pack_price").val(d.price * qty);
+                    $("#priceShow").html(d.price * qty);
                     // console.log((d.min));
                 },
                 error:function(d){

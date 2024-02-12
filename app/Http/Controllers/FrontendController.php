@@ -39,4 +39,13 @@ class FrontendController extends Controller
         return view('frontend.productdetails',compact('product'));
         
     }
+
+    public function clearAllSessionData()
+    {
+        
+        session()->flush();
+        session()->regenerate();
+
+        return redirect()->back();
+    }
 }
