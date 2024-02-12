@@ -1,4 +1,6 @@
-<header class="site-header" id="header">
+
+<!-- site header start -->
+<header class="site-header active" id="header">
     <section class="container">
         <nav class="navbar navbar-expand-lg py-0">
             <div class="container-fluid">
@@ -14,15 +16,11 @@
 
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
+                            <a class="nav-link" aria-current="page" href="{{route('homepage')}}">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link  " aria-current="page" href="{{route('about')}}">About</a>
                         </li>
-                        {{-- <li class="nav-item">
-                            <a class="nav-link  " aria-current="page" href="{{route('shop')}}">Shop</a>
-                        </li> --}}
-
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="{{route('shop')}}" role="button" data-bs-toggle="dropdown"
@@ -42,7 +40,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Occasions
+                            <a class="nav-link" aria-current="page" href="./occasions.html">Occasions
 
                             </a>
                         </li>
@@ -53,8 +51,10 @@
                     </ul>
                     <ul class="navbar-nav ms-auto d-flex align-items-center flex-wrap mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">
-                                <iconify-icon icon="ph:currency-inr"></iconify-icon>
+                            <a class="nav-link" aria-current="page" href="{{route('cart')}}">
+                                <iconify-icon icon="ph:currency-inr"></iconify-icon>@if (session('tamnt')) {{ session('tamnt') }}
+                                    
+                                @endif
                                 <iconify-icon icon="solar:cart-linear"></iconify-icon>
                             </a>
                         </li>
@@ -65,12 +65,10 @@
                         </li>
 
                     </ul>
-                    <!-- <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form> -->
+                    
                 </div>
             </div>
         </nav>
     </section>
 </header>
+<!-- site header end -->

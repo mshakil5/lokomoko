@@ -290,6 +290,47 @@
     </div>
 </section>
 
+<section class="occation default">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center ">
+                <div class="section-title text-center ">
+                    Cocktail for any occasion
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="photobox">
+                    <div class="photo">
+                        <img src="{{ asset('product/img1.jpg')}}" class="img-fluid" alt="">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="photobox">
+                    <div class="photo">
+                        <img src="{{ asset('product/img2.jpg')}}" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="photobox">
+                    <div class="photo">
+                        <img src="{{ asset('product/img3.jpg')}}" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="photobox">
+                    <div class="photo">
+                        <img src="{{ asset('product/img4.jpg')}}" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <section class="">
     <div class="container">

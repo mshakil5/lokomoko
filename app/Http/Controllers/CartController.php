@@ -17,6 +17,12 @@ class CartController extends Controller
         $pack = Pack::findOrFail($request->pack_id);
  
         $cart = session()->get('cart', []);
+        $tqty = session('tqty');
+        $tamnt = session('tamnt');
+        $newtqty = $tqty + $request->qty;
+        $newtamnt = $tamnt + $request->pack_price;
+        session(['tqty' => $newtqty]);
+        session(['tamnt' => $newtamnt]);
  
         if(isset($cart[$id])) {
             $cart[$id]['quantity']++;
@@ -34,6 +40,13 @@ class CartController extends Controller
  
         session()->put('cart', $cart);
         return redirect()->back()->with('success', 'Product add to cart successfully!');
+        
+    }
+
+    public function getCart()
+    {
+        
+        return view('frontend.cart');
         
     }
 }

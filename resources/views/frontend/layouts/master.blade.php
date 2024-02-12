@@ -38,8 +38,12 @@
 <body onscroll="scroller()">
 
     <!-- site header start -->
-    
+    @if (URL::current() == "https://www.localhost/work/lokomoko")
+        
     @include('frontend.inc.header')
+    @else
+    @include('frontend.inc.single_header')
+    @endif
     <!-- site header end -->
 
     @yield('content')

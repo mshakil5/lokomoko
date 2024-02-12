@@ -45,6 +45,7 @@ Route::get('/product/{slug}', [FrontendController::class, 'productDetails'])->na
 Route::post('/get-product-price', [ProductController::class, 'getPackDetails']);
 Route::post('/add-to-cart', [CartController::class, 'addToCart'])->name('addToCard');
 
+Route::get('/cart', [CartController::class, 'getCart'])->name('cart');
 
 /*------------------------------------------
 --------------------------------------------
