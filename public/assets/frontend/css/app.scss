@@ -24,7 +24,53 @@
 
     .statliches {
         font-family: "staatliches", sans-serif !important;
-        letter-spacing: 3.2px;
+        // letter-spacing: 3.2px;
+    }
+
+    .theme-input {
+        border: 0;
+        border-bottom: 2px solid #E6F0EE;
+        border-radius: 0;
+        padding-left: 0;
+
+        &:focus {
+            border-color: $primary;
+            outline: 0;
+            box-shadow: none;
+        }
+    }
+
+    .form-input {
+        position: relative;
+
+        .required {
+            position: absolute;
+            right: calc(100% - 64px);
+            top: -4px;
+            color: red;
+        }
+
+        .theme-input::placeholder {
+            color: rgb(144, 144, 144);
+            position: absolute;
+            top: 0;
+        }
+
+        &:focus-within {
+            .theme-input::placeholder {
+                opacity: 0;
+            }
+
+            .required {
+                opacity: 0;
+            }
+
+        }
+    }
+
+    .noto-sans {
+        font-family: "noto-sans", sans-serif !important;
+        // letter-spacing: 3.2px;
     }
 
     .bg-breadcrumb {
@@ -110,6 +156,13 @@
         right: 0;
         top: 0;
         z-index: 2;
+
+        .navbar {
+            @media(min-width:960px) {
+                padding: 1rem 0 !important;
+
+            }
+        }
 
         &.active {
             background: $white;
@@ -448,6 +501,28 @@
         border-bottom: 2px solid $primary;
     }
 
+    .link {
+        color: #000000;
+        font-weight: 500;
+        font-size: 17px;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    .hover-red {
+        &:hover {
+            color: red !important;
+        }
+    }
+
+    .hover-primary {
+        &:hover {
+            color: $primary !important;
+        }
+    }
+
 
     .product-details {
         .counter {
@@ -483,6 +558,38 @@
         }
     }
 
+    .counter {
+        border: 1px solid $primary;
+        display: flex;
+        padding: 12px;
+
+        .count {
+            height: 30px;
+            width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $black;
+            font-size: 20px;
+            cursor: pointer;
+            gap: 15px;
+
+            &:hover {
+                background: $primary;
+                color: $white;
+            }
+        }
+
+        .count-val {
+            height: 30px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $black;
+        }
+    }
+
     #nav-tab .nav-link {
         font-size: 13px;
         color: #1b1b1b;
@@ -496,11 +603,20 @@
 
     }
 
+    .dashed-border-bottom {
+        border-bottom: 1px solid #E6F0EE;
+    }
+
     // site Footer 
 
     footer {
-        background-image: url(../images/footer-bg.jpg), linear-gradient(#0c0c0c, #000000);
-        background-size: 100% 100%;
+        background-image:linear-gradient(#0c0c0c24, #000000), url(../images/footer-bg.jpg) ;
+        background-size: cover;
+        background-position: top right;
+
+        @media(max-width:768px) {
+            background-position: 82% 44%;
+        }
 
         ul {
             padding: 0;
@@ -645,5 +761,63 @@
             background: lighten($primary, $amount: 12%) !important;
             color: $white !important;
             border-color: $primary ;
+        }
+    }
+
+
+    .contact {
+        background: #F2F7F6;
+        padding: 90px 0;
+
+        .contact-block {
+            background: #fff;
+
+            iconify-icon {
+                font-size: 3rem;
+                color: $primary;
+            }
+
+            h3 {
+                color: $primary;
+            }
+
+            min-height: 384px;
+            display: flex;
+            flex-direction: column;
+            -moz-column-gap: 50px;
+            row-gap: 29px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+
+            .sub-title {
+                color: $primary;
+            }
+
+            &:hover {
+                background: #418043;
+
+                iconify-icon {
+
+                    color: $white;
+                }
+
+                h3 {
+                    color: $white;
+                }
+
+                .sub-title {
+                    color: $white;
+                }
+            }
+        }
+    }
+    .contact-form{
+        .form-control{
+            background: transparent;
+            &:focus{
+                background: #fff;
+                box-shadow: none;
+            }
         }
     }

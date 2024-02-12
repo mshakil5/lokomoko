@@ -5,7 +5,7 @@
             <div class="col-lg-3">
                 <img src="{{ asset('assets/frontend/images/logo.png')}}" alt="" class="img-fluid" width="109" height="100">
                 <p class="sub-title text-white">
-                    Litt Cocktail is a ready to serve Sparkling, Alcohol Free Cocktail Mix.
+                    Lokomoko is a ready to serve Sparkling, Alcohol Free Cocktail Mix.
                 </p>
             </div>
             <div class="col-lg-3">

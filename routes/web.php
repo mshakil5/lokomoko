@@ -38,6 +38,7 @@ Route::get('/clear-session', [FrontendController::class, 'clearAllSessionData'])
 Route::get('/about', [FrontendController::class, 'about'])->name('about');
 Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
 Route::get('/shop', [FrontendController::class, 'shop'])->name('shop');
+Route::get('/occasions', [FrontendController::class, 'occasions'])->name('occasions');
 Route::get('/product/{slug}', [FrontendController::class, 'productDetails'])->name('productDetails');
   
 

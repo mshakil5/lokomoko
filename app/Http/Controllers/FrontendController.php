@@ -32,6 +32,12 @@ class FrontendController extends Controller
         
     }
 
+    public function occasions()
+    {
+        return view('frontend.occasions');
+        
+    }
+
     public function productDetails($slug)
     {
         $product = Product::with('pack')->where('slug', $slug)->first();
