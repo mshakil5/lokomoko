@@ -46,6 +46,13 @@ Route::post('/get-product-price', [ProductController::class, 'getPackDetails']);
 Route::post('/add-to-cart', [CartController::class, 'addToCart'])->name('addToCard');
 
 Route::get('/cart', [CartController::class, 'getCart'])->name('cart');
+Route::get('/checkout', [CartController::class, 'getCheckout'])->name('checkout');
+
+
+Route::patch('update-cart', [CartController::class, 'update'])->name('update_cart');
+Route::delete('remove-from-cart', [CartController::class, 'remove'])->name('remove_from_cart');
+
+
 
 /*------------------------------------------
 --------------------------------------------

@@ -40,10 +40,10 @@
                     {{-- hidden items  --}}
                     <input type="hidden" name="product_id" id="product_id" value="{{$product->id}}">
                     <input type="hidden" name="pack_id" id="pack_id" value="{{$product->pack()->orderBy('id', 'asc')->first()->id}}">
-                    <input type="hidden" name="pack_price_per_unit" id="pack_price_per_unit" value="{{$product->pack()->orderBy('id', 'asc')->first()->price}}">
+                    <input type="hidden" name="pack_price_per_unit" id="pack_price_per_unit" value="{{ number_format($product->pack()->orderBy('id', 'asc')->first()->price, 2) }}">
                     <input type="hidden" name="qty" id="qty" value="1">
 
-                    <input type="hidden" name="pack_price" id="pack_price" value="{{$product->pack()->orderBy('id', 'asc')->first()->price}}">
+                    <input type="hidden" name="pack_price" id="pack_price" value="{{ number_format($product->pack()->orderBy('id', 'asc')->first()->price, 2) }}">
                     {{-- hidden items  --}}
 
 

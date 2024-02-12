@@ -52,9 +52,7 @@
                     <ul class="navbar-nav ms-auto d-flex align-items-center flex-wrap mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="{{route('cart')}}">
-                                <iconify-icon icon="ph:currency-inr"></iconify-icon>@if (session('tamnt')) {{ session('tamnt') }}
-                                    
-                                @endif
+                                <iconify-icon icon="ph:currency-inr"></iconify-icon>@if (session('tamnt')) {{ session('tamnt') }} @endif
                                 <iconify-icon icon="solar:cart-linear"></iconify-icon>
                             </a>
                         </li>

@@ -34,6 +34,7 @@ class CartController extends Controller
                 "pack_price_per_unit" => $pack->price,
                 "pack_price" => $request->pack_price,
                 "pack_id" => $pack->id,
+                "pack_name" => $pack->name,
                 "quantity" => $request->qty
             ];
         }
@@ -48,5 +49,48 @@ class CartController extends Controller
         
         return view('frontend.cart');
         
+    }
+
+    public function getCheckout()
+    {
+        
+        return view('frontend.checkout');
+        
+    }
+
+    public function update(Request $request)
+    {
+        if($request->id && $request->quantity){
+            $cart = session()->get('cart');
+            $cart[$request->id]["quantity"] = $request->quantity;
+            session()->put('cart', $cart);
+            session()->flash('success', 'Cart successfully updated!');
+        }
+    }
+ 
+    public function remove(Request $request)
+    {
+        if($request->id) {
+
+            $tqty = session('tqty');
+            $tamnt = session('tamnt');
+            $newtqty = $tqty - $request->qty;
+            $newtamnt = $tamnt - $request->price;
+            session(['tqty' => $newtqty]);
+            session(['tamnt' => $newtamnt]);
+
+            $cart = session()->get('cart');
+            if(isset($cart[$request->id])) {
+                unset($cart[$request->id]);
+                session()->put('cart', $cart);
+            }
+
+            
+
+            $message ="<div class='alert alert-success'> Product successfully removed! </div>";
+            
+            return response()->json(['status'=> 303,'message'=>$message,'tamnt'=>$request->price,'newtamnt'=>$newtamnt]);
+            
+        }
     }
 }
