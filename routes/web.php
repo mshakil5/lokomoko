@@ -37,6 +37,11 @@ Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
 Route::get('/shop', [FrontendController::class, 'shop'])->name('shop');
 Route::get('/product/{slug}', [FrontendController::class, 'productDetails'])->name('productDetails');
   
+
+
+Route::get('/get-product-price', [FrontendController::class, 'getPackDetails']);
+
+
 /*------------------------------------------
 --------------------------------------------
 All Normal Users Routes List

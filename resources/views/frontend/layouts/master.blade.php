@@ -46,9 +46,13 @@
 
     @include('frontend.inc.footer')
 
+    <!-- jQuery -->
+    <script src="{{ asset('assets/admin/js/jquery.min.js')}}"></script>
     <!-- latest js bootstrap-5 -->
     <script src="{{ asset('assets/frontend/js/bootstrap-5.2.3-bundle.min.js')}}"></script>
     <script src="{{ asset('assets/frontend/js/app.js')}}"></script>
+
+    @yield('script')
 </body>
 
 </html>

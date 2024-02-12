@@ -244,7 +244,24 @@
 
 
 <script>
+  $(document).ready(function () {
+      
+      
+      //header for csrf-token is must in laravel
+      $.ajaxSetup({ headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') } });
+      //
+      var url = "{{URL::to('/admin/get-product-price')}}";
+      
+
     
+      
+      
+      
+      
+        
+     
+     
+  });
 </script>
 
 @endsection

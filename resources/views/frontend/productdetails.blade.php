@@ -22,21 +22,22 @@
                 <h6 class=" text-black mb-4">{{$product->ingredient}}</h6>
                 <hr class="opacity-25 my-5">
                 <h6 class=" text-black mb-4">Qty</h6>
-                <select class="form-control select-styles mb-5">
+                <select class="form-control select-styles mb-5" id="pack" name="pack">
                     @foreach ($product->pack as $pack)
                     <option value="{{$pack->id}}">{{$pack->title}}</option>
                     @endforeach
                 </select>
-                <h4 class="statliches  text-dark mb-4 ">₹{{$product->pack()->orderBy('price', 'asc')->first()->price}}</h4>
+                {{-- hidden items  --}}
+                <input type="hidden" name="pack_id" id="pack_id" value="{{$product->pack()->orderBy('price', 'asc')->first()->id}}">
+                {{-- hidden items  --}}
+                <h4 class="statliches  text-dark mb-4 ">₹<span id="priceShow">{{$product->pack()->orderBy('price', 'asc')->first()->price}}</span></h4>
                 <div class="d-flex d-block ">
                     <div class="counter ">
                         <div class="count">-</div>
                         <div class="count-val  ">1</div>
                         <div class="count">+</div>
                     </div>
-                    <a href=""
-                        class="btn-primary w-100 text-center d-flex align-items-center justify-content-center"> Add
-                        to cart</a>
+                    <a href="" class="btn-primary w-100 text-center d-flex align-items-center justify-content-center"> Add to cart</a>
                 </div>
                 <hr class="opacity-25 my-5">
                 <h6 class="mt-4 text-black statliches mb-4">
@@ -158,5 +159,41 @@
 <!-- site footer start -->
 
 @section('script')
-    
+<script>
+    $(document).ready(function () {
+        
+        
+        //header for csrf-token is must in laravel
+        $.ajaxSetup({ headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') } });
+        //
+
+
+          // category wise product show
+        $("body").delegate("#pack","change",function () {
+            var url = "{{URL::to('/get-product-price')}}";
+            var id = $('#pack').val();
+            console.log(id);
+            var form_data = new FormData();			
+            form_data.append("id", id);
+
+            $.ajax({
+                url:searchurl,
+                method: "POST",
+                type: "POST",
+                contentType: false,
+                processData: false,
+                data:form_data,
+                success: function(d){
+                    $("#get_product").html(d.product);
+                    // console.log((d.min));
+                },
+                error:function(d){
+                    console.log(d);
+                }
+            });
+        });
+        // category wise product show
+       
+    });
+  </script>
 @endsection
