@@ -12,10 +12,9 @@
                 </div>
                 <h5 class="text-white my-4">Crafting Refreshing Mocktails, Where Every Sip IS A Burst Of Flavor Without The Buzz.</h5>
                 <div class="d-flex ">
-                    <a href="" class="btn-primary me-3">get started</a>
-                    <a href="" class="btn-default me-3 d-flex align-items-center">know more
-                        <iconify-icon class="ms-2" icon="solar:arrow-right-linear" width="1.2em"
-                            height="1.2em"></iconify-icon></a>
+                    <a href="{{route('shop')}}" class="btn-primary me-3">get started</a>
+                    <a href="{{route('about')}}" class="btn-default me-3 d-flex align-items-center">know more
+                        <iconify-icon class="ms-2" icon="solar:arrow-right-linear" width="1.2em" height="1.2em"></iconify-icon></a>
                 </div>
             </div>
             <div class="col-md-6"></div>
@@ -44,10 +43,6 @@
 
         <div class="row py-5">
 
-
-
-            
-
             @foreach ($products as $item)
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="flavour-box">
@@ -58,30 +53,7 @@
                 </div>
             </div>
             @endforeach
-            {{-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                <div class="flavour-box">
-                    <img src="{{ asset('product/mojito.png')}}" class="w-100" alt="">
-                    <div class="title">Hurricane</div>
-                    <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam fugiat harum
-                        nesciunt quasi recusandae accusamus adipisci dicta nemo tenetur voluptatibus modi architecto
-                        inventore, cum facilis?</div>
-                    <a href="" class="btn-primary fw-bold">know more</a>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                <div class="flavour-box">
-                    <img src="{{ asset('product/red-1.png')}}" class="w-100" alt="">
-                    <div class="title">Cosmopolitan</div>
-                    <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam fugiat harum
-                        nesciunt quasi recusandae accusamus adipisci dicta nemo tenetur voluptatibus modi architecto
-                        inventore, cum facilis?</div>
-                    <a href="" class="btn-primary fw-bold">know more</a>
-                </div>
-            </div> --}}
-
-
             
-
         </div>
     </div>
 </section>

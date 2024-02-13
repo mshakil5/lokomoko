@@ -42,7 +42,8 @@ class FrontendController extends Controller
     {
         $product = Product::with('pack')->where('slug', $slug)->first();
         // dd($product);
-        return view('frontend.productdetails',compact('product'));
+        $data = Product::orderby('id', 'DESC')->get();
+        return view('frontend.productdetails',compact('product','data'));
         
     }
 

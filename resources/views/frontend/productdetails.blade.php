@@ -177,6 +177,30 @@
     </div>
 </section>
 
+<section class="flavour py-5">
+    <div class="container">
+        <div class="row">
+            <div class="section-title text-center">
+                Choose Your Flavour
+            </div>
+        </div>
+
+        <div class="row py-5">
+
+            @foreach ($data as $item)
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <div class="flavour-box">
+                    <img src="{{ asset('images/product/'.$item->image)}}" class="w-100 " alt="">
+                    <div class="title">{{ $item->name }}</div>
+                    <div class="desc">{{ $item->ingredient }}</div>
+                    <a href="{{route('productDetails', $item->slug)}}" class="btn-primary fw-bold">know more</a>
+                </div>
+            </div>
+            @endforeach
+            
+        </div>
+    </div>
+</section>
 
 <!-- site footer start -->
 
