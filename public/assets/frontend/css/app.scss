@@ -1,7 +1,7 @@
     // variables
 
 
-    $primary: #418043;
+    $primary: #568C59;
     $secondary: #1E3A58 !important;
     $ternary: #1E3A58 !important;
     $white: #fff;
@@ -38,6 +38,10 @@
             outline: 0;
             box-shadow: none;
         }
+    }
+
+    .navbar-toggler{
+        background: $primary;
     }
 
     .form-input {
@@ -101,7 +105,11 @@
     // needable  classes 
 
     .txt-primary {
-        color: $primary;
+        color: $primary!important;
+    }
+
+    .cursor-pointer{
+        cursor: pointer;
     }
 
     .txt-secondary {
@@ -113,7 +121,7 @@
     }
 
     .bg-priamry {
-        background: $primary ;
+        background-color: $primary!important ;
     }
 
     .bg-secondary {
@@ -239,6 +247,22 @@
 
                     &.active {
                         color: $white;
+                    }
+                }
+
+                .mega-menu{
+                    display: none;
+                    
+                    width: 395px;
+                    position: absolute;
+                    right: 0;
+                    z-index: 1;
+                
+                }
+
+                &:hover{
+                    .mega-menu{
+                        display: block; 
                     }
                 }
 
@@ -610,7 +634,7 @@
     // site Footer 
 
     footer {
-        background-image:linear-gradient(#0c0c0c24, #000000), url(../images/footer-bg.jpg) ;
+        background-image: linear-gradient(#0c0c0c24, #000000), url(../images/footer-bg.jpg);
         background-size: cover;
         background-position: top right;
 
@@ -812,12 +836,33 @@
             }
         }
     }
-    .contact-form{
-        .form-control{
+
+    .contact-form {
+        .form-control {
             background: transparent;
-            &:focus{
+
+            &:focus {
                 background: #fff;
                 box-shadow: none;
             }
         }
     }
+
+
+    .slick-prev,
+    .slick-next {
+        background-color: #00000098 !important;
+        color: #fff !important;
+    }
+    .slick-dots li.slick-active button {
+        background: $primary !important;
+      }
+      .slick-dots li button{
+        border-radius: 50%;
+      }
+
+      #otherShip:focus + .shipping-form{ 
+        background: #000;
+      }
+
+      

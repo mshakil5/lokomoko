@@ -37,6 +37,10 @@
 
 <body onscroll="scroller()">
 
+    @php
+        $companydetails = \App\Models\CompanyDetail::first();
+    @endphp
+
     <!-- site header start -->
     @if (URL::current() == "https://www.localhost/work/lokomoko")
         

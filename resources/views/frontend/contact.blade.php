@@ -2,8 +2,10 @@
 @extends('frontend.layouts.master')
 @section('content')
    
-
-<section class="banner d-flex align-items-center" style="background-image: url('{{ asset('product/img1.jpg')}}');">
+@php
+    $companydetails = \App\Models\CompanyDetail::first();
+@endphp
+<section class="banner d-flex align-items-center" style="background-image: url('{{ asset('product/contact.webp')}}');">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center flex-column d-flex align-items-center justify-content-center">
@@ -14,7 +16,7 @@
                         height="1.2em"></iconify-icon>
                     <small class="text-white fs-6">contact</small>
                 </div>
-                <h1 class="statliches display-1 mt-4 text-light">contact Us</h1>
+                <h1 class="statliches display-1 mt-4 text-light">Contact Us</h1>
             </div>
 
         </div>
@@ -32,8 +34,7 @@
                         <br> Address
                     </h3>
                     <p class="sub-title">
-                        Katwa Globe (OPC) Pvt. Ltd. Katwa Crystal, Plot No 782, 7th Cross Bhagyanagar, Belgaum –
-                        590006
+                        {{$companydetails->address1}}
                     </p>
                 </div>
             </div>
@@ -43,7 +44,7 @@
                     <h3 class="statliches">Contact <br>
                         Number</h3>
                     <p class="sub-title">
-                        hello@littcocktails.com
+                        {{$companydetails->email1}}
                     </p>
                 </div>
             </div>
@@ -53,7 +54,7 @@
                     <h3 class="statliches">Contact <br>
                         Details</h3>
                     <p class="sub-title">
-                        +91-733-850-9404
+                        {{$companydetails->phone1}}
                     </p>
                 </div>
             </div>
@@ -65,10 +66,10 @@ background-position: center;">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center ">
-                <div class="section-title text-center text-white">
+                <div class="section-title text-center">
                     Share Your Queries &Feedback
                 </div>
-                <div class="sub-title text-center mx-auto mb-5  text-white">
+                <div class="sub-title text-center mx-auto mb-5 ">
                     You’re not going to hit a ridiculously long phone menu when you call us. Your email isn’t going to the inbox storage, never to be seen or heard from again. We try to provide the exceptional service.
                 </div>
             </div>

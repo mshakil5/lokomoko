@@ -7,7 +7,7 @@
 
 
 <section class="banner d-flex align-items-center"
-style="background-image: url('{{ asset('product/img1.jpg')}}');">
+style="background-image: url('{{ asset('product/about.webp')}}');">
 <div class="container">
     <div class="row">
         <div class="col-md-12 text-center flex-column d-flex align-items-center justify-content-center">

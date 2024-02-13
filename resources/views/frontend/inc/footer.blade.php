@@ -5,7 +5,7 @@
             <div class="col-lg-3">
                 <img src="{{ asset('assets/frontend/images/logo.png')}}" alt="" class="img-fluid" width="109" height="100">
                 <p class="sub-title text-white">
-                    Lokomoko is a ready to serve Sparkling, Alcohol Free Cocktail Mix.
+                    {{$companydetails->footer_content}}
                 </p>
             </div>
             <div class="col-lg-3">
@@ -31,8 +31,7 @@
 
 
 
-                    <li><a href="{{route('homepage')}}" data-type="URL"
-                            data-id="{{route('homepage')}}">Blogs</a></li>
+                    {{-- <li><a href="{{route('homepage')}}" data-type="URL" data-id="{{route('homepage')}}">Blogs</a></li> --}}
                 </ul>
             </div>
             <div class="col-lg-3">
@@ -60,16 +59,15 @@
                     Contact Us
                 </h4>
                 <p class=" text-white">
-                    Address: Katwa Globe (OPC) Pvt. Ltd. Katwa Crystal, Plot No 782, 7th Cross Bhagyanagar, Belgaum
-                    - 590006
+                    Address: {{$companydetails->address1}}
                 </p>
 
                 <p class="  text-white">
-                    Contact No: +91-733-850-9404
+                    Contact No: {{$companydetails->phone1}}
                 </p>
 
                 <p class=" text-white">
-                    Email: hello@littcocktails.com
+                    Email: {{$companydetails->email1}}
                 </p>
             </div>
         </div>
