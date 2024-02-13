@@ -5,7 +5,7 @@
 <br>
 <br>
 <br>
-<section class="py-5 default mt-5  ">
+<section class="py-5 default mt-5">
     <div class="container">
         <div class="row">
             <h2 class="statliches  text-dark mb-3">Checkout</h2>
@@ -224,17 +224,25 @@
                             Product</span>
                         <span class="fw-bold">Subtotal</span>
                     </div>
-                    <div class="d-flex justify-content-between noto-sans dashed-border-bottom pb-3 mb-3">
-                        <div class="pe-4 py-4">
-                            Cosmopolitan Non-alcoholic Sparkling Cocktail Mixers - Pack of 4 × 1
+
+                    @if(session('cart'))
+                        @foreach(session('cart') as $id => $details)
+                        <div class="d-flex justify-content-between noto-sans dashed-border-bottom pb-3 mb-3">
+                            <div class="pe-4 py-4">
+                                {{ $details['name'] }} - {{ $details['pack_name'] }} × {{ $details['quantity'] }}
+                            </div>
+                            <div class="text-end lh-lg d-flex align-items-center fw-bold">
+                                ₹{{ $details['pack_price'] }}
+                            </div>
                         </div>
-                        <div class="text-end lh-lg d-flex align-items-center fw-bold">
-                            ₹432
-                        </div>
-                    </div>
+                        @endforeach
+                    @endif
+                    
+
+
                     <p class="d-flex justify-content-between ">
                         <span class="fw-bold"> Subtotal</span>
-                        <span class="fw-bold">₹432 </span>
+                        <span class="fw-bold">₹@if (session('tamnt')) {{ session('tamnt') }} @endif </span>
                     </p>
                     <p class="d-flex justify-content-between ">
                         <span class="fw-bold"> Shipping</span>
@@ -242,7 +250,7 @@
                     </p>
                     <p class="d-flex justify-content-between ">
                         <span class="fw-bold"> Total</span>
-                        <span class="fw-bold">₹432 </span>
+                        <span class="fw-bold">₹@if (session('tamnt')) {{ session('tamnt') }} @endif </span>
                     </p>
                     <div class="payment">
                         <div class="accordion" id="accordionExample">
