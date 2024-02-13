@@ -3,7 +3,7 @@
 
         <div class="row">
             <div class="col-lg-3">
-                <img src="{{ asset('assets/frontend/images/logo.png')}}" alt="" class="img-fluid" width="109" height="100">
+                <img src="{{ asset('images/company/'.$companydetails->footer_logo)}}" alt="" class="img-fluid" width="109" height="100">
                 <p class="sub-title text-white">
                     {{$companydetails->footer_content}}
                 </p>

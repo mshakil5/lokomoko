@@ -20,7 +20,7 @@
                         <img src="{{ asset('images/product/'.$product->image)}}" class="img-fluid mb-5">
                         <h5 class="title statliches text-dark text-decoration-none" style="letter-spacing: 0.2px;">
                             {{$product->name}}</h5>
-                        <h6 class="text-dark my-3 fw-bold">₹432 – ₹1,152 </h6>
+                        <h6 class="text-dark my-3 fw-bold">₹{{$product->pack()->orderBy('price', 'asc')->first()->price}} – ₹{{$product->pack()->orderBy('price', 'desc')->first()->price}}</h6>
                     </div> 
                 </a> 
                 <a href="{{route('productDetails', $product->slug)}}" class="btn-primary py-3 mt-3 d-inline-block">Select option</a> 
