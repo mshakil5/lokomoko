@@ -117,75 +117,7 @@
 
 
 @section('script')
-<script type="text/javascript">
-   
-    $(".cart_update").change(function (e) {
-        e.preventDefault();
-   
-        var ele = $(this);
-   
-        $.ajax({
-            url: '{{ route('update_cart') }}',
-            method: "patch",
-            data: {
-                _token: '{{ csrf_token() }}', 
-                id: ele.parents("tr").attr("data-id"), 
-                quantity: ele.parents("tr").find(".quantity").val()
-            },
-            success: function (response) {
-               window.location.reload();
-            }
-        });
-    });
-   
-    $(".cart_remove").click(function (e) {
-        e.preventDefault();
-   
-        var ele = $(this);
-        
-   
-        if(confirm("Do you really want to remove?")) {
-            $.ajax({
-                url: '{{ route('remove_from_cart') }}',
-                method: "DELETE",
-                data: {
-                    _token: '{{ csrf_token() }}', 
-                    id: ele.parents("tr").attr("data-id"),
-                    price: ele.parents("tr").attr("data-price"),
-                    qty: ele.parents("tr").attr("data-qty")
-                },
-                success: function (response) {
-                    console.log(response);
-                      $(".msgshow").html(response.message);
-                      window.setTimeout(function(){location.reload()},2000)
-                }
-            });
-        }
-    });
-   
-</script>
 
-<script>
-    function removeRow(event) {
-        event.target.parentElement.parentElement.remove();
-        net_total();
-        var data = $("#cardinner").html();
-        var clearsessionurl = "{{URL::to('/clear-session-data')}}";
-        $.ajax({
-            url: clearsessionurl,
-            method: "POST",
-            data: {data},
 
-            success: function (d) {
-                window.setTimeout(function(){location.reload()},200)
-                net_total();
-                console.log(d);
-            },
-            error: function (d) {
-                console.log(d);
-            }
-        });
 
-    }
-</script>
 @endsection

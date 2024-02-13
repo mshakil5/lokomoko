@@ -57,23 +57,27 @@
                                 <iconify-icon icon="ph:currency-inr"></iconify-icon>@if (session('tamnt')) {{ session('tamnt') }} @endif
                                 <iconify-icon icon="solar:cart-linear"></iconify-icon>
                             </a>
+                            @if(session('cart'))
                             <div class="mega-menu p-4 bg-dark">
                                 <div class="row">
-                                    <div class="col-3">
-                                        <img src="./images/product-slider/Litt-Cocktail-Mixers-Online-Buy-Mumbai-India-1.png"
-                                            class="img-fluid">
-                                    </div>
-                                    <div class="col-7">
-                                        <a href="#" class="link txt-primary">Blue Lagoon Non-alcoholic Sparkling
-                                            Cocktail Mixers </a>
-                                        <small class="d-block text-light fw-bold">
-                                            1 × ₹432
-                                        </small>
-                                    </div>
-                                    <div class="col-2 d-flex align-items-center justify-content-center">
-                                        <iconify-icon class="cursor-pointer text-danger" icon="tabler:trash-filled" width="1.2em"
-                                            height="1.2em"></iconify-icon>
-                                    </div>
+                                    <table class="table">
+                                        @foreach(session('cart') as $id => $details)
+                                        <tr data-id="{{ $id }}" data-price="{{ $details['pack_price'] }}" data-qty="{{ $details['quantity'] }}">
+                                            <td class="p-3">
+                                                <img src="{{ asset('images/product') }}/{{ $details['image'] }}" class="img-fluid" style="width: 80px">
+                                            </td>
+                                            <td>
+                                                <a href="#" class="link text-white">
+                                                    {{ $details['name'] }} - {{ $details['pack_name'] }}
+                                                </a>
+                                                <span class="d-block text-white mt-2">₹{{ $details['pack_price'] }}</span>
+                                            </td>
+                                            <td class="p-3"> 
+                                                <iconify-icon class="text-white hover-red fs-6 cart_remove" icon="tabler:trash-filled" width="1.2em" height="1.2em"></iconify-icon>
+                                            </td>
+                                        </tr>
+                                        @endforeach
+                                    </table>
                                 </div>
                                 <hr style="border-bottom: 1px dashed #fde9e9;">
                                 <div class="row justify-content-between fw-bold text-light">
@@ -90,6 +94,7 @@
                                     
                                 </div>
                             </div>
+                            @endif
                         </li>
                         <li class="nav-item">
                             <a class="btn-default" aria-current="page" href="{{route('shop')}}">
