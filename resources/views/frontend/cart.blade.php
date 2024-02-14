@@ -145,6 +145,53 @@
 
 @section('script')
 
+<script>
+    $(function()
+        {
+            // parent increase function start
+            $(".add").click(function()
+            {
+                var currentVal = parseInt($("#qty").val());
+                var unitprice = $("#pack_price_per_unit").val();
+                
+                var priceperunit = (currentVal+1)*unitprice;
+                var amt = parseFloat(priceperunit);
+                
+                
+                if (currentVal != NaN)
+                {
+                    $("#qty").val(currentVal + 1);
+                    $("#qtyshow").html(currentVal + 1);
+                    $("#priceShow").html(amt);
+                    $("#pack_price").val(amt.toFixed(2));
+                }
+            });
+            // parent increase function end
 
+            // parent decrease function start
+            $(".minus").click(function()
+            {
+                var currentVal = parseInt($("#qty").val());
+                var unitprice = $("#pack_price_per_unit").val();
+
+                if (currentVal < 2) {
+                    var currentVal = 2;
+                }
+                
+                var priceperunit = (currentVal-1)*unitprice;
+                var amt = parseFloat(priceperunit);
+                
+                
+                if (currentVal != NaN)
+                {
+                    $("#qty").val(currentVal - 1);
+                    $("#qtyshow").html(currentVal - 1);
+                    $("#priceShow").html(amt);
+                    $("#pack_price").val(amt.toFixed(2));
+                }
+            });
+            // parent decrease function end
+        });
+</script>
 
 @endsection

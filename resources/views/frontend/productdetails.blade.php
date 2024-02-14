@@ -217,7 +217,7 @@
 @section('script')
 <script>
 
-$(function()
+        $(function()
         {
             // parent increase function start
             $(".add").click(function()
