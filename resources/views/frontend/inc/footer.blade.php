@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-lg-3">
                 <img src="{{ asset('images/company/'.$companydetails->footer_logo)}}" alt="" class="img-fluid" width="109" height="100">
-                <p class="sub-title text-white">
+                <p class="sub-title text-white mt-3">
                     {{$companydetails->footer_content}}
                 </p>
             </div>

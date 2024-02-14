@@ -161,8 +161,7 @@
                     Quick menu
                 </div>
                 <div class="sub-title text-center mx-auto mb-5  text-white">
-                    Litt is a ready-to-serve Sparkling, Alcohol-Free Mixer. It is a fun lifestyle alternative –
-                    enjoy on every occasion!
+                    Lokomoko Moktails is ready to serve. Sparkling, Non-alchoholic drinks. It's a fun lifestyle alternative – enjoy on every occasion!
                 </div>
             </div>
 
@@ -268,35 +267,50 @@
                     Cocktail for any occasion
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="photobox">
-                    <div class="photo">
-                        <img src="{{ asset('product/img1.jpg')}}" class="img-fluid" alt="">
-                        
+
+            
+            <div class="row  justify-content-md-center">
+                <div class="col-lg-8">
+                    <div class="row">
+
+
+                        <div class="col-lg-6">
+                            <div class="photobox">
+                                <div class="photo">
+                                    <img src="{{ asset('product/img1.jpg')}}" class="img-fluid" alt="">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="photobox">
+                                <div class="photo">
+                                    <img src="{{ asset('product/img2.jpg')}}" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="photobox">
+                                <div class="photo">
+                                    <img src="{{ asset('product/img3.jpg')}}" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="photobox">
+                                <div class="photo">
+                                    <img src="{{ asset('product/img4.jpg')}}" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="photobox">
-                    <div class="photo">
-                        <img src="{{ asset('product/img2.jpg')}}" class="img-fluid" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="photobox">
-                    <div class="photo">
-                        <img src="{{ asset('product/img3.jpg')}}" class="img-fluid" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="photobox">
-                    <div class="photo">
-                        <img src="{{ asset('product/img4.jpg')}}" class="img-fluid" alt="">
-                    </div>
-                </div>
-            </div>
+
+            
+
+
+
         </div>
     </div>
 </section>
@@ -316,8 +330,7 @@
                     or
                     even a little bit spicy, we have a mixer that will suit your taste.
                 </div>
-                <a href="" width="160px" class="btn-primary text-white d-inline-flex align-items-center">Explore
-                    colection
+                <a href="{{route('shop')}}" width="160px" class="btn-primary text-white d-inline-flex align-items-center">Explore colection
                     <iconify-icon icon="bi:arrow-right" class="ms-2" width="1.2em" height="1.2em"></iconify-icon>
                 </a>
             </div>
