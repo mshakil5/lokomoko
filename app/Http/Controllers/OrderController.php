@@ -22,13 +22,30 @@ class OrderController extends Controller
     public function orderStore(Request $request){
 
         
-        session(['name' => $request->name]);
+        session(['first_name' => $request->first_name]);
+        session(['last_name' => $request->last_name]);
         session(['email' => $request->email]);
         session(['phone' => $request->phone]);
         session(['house' => $request->house]);
         session(['street' => $request->street]);
         session(['city' => $request->city]);
         session(['postcode' => $request->postcode]);
+
+        $validatedData = $request->validate([
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'house' => 'required',
+            'street' => 'required',
+            'city' => 'required',
+            'postcode' => 'required'
+        ], [
+            'first_name.required' => 'First Name field is required.',
+            'last_name.required' => 'Last Name field is required.',
+            'timeslot.required' => 'Delivery time field is required.',
+            'parent_product_id.required' => 'Please, choose a product.'
+        ]);
 
         // dd($request->all());
 

@@ -20,40 +20,68 @@
                         <div class="col-lg-6">
                             <p class="form-input mb-5">
                                 <label for="first_name" class="fw-bold mb-4">First name <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control theme-input" id="first_name" name="first_name">
+                                <input type="text" class="form-control theme-input @error('first_name') is-invalid @enderror" id="first_name" name="first_name" value="@if (session('first_name') !== 'Null') {{session('first_name')}} @else {{ old('first_name') }} @endif">
+                                @error('first_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </p>
                         </div>
                         <div class="col-lg-6">
                             <p class="form-input mb-5">
                                 <label for="last_name" class="fw-bold mb-4">Last name <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control theme-input" id="last_name" name="last_name">
+                                <input type="text" class="form-control theme-input @error('last_name') is-invalid @enderror" id="last_name" name="last_name" value="@if (session('last_name') !== 'Null') {{session('last_name')}} @else {{ old('last_name') }} @endif">
+                                @error('last_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </p>
                         </div>
                         <div class="col-lg-12">
                             <p class="form-input mb-5">
                                 <label for="company_name" class="fw-bold mb-4">Company name (optional) <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control theme-input" id="company_name" name="company_name">
+                                @error('company_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </p>
                         </div>
                         <div class="col-lg-12">
                             <p class="form-input mb-5">
                                 <label for="country" class="fw-bold mb-4">Country / Region </label>
-                                <select name="country" id="country" class="form-control theme-input">
+                                <select name="country" id="country" class="form-control theme-input @error('country') is-invalid @enderror">
                                     <option value="India">India</option>
                                 </select>
+                                @error('country')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </p>
                         </div>
                         <div class="col-lg-12">
                             <p class="form-input mb-5">
                                 <label for="street" class="fw-bold mb-4">Street address </label>
-                                <input type="text" class="form-control theme-input"
-                                    placeholder="House number & Street name"  id="street" name="street">
+                                <input type="text" class="form-control theme-input @error('street') is-invalid @enderror" placeholder="House number & Street name"  id="street" name="street" value="@if (session('street') !== 'Null') {{session('street')}} @else {{ old('street') }} @endif">
+                                @error('street')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </p>
                         </div>
                         <div class="col-lg-12">
                             <p class="form-input mb-5">
-                                <input type="text" class="form-control theme-input"
-                                    placeholder="Apartment,suite,unit, etc , optional" id="suite" name="suite">
+                                <input type="text" class="form-control theme-input @error('suite') is-invalid @enderror" placeholder="Apartment,suite,unit, etc , optional" id="suite" name="suite" value="@if (session('suite') !== 'Null') {{session('suite')}} @else {{ old('suite') }} @endif">
+                                    @error('suite')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                             </p>
                         </div>
                         <div class="col-lg-12">
@@ -61,8 +89,12 @@
                                 <label for="" class="fw-bold mb-4">
                                     Postcode / ZIP <span class="text-danger">*</span>
                                 </label>
-                                <input type="text" class="form-control theme-input"
-                                    placeholder="Apartment,suite,unit, etc , optional" id="postcode" name="postcode">
+                                <input type="text" class="form-control theme-input @error('postcode') is-invalid @enderror" placeholder="" id="postcode" name="postcode" value="@if (session('postcode') !== 'Null') {{session('postcode')}} @else {{ old('postcode') }} @endif">
+                                @error('postcode')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </p>
                         </div>
                         <div class="col-lg-12">
@@ -70,23 +102,35 @@
                                 <label for="" class="fw-bold mb-4">
                                     Town / City<span class="text-danger">*</span>
                                 </label>
-                                <input type="text" class="form-control theme-input"
-                                    placeholder="Apartment,suite,unit, etc , optional" id="town" name="town">
+                                <input type="text" class="form-control theme-input @error('town') is-invalid @enderror" placeholder="" id="town" name="town"  value="@if (session('town') !== 'Null') {{session('town')}} @else {{ old('town') }} @endif">
+                                    @error('town')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                             </p>
                         </div>
                         
                         <div class="col-lg-12">
                             <p class="form-input mb-5">
                                 <label for="phone" class="fw-bold mb-4">Phone <span class="text-center">*</span> </label>
-                                <input type="text" class="form-control theme-input"
-                                    placeholder="Apartment,suite,unit, etc , optional" id="phone" name="phone">
+                                <input type="text" class="form-control theme-input @error('phone') is-invalid @enderror" placeholder="" id="phone" name="phone"  value="@if (session('phone') !== 'Null') {{session('phone')}} @else {{ old('phone') }} @endif">
+                                    @error('phone')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                             </p>
                         </div>
                         <div class="col-lg-12">
                             <p class="form-input mb-5">
                                 <label for="email" class="fw-bold mb-4">Email <span class="text-center">*</span> </label>
-                                <input type="text" class="form-control theme-input"
-                                    placeholder="Apartment,suite,unit, etc , optional" id="email" name="email">
+                                <input type="text" class="form-control theme-input @error('email') is-invalid @enderror" placeholder="" id="email" name="email"  value="@if (session('email') !== 'Null') {{session('email')}} @else {{ old('email') }} @endif">
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                             </p>
                         </div>
                         <div class="col-lg-12">
@@ -103,44 +147,70 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <p class="form-input mb-5">
-                                            <label for="dif_first_name" class="fw-bold mb-4">First name <span
-                                                    class="text-danger">*</span></label>
-                                            <input type="text" class="form-control theme-input" id="dif_first_name" name="dif_first_name">
+                                            <label for="dif_first_name" class="fw-bold mb-4">First name <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control theme-input @error('dif_first_name') is-invalid @enderror" id="dif_first_name" name="dif_first_name" value="@if (session('dif_first_name') !== 'Null') {{session('dif_first_name')}} @else {{ old('dif_first_name') }} @endif">
+                                            @error('dif_first_name')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </p>
                                     </div>
                                     <div class="col-lg-6">
                                         <p class="form-input mb-5">
-                                            <label for="dif_last_name" class="fw-bold mb-4">Last name <span
-                                                    class="text-danger">*</span></label>
-                                            <input type="text" class="form-control theme-input" id="dif_last_name" name="dif_last_name">
+                                            <label for="dif_last_name" class="fw-bold mb-4">Last name <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control theme-input @error('dif_last_name') is-invalid @enderror" id="dif_last_name" name="dif_last_name" value="@if (session('dif_last_name') !== 'Null') {{session('dif_last_name')}} @else {{ old('dif_last_name') }} @endif">
+                                            @error('dif_last_name')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </p>
                                     </div>
                                     <div class="col-lg-12">
                                         <p class="form-input mb-5">
                                             <label for="dif_company_name" class="fw-bold mb-4">Company name (optional) <span class="text-danger">*</span></label>
-                                            <input type="text" class="form-control theme-input" id="dif_company_name" name="dif_company_name">
+                                            <input type="text" class="form-control theme-input @error('dif_company_name') is-invalid @enderror" id="dif_company_name" name="dif_company_name">
+                                            @error('dif_company_name')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </p>
                                     </div>
                                     <div class="col-lg-12">
                                         <p class="form-input mb-5">
                                             <label for="dif_country" class="fw-bold mb-4">Country / Region </label>
     
-                                            <select name="dif_country" id="dif_country" class="form-control theme-input">
+                                            <select name="dif_country" id="dif_country" class="form-control theme-input @error('dif_country') is-invalid @enderror">
                                                 <option value="India">India</option>
                                             </select>
+                                            @error('dif_country')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </p>
                                     </div>
                                     <div class="col-lg-12">
                                         <p class="form-input mb-5">
                                             <label for="dif_street" class="fw-bold mb-4">Street address </label>
-                                            <input type="text" class="form-control theme-input"
-                                                placeholder="House number & Street name" id="dif_street" name="dif_street">
+                                            <input type="text" class="form-control theme-input @error('dif_street') is-invalid @enderror" placeholder="House number & Street name" id="dif_street" name="dif_street" value="@if (session('dif_street') !== 'Null') {{session('dif_street')}} @else {{ old('dif_street') }} @endif">
+                                            @error('dif_street')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </p>
                                     </div>
                                     <div class="col-lg-12">
                                         <p class="form-input mb-5">
-                                            <input type="text" class="form-control theme-input"
-                                                placeholder="Apartment,suite,unit, etc , optional" id="dif_suite" name="dif_house">
+                                            <input type="text" class="form-control theme-input @error('dif_house') is-invalid @enderror" placeholder="Apartment,suite,unit, etc , optional" id="dif_suite" name="dif_house" value="@if (session('dif_house') !== 'Null') {{session('dif_house')}} @else {{ old('dif_house') }} @endif">
+                                                @error('dif_house')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
                                         </p>
                                     </div>
                                     <div class="col-lg-12">
@@ -148,8 +218,12 @@
                                             <label for="" class="fw-bold mb-4">
                                                 Postcode / ZIP <span class="text-danger">*</span>
                                             </label>
-                                            <input type="text" class="form-control theme-input"
-                                                placeholder="Apartment,suite,unit, etc , optional" id="dif_postcode" name="dif_postcode">
+                                            <input type="text" class="form-control theme-input @error('dif_postcode') is-invalid @enderror" placeholder="" id="dif_postcode" name="dif_postcode" value="@if (session('dif_postcode') !== 'Null') {{session('dif_postcode')}} @else {{ old('dif_postcode') }} @endif">
+                                            @error('dif_postcode')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </p>
                                     </div>
                                     <div class="col-lg-12">
@@ -157,8 +231,12 @@
                                             <label for="dif_town" class="fw-bold mb-4">
                                                 Town / City<span class="text-danger">*</span>
                                             </label>
-                                            <input type="text" class="form-control theme-input"
-                                                placeholder="Apartment,suite,unit, etc , optional" id="dif_town" name="dif_town">
+                                            <input type="text" class="form-control theme-input @error('dif_town') is-invalid @enderror" placeholder="" id="dif_town" name="dif_town" value="@if (session('dif_town') !== 'Null') {{session('dif_town')}} @else {{ old('dif_town') }} @endif">
+                                            @error('dif_town')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </p>
                                     </div>
                                     
@@ -167,16 +245,26 @@
                                         <p class="form-input mb-5">
                                             <label for="dif_phone" class="fw-bold mb-4">Phone <span class="text-center">*</span>
                                             </label>
-                                            <input type="text" class="form-control theme-input"
-                                                placeholder="Phone" id="dif_phone" name="dif_phone">
+                                            <input type="text" class="form-control theme-input @error('dif_phone') is-invalid @enderror"
+                                                placeholder="Phone" id="dif_phone" name="dif_phone" value="@if (session('dif_phone') !== 'Null') {{session('dif_phone')}} @else {{ old('dif_phone') }} @endif">
+                                                @error('dif_phone')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
                                         </p>
                                     </div>
                                     <div class="col-lg-12">
                                         <p class="form-input mb-5">
                                             <label for="" class="fw-bold mb-4">Email <span class="text-center">*</span>
                                             </label>
-                                            <input type="email" class="form-control theme-input"
-                                                placeholder="" id="dif_email" name="dif_email">
+                                            <input type="email" class="form-control theme-input @error('dif_email') is-invalid @enderror"
+                                                placeholder="" id="dif_email" name="dif_email" value="@if (session('dif_email') !== 'Null') {{session('dif_email')}} @else {{ old('dif_email') }} @endif">
+                                                @error('dif_email')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
                                         </p>
                                     </div>
                                 </div>
@@ -185,8 +273,7 @@
                         <div class="col-lg-12 mt-4">
                             <p class="form-input mb-5">
                                 <label for="">Order notes (optional)</label>
-                                <textarea  id="" name="" rows="3" class="form-control theme-input"
-                                    placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                                <textarea  id="order_note" name="order_note" rows="3" class="form-control theme-input" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
                             </p>
                         </div>
                     </div>
