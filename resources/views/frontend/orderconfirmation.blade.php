@@ -83,7 +83,6 @@
                             <thead>
                                 <tr>
                                     <td><strong>Item</strong></td>
-                                    <td class="text-center"><strong>Additional Item</strong></td>
                                     <td class="text-center"><strong>Price</strong></td>
                                     <td class="text-center"><strong>QTY</strong></td>
                                     <td class="text-right"><strong>Totals</strong></td>
@@ -94,8 +93,6 @@
                                 
                                     <tr>
                                         <td>{{$item->product_name}}</td>
-                                        <td class="text-center">
-                                        </td>
                                         <td class="text-center">{{$item->price_per_unit}}</td>
                                         <td class="text-center">{{$item->quantity}}</td>
                                         <td class="text-right">{{number_format($item->total_price, 2)}}</td>
@@ -106,14 +103,12 @@
                                 <tr>
                                     <td class="thick-line"></td>
                                     <td class="thick-line"></td>
-                                    <td class="thick-line"></td>
                                     <td class="thick-line text-right"><strong>Subtotal:</strong></td>
                                     <td class="thick-line text-right">{{number_format($data->total_amount, 2)}}</td>
                                 </tr>
                                 @if ($data->discount > 0)
                                     
                                 <tr>
-                                    <td class="no-line"></td>
                                     <td class="no-line"></td>
                                     <td class="no-line"></td>
                                     <td class="thick-line text-right"><strong>Discount:</strong></td>
@@ -130,7 +125,7 @@
                                 @endif
                                 
                                 <tr>
-                                    <td class="no-line text-left" colspan="3">{{$data->note}}</td>
+                                    <td class="no-line text-left" colspan="2">{{$data->order_note}}</td>
                                     <td class="thick-line text-right"><strong>Total:</strong></td>
                                     <td class="thick-line text-right">{{number_format($data->net_amount, 2)}}</td>
                                 </tr>

@@ -3,7 +3,7 @@
 @section('content')
     
 @endsection
-
+<br><br>
 
 <section class="product-details mt-5 default">
     <div class="container">

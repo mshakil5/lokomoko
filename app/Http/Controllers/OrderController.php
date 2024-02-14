@@ -95,9 +95,6 @@ class OrderController extends Controller
             $customer->dif_city = $request->dif_city;
             $customer->dif_phone = $request->dif_phone;
             $customer->dif_email = $request->dif_email;
-            $customer->discount = "0";
-            $customer->order_note = $request->order_note;
-            $customer->payment_type = "Cash";
             $customer->save();
             // customer information store
 
