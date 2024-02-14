@@ -17,7 +17,7 @@ style="background-image: url('{{ asset('product/about.jpg')}}');">
                     height="1.2em"></iconify-icon>
                 <small class="text-white fs-6">About</small>
             </div>
-            <h1 class="statliches display-1 mt-4 text-light">About Us</h1>
+            <h1 class="statliches display-1 text-light">About Us</h1>
         </div>
 
     </div>
@@ -27,7 +27,7 @@ style="background-image: url('{{ asset('product/about.jpg')}}');">
 <section class="py-5">
 <div class="container">
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-12">
             <h1 class="statliches mb-4">About Us</h1>
             <h5 class="statliches mb-4">A BRIGHT IDEA TAKES PLACE</h5>
 
@@ -51,12 +51,10 @@ style="background-image: url('{{ asset('product/about.jpg')}}');">
                 Explore Product
             </a>
         </div>
-        <div class="col-lg-6  bg-light d-flex align-items-center justify-content-center">
-            <img src="./images/Ravi-Katwa-Litt-Cocktails.png" class="img-fluid" alt="">
-        </div>
     </div>
 </div>
 </section>
+
 
 <section class="occation default">
     <div class="container">
@@ -66,35 +64,50 @@ style="background-image: url('{{ asset('product/about.jpg')}}');">
                     Cocktail for any occasion
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="photobox">
-                    <div class="photo">
-                        <img src="{{ asset('product/img1.jpg')}}" class="img-fluid" alt="">
-                        
+
+            
+            <div class="row  justify-content-md-center">
+                <div class="col-lg-8">
+                    <div class="row">
+
+
+                        <div class="col-lg-6">
+                            <div class="photobox">
+                                <div class="photo">
+                                    <img src="{{ asset('product/img1.jpg')}}" class="img-fluid" alt="">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="photobox">
+                                <div class="photo">
+                                    <img src="{{ asset('product/img2.jpg')}}" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="photobox">
+                                <div class="photo">
+                                    <img src="{{ asset('product/img3.jpg')}}" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="photobox">
+                                <div class="photo">
+                                    <img src="{{ asset('product/img4.jpg')}}" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="photobox">
-                    <div class="photo">
-                        <img src="{{ asset('product/img2.jpg')}}" class="img-fluid" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="photobox">
-                    <div class="photo">
-                        <img src="{{ asset('product/img3.jpg')}}" class="img-fluid" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="photobox">
-                    <div class="photo">
-                        <img src="{{ asset('product/img4.jpg')}}" class="img-fluid" alt="">
-                    </div>
-                </div>
-            </div>
+
+            
+
+
+
         </div>
     </div>
 </section>
