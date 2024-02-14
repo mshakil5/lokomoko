@@ -61,7 +61,7 @@ style="background-image: url('{{ asset('product/about.jpg')}}');">
         <div class="row">
             <div class="col-lg-12 text-center ">
                 <div class="section-title text-center ">
-                    Cocktail for any occasion
+                    Moktails for any occasion
                 </div>
             </div>
 

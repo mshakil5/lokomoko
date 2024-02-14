@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="title display-1 fw-bold text-uppercase text-white statliches">
-                    Lokomoko <br> Moktails
+                    Lokomoko <br> Mocktails
                 </div>
                 <h5 class="text-white my-4">Crafting Refreshing Mocktails, Where Every Sip IS A Burst Of Flavor Without The Buzz.</h5>
                 <div class="d-flex ">
@@ -64,7 +64,7 @@
         <div class="row">
             <div class="col-lg-12 text-center ">
                 <div class="section-title text-center text-white">
-                    Moktails Revolution
+                    Mocktails Revolution
                 </div>
                 <div class="sub-title text-center mx-auto mb-5  text-white">
                     Litt non-alcoholic mixes are crafted by India’s award-winning Mixologists who have been
@@ -86,10 +86,10 @@
         <div class="row">
             <div class="col-lg-12 text-center ">
                 <div class="section-title text-center ">
-                    Moktails for any occasion
+                    Mocktails for any occasion
                 </div>
                 <div class="sub-title text-center mx-auto mb-5  ">
-                    Moktails for Any Occasion: Make your next party or gathering a hit with our foolproof drinks recipes. Whether you’re looking for something classic or something new, we’ve got you covered.
+                    Mocktails for Any Occasion: Make your next party or gathering a hit with our foolproof drinks recipes. Whether you’re looking for something classic or something new, we’ve got you covered.
                 </div>
             </div>
             <div class="col-lg-6">
@@ -99,7 +99,7 @@
                         <div class="info left">
                             <div class="text-center">
                                 <h3 class="statliches text-center">Private Party</h3>
-                                <p class="sub-title text-center mx-auto w-75">Who does not like to mix their drinks at a party? Become your own bartender and enjoy the most fascinating cocktail mixes by Litt.</p>
+                                <p class="sub-title text-center mx-auto w-75">Who does not like to mix their drinks at a party? Become your own bartender and enjoy the most fascinating moktails mixes by Litt.</p>
                             </div>
                         </div>
                     </div>
@@ -161,7 +161,7 @@
                     Quick menu
                 </div>
                 <div class="sub-title text-center mx-auto mb-5  text-white">
-                    Lokomoko Moktails is ready to serve. Sparkling, Non-alchoholic drinks. It's a fun lifestyle alternative – enjoy on every occasion!
+                    Lokomoko Mocktails is ready to serve. Sparkling, Non-alchoholic drinks. It's a fun lifestyle alternative – enjoy on every occasion!
                 </div>
             </div>
 
@@ -264,7 +264,7 @@
         <div class="row">
             <div class="col-lg-12 text-center ">
                 <div class="section-title text-center ">
-                    Cocktail for any occasion
+                    Moktails for any occasion
                 </div>
             </div>
 
