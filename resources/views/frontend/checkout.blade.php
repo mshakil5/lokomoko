@@ -289,7 +289,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="border p-4" style="position: sticky; top:0;">
-                        <h6 class="statliches mb-3">Your order</h6>
+                        <h5 class="statliches mb-3">Your order</h5>
                         <div class="d-flex justify-content-between dashed-border-bottom pb-3">
                             <span class="fw-bold">
                                 Product</span>
@@ -333,18 +333,23 @@
                         </p>
                         <div class="payment">
                             <div class="accordion" id="accordionExample">
-                                <div class="accordion-item">
+                                {{-- <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne" aria-expanded="true"
-                                            aria-controls="collapseOne">
-                                            Credit & Debit Cards / Net banking / UPI / EMI / Wallets
+                                        <button class="accordion-button fw-bold fs-6 text-black cursor-pointer d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="outline: 0; box-shadow: none;">
+                                            <label for="card" class="d-flex align-items-center">
+                                                <input type="radio" name="payment" value="upi"
+                                                    class="form-check-input me-2" id="card">
+                                                <small>Credit & Debit Cards / Net banking / UPI / EMI / Wallets</small>
+                                                <img width="25px" class="ms-3"
+                                                    src="https://im-testing.im-cdn.com/assets/images/favicon.6d3d153d920c.png"
+                                                    alt="">
+                                            </label>
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                    <div id="collapseOne" class="accordion-collapse collapse"
                                         aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <small class="text-muted">
+                                            <small class="text-dark">
                                                 Pay securely with Credit or Debit Cards | Internet Banking | UPI |
                                                 Google
                                                 Pay | EMI Option | Bhim
@@ -357,38 +362,61 @@
                                         <button class="accordion-button collapsed fw-bold" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#collapseTwo"
                                             aria-expanded="false" aria-controls="collapseTwo">
-                                            Pay with UPI QR Code
+                                            <label for="upi" class="d-flex align-items-center">
+                                                <input type="radio" name="payment" value="cash"
+                                                    class="form-check-input me-2" id="upi">
+                                                <small class="text-black">Pay with UPI QR Code</small>
+                                                <img width="25px" class="ms-3"
+                                                    src="https://im-testing.im-cdn.com/assets/images/favicon.6d3d153d920c.png"
+                                                    alt="">
+                                            </label>
                                         </button>
                                     </h2>
                                     <div id="collapseTwo" class="accordion-collapse collapse"
                                         aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <small class="text-muted mb-3 d-block">
+                                            <small class="text-dark mb-3 d-block">
                                                 It uses UPI apps like BHIM, Paytm, Google Pay, PhonePe or any Banking
                                                 UPI
                                                 app to make payment.
                                             </small>
                                             <div class="row gx-3 mt-3">
                                                 <div class="col-lg-6">
-                                                    <label for="">UPI Address <span class="text-danger">*</span></label>
-                                                    <input type="text" name="" class="form-control theme-input" id="">
+                                                    <label for=""><b>UPI Address</b> <span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="text" placeholder="Eg: mobile number" name=""
+                                                        class="form-control theme-input" id="">
                                                 </div>
                                                 <div class="col-lg-6">
-                                                    <label for="">UPI Handle * <span
+                                                    <label for=""><b>UPI Handle</b> * <span
                                                             class="text-danger">*</span></label>
                                                     <select name="" class="form-control" id="">
-                                                        <option value="">sdfdsf</option>
-                                                        <option value="">sdfdsf</option>
-                                                        <option value="">sdfdsf</option>
-                                                        <option value="">sdfdsf</option>
-                                                        <option value="">sdfdsf</option>
+                                                        <option value="">===select====</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div> --}}
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed fw-bold" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            <label for="cash" class="d-flex align-items-center text-black">
+                                                <input type="radio" name="payment" value=""
+                                                    class="form-check-input me-2" id="cash" checked>
+                                                <small>Cash on delivery</small>
+                                            </label>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Pay with cash upon delivery.
+                                        </div>
+                                    </div>
                                 </div>
-    
                             </div>
                         </div>
                         <p class="text-muted mt-3">
