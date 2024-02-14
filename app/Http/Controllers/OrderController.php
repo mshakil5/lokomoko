@@ -131,28 +131,28 @@ class OrderController extends Controller
                 $orderDtls = OrderDetail::where('order_id', $order->id)->get();
                 
                 if (isset($msg)) {
-                    $array['name'] = $request->name;
+                    $array['name'] = $request->first_name;
                     $array['email'] = $request->email;
                     $array['phone'] = $request->phone;
                     $array['house'] = $request->house;
                     $array['city'] = $request->city;
                     $array['street'] = $request->street;
                     $array['postcode'] = $request->postcode;
-                    $array['note'] = $request->note;
+                    $array['note'] = $request->order_note;
                     $array['invoiceno'] = $order->invoiceno;
-                    $array['payment_type'] = $order->payment_type;
-                    $array['delivery_type'] = $order->delivery_type;
+                    $array['payment_type'] = "Cash";
                     $array['orderDtls'] = $orderDtls;
                     $array['date'] = $order->date;
-                    $array['discount'] = $order->discount;
+                    $array['discount'] = "00";
                     $array['net_amount'] = $order->net_amount;
                     $array['subject'] = "Order Booking Confirmation";
                     $array['message'] = $msg;
                     $array['contactmail'] = $contactmail;
+                    $array['cc'] = $contactmail;
         
-                    // Mail::to($contactmail)
-                    //     ->cc($ccEmails)
-                    //     ->send(new OrderConfirmMail($array));
+                    Mail::to($contactmail)
+                        ->cc($ccEmails)
+                        ->send(new OrderConfirmMail($array));
         
                 }
 

@@ -13,12 +13,13 @@ class OrderConfirmMail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $array;
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct($array)
     {
-        //
+        $this->array = $array;
     }
 
     /**
@@ -31,23 +32,11 @@ class OrderConfirmMail extends Mailable
         );
     }
 
-    /**
-     * Get the message content definition.
-     */
-    public function content(): Content
+    public function build()
     {
-        return new Content(
-            view: 'view.name',
-        );
-    }
-
-    /**
-     * Get the attachments for the message.
-     *
-     * @return array<int, \Illuminate\Mail\Mailables\Attachment>
-     */
-    public function attachments(): array
-    {
-        return [];
+        return $this->from('do-not-reply@thelokomoko.com', 'thelokomoko.com')
+        ->replyTo($this->array['cc'], 'Thelokomoko')
+        ->subject('Order confirmed successfully.')
+        ->markdown('emails.orderconfirm');
     }
 }

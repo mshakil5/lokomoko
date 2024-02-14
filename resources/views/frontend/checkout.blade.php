@@ -307,12 +307,12 @@
                                 </div>
                             </div>
                             {{-- hidden items  --}}
-                            <input type="text" id="product_id" name="product_id[]" class="form-control" value="{{ $details['pid'] }}">
-                            <input type="text" id="pack_id" name="pack_id[]" class="form-control" value="{{ $details['pack_id'] }}">
-                            <input type="number" id="quantity" name="quantity[]" class="form-control" value="{{ $details['quantity'] }}">
-                            <input type="number" id="price_per_unit" name="price_per_unit[]" class="form-control" value="{{ $details['pack_price_per_unit'] }}">
-                            <input type="number" id="pack_price" name="pack_price[]" class="form-control" value="{{ $details['pack_price'] }}">
-                            <input type="text" id="pname" name="pname[]" class="form-control" value="{{ $details['name'] }}">
+                            <input type="hidden" id="product_id" name="product_id[]" class="form-control" value="{{ $details['pid'] }}">
+                            <input type="hidden" id="pack_id" name="pack_id[]" class="form-control" value="{{ $details['pack_id'] }}">
+                            <input type="hidden" id="quantity" name="quantity[]" class="form-control" value="{{ $details['quantity'] }}">
+                            <input type="hidden" id="price_per_unit" name="price_per_unit[]" class="form-control" value="{{ $details['pack_price_per_unit'] }}">
+                            <input type="hidden" id="pack_price" name="pack_price[]" class="form-control" value="{{ $details['pack_price'] }}">
+                            <input type="hidden" id="pname" name="pname[]" class="form-control" value="{{ $details['name'] }}">
                             {{-- hidden items  --}}
                             @endforeach
                         @endif

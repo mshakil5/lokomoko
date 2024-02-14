@@ -99,16 +99,6 @@
                     </div>
                 </div>
 
-
-                <div class="row" style="color: #74787E;font-size: 12px">
-                    <div class="col-xs-6 text-right">
-                        <strong style="color: #74787E;font-size: 12px">Delivery/Collection Details:</strong><br>
-                        Type: {{$array['delivery_type']}}<br>
-                        Date: {{$array['collection_date']}}<br>
-                        Time: {{$array['collection_time']}}<br>
-                    </div>
-                </div>
-
             </div>
         </div>
 
@@ -124,7 +114,6 @@
                         <thead>
                             <tr>
                                 <td><strong>Item</strong></td>
-                                <td class="text-center"><strong>Additional Item</strong></td>
                                 <td class="text-center"><strong></strong></td>
                                 <td class="text-center"><strong>Qty</strong></td>
                                 <td class="text-center"><strong>Price</strong></td>
@@ -136,11 +125,6 @@
                             
                                 <tr>
                                     <td>{{$item->product_name}}</td>
-                                    <td class="text-left">
-                                        @foreach ($item->orderadditionalitem as $additms)
-                                            {{$additms->item_name}},Qty: {{$additms->quantity}} <br>
-                                        @endforeach
-                                    </td>
                                     <td class="text-center"></td>
                                     <td class="text-center">{{$item->quantity}}</td>
                                     <td class="text-center">{{$item->price_per_unit}}</td>
@@ -153,7 +137,6 @@
                                 <td class="thick-line"></td>
                                 <td class="thick-line"></td>
                                 <td class="thick-line"></td>
-                                <td class="thick-line"></td>
                                 <td class="thick-line text-left"><strong>Subtotal:</strong></td>
                                 <td class="thick-line text-right" style="text-align: right">{{ number_format($array['net_amount'], 2) }}</td>
                             </tr>
@@ -163,29 +146,17 @@
                                 <td class="no-line"></td>
                                 <td class="no-line"></td>
                                 <td class="no-line"></td>
-                                <td class="no-line"></td>
                                 <td class="thick-line text-left"><strong>Discount:</strong></td>
                                 <td class="thick-line text-right" style="text-align: right">{{ number_format($array['discount'], 2) }}</td>
                             </tr>
                             @endif
-                            
-
-
-                            {{-- <tr>
-                                <td class="no-line"></td>
-                                <td class="no-line"></td>
-                                <td class="no-line"></td>
-                                <td class="no-line"></td>
-                                <td class="thick-line text-left"><strong>Delivery Charge:</strong></td>
-                                <td class="thick-line text-right"></td>
-                            </tr> --}}
-
+                        
                             @php
                                 $namnt = $array['net_amount'] - $array['discount'];
                             @endphp
 
                             <tr>
-                                <td class="no-line text-left" colspan="4"><strong>Note:</strong>{{$array['note']}}</td>
+                                <td class="no-line text-left" colspan="3"><strong>Note:</strong>{{$array['note']}}</td>
                                 <td class="thick-line text-left"><strong>Total:</strong></td>
                                 <td class="thick-line text-right" style="text-align: right">{{number_format($namnt, 2)}}</td>
                             </tr>
