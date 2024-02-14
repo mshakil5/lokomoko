@@ -10,6 +10,15 @@
         <div class="row">
             <h2 class="statliches  text-dark mb-3">Checkout</h2>
         </div>
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <form action="{{route('order.store')}}" method="POST">
             @csrf
             <div class="row">

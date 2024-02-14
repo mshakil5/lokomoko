@@ -21,6 +21,7 @@ class OrderController extends Controller
 
     public function orderStore(Request $request){
 
+        // dd($request->all());
         
         session(['first_name' => $request->first_name]);
         session(['last_name' => $request->last_name]);
@@ -28,7 +29,7 @@ class OrderController extends Controller
         session(['phone' => $request->phone]);
         session(['house' => $request->house]);
         session(['street' => $request->street]);
-        session(['city' => $request->city]);
+        session(['town' => $request->town]);
         session(['postcode' => $request->postcode]);
 
         $validatedData = $request->validate([
@@ -36,9 +37,8 @@ class OrderController extends Controller
             'last_name' => 'required',
             'email' => 'required',
             'phone' => 'required',
-            'house' => 'required',
             'street' => 'required',
-            'city' => 'required',
+            'town' => 'required',
             'postcode' => 'required'
         ], [
             'first_name.required' => 'First Name field is required.',
@@ -47,7 +47,6 @@ class OrderController extends Controller
             'parent_product_id.required' => 'Please, choose a product.'
         ]);
 
-        // dd($request->all());
 
         // new code
         $order = new Order();
