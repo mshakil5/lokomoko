@@ -6,8 +6,12 @@
   font-family: "staatliches";
   src: url(../fonts/Staatliches-Regular.ttf);
 }
+@font-face {
+  font-family: "roboto";
+  src: url(../fonts/Roboto-Bold.ttf);
+}
 .statliches {
-  font-family: "staatliches", sans-serif !important;
+  font-family: "roboto", sans-serif !important;
 }
 
 .theme-input {

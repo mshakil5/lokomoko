@@ -64,15 +64,14 @@
         <div class="row">
             <div class="col-lg-12 text-center ">
                 <div class="section-title text-center text-white">
-                    Cocktail Revolution
+                    Moktails Revolution
                 </div>
                 <div class="sub-title text-center mx-auto mb-5  text-white">
                     Litt non-alcoholic mixes are crafted by India’s award-winning Mixologists who have been
                     passionately making the best-tasting mixers. Our non-alcoholic mixers are made with imported
                     ingredients & natural sugar with fewer calories & Zero artificial Sweeteners.
                 </div>
-                <a href="" width='160px' class="btn-default-dark text-white d-inline-flex align-items-center "> Read
-                    More
+                <a href="{{route('about')}}" width='160px' class="btn-default-dark text-white d-inline-flex align-items-center "> Read More
                     <iconify-icon icon="bi:arrow-right" class="ms-2" width="1.2em" height="1.2em"></iconify-icon>
                 </a>
             </div>
@@ -87,11 +86,10 @@
         <div class="row">
             <div class="col-lg-12 text-center ">
                 <div class="section-title text-center ">
-                    Cocktail for any occasion
+                    Moktails for any occasion
                 </div>
                 <div class="sub-title text-center mx-auto mb-5  ">
-                    Cocktail for Any Occasion: Make your next party or gathering a hit with our foolproof drinks
-                    recipes. Whether you’re looking for something classic or something new, we’ve got you covered.
+                    Moktails for Any Occasion: Make your next party or gathering a hit with our foolproof drinks recipes. Whether you’re looking for something classic or something new, we’ve got you covered.
                 </div>
             </div>
             <div class="col-lg-6">

@@ -96,27 +96,25 @@
 
                                 <div class="collapse" id="changeAddress">
                                     <p class="form-input ">
-                                        <label for="" class="fw-bold mb-4">Provience </label>
-                                        <select name="" id="" class="form-control theme-input">
-                                            <option value="">India</option>
+                                        <label for="country" class="fw-bold mb-4">Provience </label>
+                                        <select name="country" id="country" class="form-control theme-input">
+                                            <option value="India">India</option>
                                         </select>
                                     </p>
                                     <p class="form-input ">
-                                        <select name="" id="" class="form-control theme-input">
-                                            <option value="">Maharashtra</option>
+                                        <select name="state" id="state" class="form-control theme-input">
+                                            <option value="Maharashtra">Maharashtra</option>
                                         </select>
                                     </p>
                                     <p class="form-input ">
-                                        <input type="text" placeholder="City" class="form-control theme-input"
-                                            placeholder="House number &amp; Street name">
+                                        <input type="text" id="city" name="city" placeholder="City" class="form-control theme-input" placeholder="House number &amp; Street name">
                                     </p>
                                     <p class="form-input  ">
-                                        <input type="text" placeholder="Zip code" class="form-control theme-input"
-                                            placeholder="House number &amp; Street name">
+                                        <input type="text" placeholder="Zip code" class="form-control theme-input" placeholder="House number &amp; Street name">
                                     </p>
-                                    <a href="#" class="btn-primary w-100 d-inline text-center py-3 d-block">
+                                    <button type="button" class="btn-primary w-100 d-inline text-center py-3 d-block">
                                         update
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </div>
