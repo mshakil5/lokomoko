@@ -40,7 +40,7 @@
         }
     }
 
-    .navbar-toggler{
+    .navbar-toggler {
         background: $primary;
     }
 
@@ -105,10 +105,10 @@
     // needable  classes 
 
     .txt-primary {
-        color: $primary!important;
+        color: $primary !important;
     }
 
-    .cursor-pointer{
+    .cursor-pointer {
         cursor: pointer;
     }
 
@@ -250,19 +250,19 @@
                     }
                 }
 
-                .mega-menu{
+                .mega-menu {
                     display: none;
-                    
+
                     width: 395px;
                     position: absolute;
                     right: 0;
                     z-index: 1;
-                
+
                 }
 
-                &:hover{
-                    .mega-menu{
-                        display: block; 
+                &:hover {
+                    .mega-menu {
+                        display: block;
                     }
                 }
 
@@ -854,15 +854,39 @@
         background-color: #00000098 !important;
         color: #fff !important;
     }
+
     .slick-dots li.slick-active button {
         background: $primary !important;
-      }
-      .slick-dots li button{
+    }
+
+    .slick-dots li button {
         border-radius: 50%;
-      }
+    }
 
-      #otherShip:focus + .shipping-form{ 
+    #otherShip:focus+.shipping-form {
         background: #000;
-      }
+    }
 
-      
+    #headingOne .accordion-button::after {
+        display: none;
+    }
+
+    #headingTwo .accordion-button::after {
+        display: none;
+    }
+
+    #headingThree .accordion-button::after {
+        display: none;
+    }
+
+    .accordion-button:not(.collapsed) {
+        background-color: #dae9da;
+
+    }
+
+    input[type=radio].form-check-input{
+        accent-color: $primary!important;
+        -webkit-appearance:auto;
+        appearance: auto!important;
+        box-shadow: none;
+    }

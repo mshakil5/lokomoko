@@ -5,7 +5,7 @@
 @php
     $companydetails = \App\Models\CompanyDetail::first();
 @endphp
-<section class="banner d-flex align-items-center" style="background-image: url('{{ asset('product/contact.webp')}}');">
+<section class="banner d-flex align-items-center" style="background-image: url('{{ asset('product/contact.jpg')}}');">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center flex-column d-flex align-items-center justify-content-center">

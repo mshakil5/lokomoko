@@ -11,7 +11,7 @@ style="background-image: url('{{ asset('product/occasion.jpg')}}');">
     <div class="row">
         <div class="col-md-12 text-center flex-column d-flex align-items-center justify-content-center">
             <div class="box text-uppercase fw-bold d-flex align-items-center fs-6">
-                <small><a href="/index.html"
+                <small><a href="{{route('homepage')}}"
                         class="text-white text-decoration-none  fs-6 hover-primary">Home</a></small>
                 <iconify-icon icon="fluent:chevron-right-24-filled" class="text-white mx-2" width="1.2em"
                     height="1.2em"></iconify-icon>

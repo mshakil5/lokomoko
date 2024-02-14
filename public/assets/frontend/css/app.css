@@ -665,4 +665,28 @@ footer ul li a:hover {
 
 #otherShip:focus + .shipping-form {
   background: #000;
+}
+
+#headingOne .accordion-button::after {
+  display: none;
+}
+
+#headingTwo .accordion-button::after {
+  display: none;
+}
+
+#headingThree .accordion-button::after {
+  display: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #dae9da;
+}
+
+input[type=radio].form-check-input {
+  accent-color: #568C59 !important;
+  -webkit-appearance: auto;
+  -moz-appearance: auto !important;
+       appearance: auto !important;
+  box-shadow: none;
 }/*# sourceMappingURL=app.css.map */

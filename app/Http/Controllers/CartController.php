@@ -13,9 +13,9 @@ class CartController extends Controller
         // dd($request->all());
         
         $product = Product::findOrFail($request->product_id);
-        $id = $product->id;
         $pack = Pack::findOrFail($request->pack_id);
  
+        $id = $pack->id;
         $cart = session()->get('cart', []);
         $tqty = session('tqty');
         $tamnt = session('tamnt');
@@ -34,7 +34,7 @@ class CartController extends Controller
                 "pack_price_per_unit" => $pack->price,
                 "pack_price" => $request->pack_price,
                 "pack_id" => $pack->id,
-                "pack_name" => $pack->name,
+                "pack_name" => $pack->title,
                 "quantity" => $request->qty
             ];
         }

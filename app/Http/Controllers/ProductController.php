@@ -11,7 +11,7 @@ class ProductController extends Controller
     {
         $packs = Pack::where('id', $request->id)->first();
         // dd($product);
-        return response()->json(['status'=> 303,'id'=>$packs->id,'price'=>$packs->price]);
+        return response()->json(['status'=> 303,'id'=>$packs->id,'price'=>$packs->price,'title'=>$packs->title]);
         
     }
 }

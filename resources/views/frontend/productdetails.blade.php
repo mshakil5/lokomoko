@@ -8,6 +8,19 @@
 <section class="product-details mt-5 default">
     <div class="container">
         <div class="row">
+            <div class="col-lg-12">
+                @if(session()->has('success'))
+                    <div class="alert alert-secondary d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <iconify-icon icon="bi:bell" class="me-2 txt-primary fs-4"></iconify-icon>
+                            <span class="txt-dark">{{ session()->get('success') }}</span>
+                        </div> 
+                        <a href="{{route('cart')}}"  style="max-width:162px;" class="btn-primary w-100 text-center d-flex align-items-center justify-content-center">
+                            Cart
+                        </a>
+                    </div>
+                @endif
+            </div>
             <div class="col-lg-6">
                 <div class="product-box position-relative text-center">
                     <span
@@ -16,11 +29,7 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                @if(session()->has('success'))
-                    <div class="alert alert-success">
-                        {{ session()->get('success') }}
-                    </div>
-                @endif
+                
                 
                 <form action="{{route('addToCard')}}" method="post">
                 @csrf
@@ -40,6 +49,7 @@
                     {{-- hidden items  --}}
                     <input type="hidden" name="product_id" id="product_id" value="{{$product->id}}">
                     <input type="hidden" name="pack_id" id="pack_id" value="{{$product->pack()->orderBy('id', 'asc')->first()->id}}">
+                    <input type="hidden" name="pack_name" id="pack_name" value="{{$product->pack()->orderBy('id', 'asc')->first()->title}}">
                     <input type="hidden" name="pack_price_per_unit" id="pack_price_per_unit" value="{{ number_format($product->pack()->orderBy('id', 'asc')->first()->price, 2) }}">
                     <input type="hidden" name="qty" id="qty" value="1">
 
@@ -284,10 +294,11 @@ $(function()
                 success: function(d){
                     console.log(d);
                     var qty = $('#qty').val();
+                    
                     $("#pack_id").val(d.id);
-                    $("#pack_price_per_unit").val(d.price);
-                    $("#pack_price").val(d.price * qty);
-                    $("#priceShow").html(d.price * qty);
+                    $("#pack_price_per_unit").val(d.price.toFixed(2));
+                    $("#pack_price").val(d.price.toFixed(2) * qty);
+                    $("#priceShow").html(d.price.toFixed(2) * qty);
                     // console.log((d.min));
                 },
                 error:function(d){

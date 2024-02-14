@@ -88,13 +88,37 @@
                             <span>₹@if (session('tamnt')) {{ session('tamnt') }} @endif</span>
                         </div>
                         <div class="d-flex justify-content-between noto-sans dashed-border-bottom pb-3 mb-3">
-                        <div class=" "> shipping </div>
-                        <div class="text-end lh-lg ">
-                            Free Shipping <br>
-                            Shipping to <span class="fw-bold">Maharashtra</span> <br>
-                            <a href="#" class="link">change address</a>
+                            <div class=" "> Shipping </div>
+                            <div class="text-end lh-lg ">
+                                Free Shipping <br>
+                                Shipping to <span class="fw-bold">Maharashtra</span> <br>
+                                <a class="link" data-bs-toggle="collapse" href="#changeAddress" role="button" aria-expanded="false" aria-controls="changeAddress">Change address</a>
 
-                        </div>
+                                <div class="collapse" id="changeAddress">
+                                    <p class="form-input ">
+                                        <label for="" class="fw-bold mb-4">Provience </label>
+                                        <select name="" id="" class="form-control theme-input">
+                                            <option value="">India</option>
+                                        </select>
+                                    </p>
+                                    <p class="form-input ">
+                                        <select name="" id="" class="form-control theme-input">
+                                            <option value="">Maharashtra</option>
+                                        </select>
+                                    </p>
+                                    <p class="form-input ">
+                                        <input type="text" placeholder="City" class="form-control theme-input"
+                                            placeholder="House number &amp; Street name">
+                                    </p>
+                                    <p class="form-input  ">
+                                        <input type="text" placeholder="Zip code" class="form-control theme-input"
+                                            placeholder="House number &amp; Street name">
+                                    </p>
+                                    <a href="#" class="btn-primary w-100 d-inline text-center py-3 d-block">
+                                        update
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                         <p class="d-flex justify-content-between ">
                             <span class="fw-bold"> Total</span>
@@ -106,7 +130,10 @@
                     </div>
                 </div>
             @else
-            <h1>Your cart is currently empty.</h1>
+            <div class="alert alert-secondary d-flex align-items-center">
+                <iconify-icon icon="bi:bell" class="me-2 txt-primary fs-4"></iconify-icon>
+                <span class="txt-dark">"Your cart is currently empty."</span>
+            </div>
             @endif
         </div>
     </div>
