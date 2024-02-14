@@ -191,7 +191,7 @@
                         <div class="card-body">
                         
                             @if (isset($data->header_logo))
-                            <img src="{{asset('images/company/'.$data->header_logo)}}" alt="">
+                            <img src="{{asset('images/company/'.$data->header_logo)}}" alt="" style="width: 230px">
                             @endif
                             
                         </div>
@@ -216,7 +216,7 @@
                         <!-- /.card-header -->
                         <div class="card-body">
                             @if (isset($data->footer_logo))
-                            <img src="{{asset('images/company/'.$data->footer_logo)}}" alt="">
+                            <img src="{{asset('images/company/'.$data->footer_logo)}}" alt="" style="width: 230px">
                             @endif
                             
                         </div>
@@ -241,7 +241,7 @@
                         <!-- /.card-header -->
                         <div class="card-body">
                             @if (isset($data->logo))
-                            <img src="{{asset('images/company/'.$data->logo)}}" alt="">
+                            <img src="{{asset('images/company/'.$data->logo)}}" alt="" style="width: 230px">
                             @endif
                             
                         </div>
