@@ -40,15 +40,24 @@
                                         </a>
                                         <span class="d-block text-normal mt-2">₹{{ $details['pack_price_per_unit'] }}</span>
                                     </td>
+                                    
+                                    {{-- hidden items  --}}
+                                    <input type="hidden" name="product_id" id="product_id{{ $id }}" value="{{ $details['pid'] }}">
+                                    <input type="hidden" name="pack_id" id="pack_id{{ $id }}" value="{{ $id }}">
+                                    <input type="hidden" name="pack_price_per_unit" id="pack_price_per_unit{{ $id }}" value="{{ $details['pack_price_per_unit'] }}">
+                                    <input type="hidden" name="qty" id="qty{{ $id }}" value="{{ $details['quantity'] }}">
+                                    <input type="hidden" name="pack_price" id="pack_price{{ $id }}" value="{{ $details['pack_price'] }}">
+                                    {{-- hidden items  --}}
+
                                     <td class="p-3">
                                         <div class="counter p-1">
-                                            <div class="count">-</div>
-                                            <div class="count-val  ">{{ $details['quantity'] }}</div>
-                                            <div class="count">+</div>
+                                            <div class="count minus">-</div>
+                                            <div class="count-val  " id="qtyshow{{ $id }}">{{ $details['quantity'] }}</div>
+                                            <div class="count add">+</div>
                                         </div>
                                     </td>
                                     <td class="p-3">
-                                        <span class="d-block text-normal mt-2">₹{{ $details['pack_price'] }}</span>
+                                        <span class="d-block text-normal mt-2">₹<span id="priceShow{{ $id }}">{{ $details['pack_price'] }}</span> </span>
                                     </td>
                                     <td class="p-3"> 
                                         <iconify-icon class="text-dark hover-red fs-6 cart_remove" icon="tabler:trash-filled" width="1.2em" height="1.2em"></iconify-icon>
@@ -85,7 +94,8 @@
                         <h6 class="statliches mb-3">Cart totals</h6>
                         <div class="d-flex justify-content-between dashed-border-bottom pb-3">
                             <span class="fw-bold"> Subtotal</span>
-                            <span>₹@if (session('tamnt')) {{ session('tamnt') }} @endif</span>
+                            <span id="subtotalShow">₹@if (session('tamnt')) {{ session('tamnt') }} @endif</span>
+                            <input type="hidden" id="subtotal" name="subtotal" value="@if(session('tamnt')){{ session('tamnt') }}@endif">
                         </div>
                         <div class="d-flex justify-content-between noto-sans dashed-border-bottom pb-3 mb-3">
                             <div class=" "> Shipping </div>
@@ -103,7 +113,14 @@
                                     </p>
                                     <p class="form-input ">
                                         <select name="state" id="state" class="form-control theme-input">
-                                            <option value="Maharashtra">Maharashtra</option>
+                                            <option value="">State</option>
+                                            <option value="Karnataka">Karnataka</option>
+                                            <option value="Punjab">Punjab</option>
+                                            <option value="Delhi">Delhi</option>
+                                            <option value="Madhaya">Madhaya</option>
+                                            <option value="Pradesh">Pradesh</option>
+                                            <option value="West Bengal">West Bengal</option>
+                                            <option value="Assam">Assam</option>
                                         </select>
                                     </p>
                                     <p class="form-input ">
@@ -120,7 +137,7 @@
                         </div>
                         <p class="d-flex justify-content-between ">
                             <span class="fw-bold"> Total</span>
-                            <span class="fw-bold">₹@if (session('tamnt')) {{ session('tamnt') }} @endif </span>
+                            <span class="fw-bold" id="totalShow">₹@if (session('tamnt')) {{ session('tamnt') }} @endif </span>
                         </p>
                         <a href="{{route('checkout')}}" class="btn-primary w-100 d-inline text-center py-3 d-block">
                             Proceed to checkout
@@ -149,47 +166,71 @@
     $(function()
         {
             // parent increase function start
-            $(".add").click(function()
+            $(".add").click(function(e)
             {
-                var currentVal = parseInt($("#qty").val());
-                var unitprice = $("#pack_price_per_unit").val();
+                e.preventDefault();
+                var ele = $(this);
+                var packid = ele.parents("tr").attr("data-id");
+                // console.log(pid);
+                var currentVal = parseInt($("#qty"+packid).val());
+                var unitprice = $("#pack_price_per_unit"+packid).val();
+
                 
+                var subtotal = parseInt($("#subtotal").val());
+                var subcal = subtotal + parseInt(unitprice);
                 var priceperunit = (currentVal+1)*unitprice;
                 var amt = parseFloat(priceperunit);
-                
+                console.log(subcal);
                 
                 if (currentVal != NaN)
                 {
-                    $("#qty").val(currentVal + 1);
-                    $("#qtyshow").html(currentVal + 1);
-                    $("#priceShow").html(amt);
-                    $("#pack_price").val(amt.toFixed(2));
+                    $("#qty"+packid).val(currentVal + 1);
+                    $("#qtyshow"+packid).html(currentVal + 1);
+                    $("#priceShow"+packid).html(amt);
+                    $("#pack_price"+packid).val(amt.toFixed(2));
+                    
+                    $("#subtotalShow").html("₹"+subcal);
+                    $("#totalShow").html("₹"+subcal);
+                    $("#subtotal").val(subcal);
                 }
             });
             // parent increase function end
 
             // parent decrease function start
-            $(".minus").click(function()
+
+            $(".minus").click(function(e)
             {
-                var currentVal = parseInt($("#qty").val());
-                var unitprice = $("#pack_price_per_unit").val();
+                e.preventDefault();
+                var ele = $(this);
+                var packid = ele.parents("tr").attr("data-id");
+                // console.log(pid);
+                var currentVal = parseInt($("#qty"+packid).val());
+                var unitprice = $("#pack_price_per_unit"+packid).val();
 
                 if (currentVal < 2) {
                     var currentVal = 2;
                 }
-                
+
                 var priceperunit = (currentVal-1)*unitprice;
                 var amt = parseFloat(priceperunit);
-                
+                if (currentVal > 1) {
+                var subtotal = parseInt($("#subtotal").val());
+                var subcal = subtotal - unitprice;
+                }
                 
                 if (currentVal != NaN)
                 {
-                    $("#qty").val(currentVal - 1);
-                    $("#qtyshow").html(currentVal - 1);
-                    $("#priceShow").html(amt);
-                    $("#pack_price").val(amt.toFixed(2));
+                    $("#qty"+packid).val(currentVal - 1);
+                    $("#qtyshow"+packid).html(currentVal - 1);
+                    $("#priceShow"+packid).html(amt);
+                    $("#pack_price"+packid).val(amt.toFixed(2));
+                    $("#subtotalShow").html("₹"+subcal);
+                    $("#totalShow").html("₹"+subcal);
+                    $("#subtotal").val(subcal);
                 }
             });
+
+
             // parent decrease function end
         });
 </script>
