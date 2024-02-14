@@ -25,99 +25,95 @@ style="background-image: url('{{ asset('product/occasion.jpg')}}');">
 </section>
 
 <section class="py-5">
-<div class="container">
-    <div class="row py-5">
-        <div class="col-lg-4">
-            <h1 class="statliches mb-4">Delicious for Every <br> Parties</h1>
-        </div>
-        <div class="col-lg-4">
-            <p class="sub-title " style="max-width:90%;">
-                Litt non-alcoholic mixers were born for the very purpose of bringing the Revolution in the home
-                parties. To provide a quick, simple & easy way to make drinks for anyone who has never made any
-                mixer drinks before.
-            </p>
-        </div>
-        <div class="col-lg-4">
-            <p class="sub-title " style="max-width:90%;">
-                Litt non-alcoholic mixers were born for the very purpose of bringing the Revolution in the home
-                parties. To provide a quick, simple & easy way to make drinks for anyone who has never made any
-                mixer drinks before.
-            </p>
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-lg-4">
+                <h1 class="statliches mb-4">Delicious for Every <br> Parties</h1>
+            </div>
+            <div class="col-lg-4">
+                <p class="sub-title " style="max-width:90%;">
+                    Litt non-alcoholic mixers were born for the very purpose of bringing the Revolution in the home
+                    parties. To provide a quick, simple & easy way to make drinks for anyone who has never made any
+                    mixer drinks before.
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <p class="sub-title " style="max-width:90%;">
+                    Litt non-alcoholic mixers were born for the very purpose of bringing the Revolution in the home
+                    parties. To provide a quick, simple & easy way to make drinks for anyone who has never made any
+                    mixer drinks before.
+                </p>
+            </div>
         </div>
     </div>
-</div>
 </section>
-<section class=" contact">
-<div class="container">
-    <div class="row gx-4">
-        <div class="col-lg-4">
-            <div class="contact-block py-5">
-                <iconify-icon icon="ph:map-pin-light" width="1.2em" height="1.2em"></iconify-icon>
 
-                <h3 class="statliches">Corporate <br>
-                    Event
-                </h3>
-                <p class="sub-title">
-                    You need to act sober but enjoy the splendid variety of Litt non-alcoholic mixers. This
-                    finely crafted mix will ensure that you are on top of your game.
-                </p>
-                <a class="btn-primary mt-4 text-white d-inline-flex align-items-center" aria-current="page"
-                    href="#">
-                    Get Started
-                </a>
+
+<section class=" contact">
+    <div class="container">
+        <div class="row gx-4">
+            <div class="col-lg-4">
+                <div class="contact-block py-5">
+                    <iconify-icon icon="ph:map-pin-light" width="1.2em" height="1.2em"></iconify-icon>
+
+                    <h3 class="statliches">Corporate <br>
+                        Event
+                    </h3>
+                    <p class="sub-title">
+                        You need to act sober but enjoy the splendid variety of Litt non-alcoholic mixers. This
+                        finely crafted mix will ensure that you are on top of your game.
+                    </p>
+                    <a class="btn-primary mt-4 text-white d-inline-flex align-items-center" aria-current="page"
+                        href="#">
+                        Get Started
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="contact-block py-5">
-                <iconify-icon icon="la:ring" width="1.2em" height="1.2em"></iconify-icon>
-                <h3 class="statliches">Wedding <br>
-                    Reception</h3>
-                <p class="sub-title">
-                    This is a perfect time for celebration. With exciting non-alcoholic mixes from Litt, you can
-                    be sure that everybody is in high spirits during the joyous moments.
-                </p>
-                <a class="btn-primary mt-4 text-white d-inline-flex align-items-center" aria-current="page"
-                    href="#">
-                    Get Started
-                </a>
+            <div class="col-lg-4">
+                <div class="contact-block py-5">
+                    <iconify-icon icon="la:ring" width="1.2em" height="1.2em"></iconify-icon>
+                    <h3 class="statliches">Wedding <br>
+                        Reception</h3>
+                    <p class="sub-title">
+                        This is a perfect time for celebration. With exciting non-alcoholic mixes from Litt, you can
+                        be sure that everybody is in high spirits during the joyous moments.
+                    </p>
+                    <a class="btn-primary mt-4 text-white d-inline-flex align-items-center" aria-current="page"
+                        href="#">
+                        Get Started
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="contact-block py-5">
-                <iconify-icon icon="fluent-mdl2:blowing-snow" width="1.2em" height="1.2em"></iconify-icon>
-                <h3 class="statliches">Birthday<br>
-                    Party
-                </h3>
-                <p class="sub-title">
-                    Birthday parties are always special and Litt non-alcoholic mixers will ensure that the
-                    atmosphere is charged with excitement and high-spirited conversation.
-                </p>
-                <a class="btn-primary mt-4 text-white d-inline-flex align-items-center" aria-current="page"
-                    href="#">
-                    Get Started
-                </a>
+            <div class="col-lg-4">
+                <div class="contact-block py-5">
+                    <iconify-icon icon="fluent-mdl2:blowing-snow" width="1.2em" height="1.2em"></iconify-icon>
+                    <h3 class="statliches">Birthday<br>
+                        Party
+                    </h3>
+                    <p class="sub-title">
+                        Birthday parties are always special and Litt non-alcoholic mixers will ensure that the
+                        atmosphere is charged with excitement and high-spirited conversation.
+                    </p>
+                    <a class="btn-primary mt-4 text-white d-inline-flex align-items-center" aria-current="page"
+                        href="#">
+                        Get Started
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </section>
 
 
 <section class="py-5 bg-dark">
 <div class="container">
     <div class="row py-5">
-        <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <img src="./images/Bluelagoon-Litt-Cocktail-Mixer-Mumbai-India.png" class="img-fluid w-75" alt="">
+        @foreach (\App\Models\Product::select('id','big_image')->get() as $product)
+        <div class="col-lg-4 d-flex align-items-center justify-content-center">
+            <img src="{{ asset('images/product/'.$product->big_image)}}" class="img-fluid w-75" alt="">
         </div>
-        <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <img src="./images/Bluelagoon-Litt-Cocktail-Mixer-Mumbai-India.png" class="img-fluid w-75" alt="">
-        </div>
-        <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <img src="./images/Bluelagoon-Litt-Cocktail-Mixer-Mumbai-India.png" class="img-fluid w-75" alt="">
-        </div>
-        <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <img src="./images/Bluelagoon-Litt-Cocktail-Mixer-Mumbai-India.png" class="img-fluid w-75" alt="">
-        </div>
+        @endforeach
+        
 
     </div>
 </div>
@@ -128,20 +124,13 @@ style="background-image: url('{{ asset('product/occasion.jpg')}}');">
     <div class="row py-5">
         <div class="col-lg-6  ">
             <div class="testimonial my-5">
-                <div class="p-3 d-flex justify-content-center align-items-center">
-                    <img src="./images/product-slider/Litt-Cocktail-Mixers-Online-Buy-Mumbai-India-1.png"
-                        class="img-fluid w-75">
-                </div>
-                <div class="p-3 d-flex justify-content-center align-items-center">
-                    <img src="./images/product-slider/Litt-Cocktail-Mixers-Online-Buy-Mumbai-India-2.png"
-                        class="img-fluid w-75">
-                </div>
-                <div class="p-3 d-flex justify-content-center align-items-center">
-                    <img src="./images/product-slider/Litt-Cocktail-Mixers-Online-Buy-Mumbai-India-3.png"
-                        class="img-fluid w-75">
-                </div>
 
-
+                @foreach (\App\Models\Product::select('id','big_image')->get() as $product)
+                <div class="p-3 d-flex justify-content-center align-items-center">
+                    <img src="{{ asset('images/product/'.$product->big_image)}}" class="img-fluid w-75">
+                </div>
+                @endforeach
+                
             </div>
         </div>
         <div class="col-lg-6  d-flex align-items-center">
@@ -194,4 +183,60 @@ style="background-image: url('{{ asset('product/occasion.jpg')}}');">
 
 @endsection
 @section('script')
+
+<script>
+    $(document).ready(function () {
+
+        $('.testimonial').slick({
+            centerMode: true,
+            centerPadding: '0px',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            draggable: true,
+            swipeToSlide: true,
+            arrows: false,
+            dots: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: true,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        centerMode: true,
+                        centerPadding: '0px',
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+            ]
+        });
+    });
+
+</script>
 @endsection

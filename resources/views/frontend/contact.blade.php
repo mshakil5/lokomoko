@@ -69,10 +69,7 @@ background-position: center;">
         <div class="row">
             <div class="col-lg-12 text-center ">
                 <div class="section-title text-center">
-                    Share Your Queries &Feedback
-                </div>
-                <div class="sub-title text-center mx-auto mb-5 ">
-                    You’re not going to hit a ridiculously long phone menu when you call us. Your email isn’t going to the inbox storage, never to be seen or heard from again. We try to provide the exceptional service.
+                    Share Your Queries & Feedback
                 </div>
             </div>
 
