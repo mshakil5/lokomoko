@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\CompanyDetailController;
+use App\Http\Controllers\Admin\OrderController;
 
 
 /*------------------------------------------
@@ -76,6 +77,12 @@ Route::group(['prefix' =>'admin/', 'middleware' => ['auth', 'is_admin']], functi
     // company information
     Route::get('/company-detail', [CompanyDetailController::class, 'index'])->name('admin.companyDetail');
     Route::post('/company-detail', [CompanyDetailController::class, 'update'])->name('admin.companyDetails');
+
+
+    
+    // order
+    Route::get('/order', [OrderController::class, 'getAllOrder'])->name('admin.order');
+    Route::get('/order/{id}', [OrderController::class, 'getOrderDetails'])->name('admin.orderDeatils');
     
 });
   

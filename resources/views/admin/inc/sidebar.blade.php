@@ -87,6 +87,15 @@
           </p>
         </a>
       </li>
+
+      <li class="nav-item">
+        <a href="{{route('admin.order')}}" class="nav-link {{ (request()->is('admin/order*')) ? 'active' : '' }}">
+          <i class="nav-icon fas fa-th"></i>
+          <p>
+            Orders
+          </p>
+        </a>
+      </li>
       
       
       
