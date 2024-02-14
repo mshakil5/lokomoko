@@ -38,6 +38,18 @@ class FrontendController extends Controller
         
     }
 
+    public function privacy()
+    {
+        return view('frontend.privacy');
+        
+    }
+
+    public function terms()
+    {
+        return view('frontend.terms');
+        
+    }
+
     public function productDetails($slug)
     {
         $product = Product::with('pack')->where('slug', $slug)->first();

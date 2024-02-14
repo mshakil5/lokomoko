@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderController;
   
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +42,8 @@ Route::get('/shop', [FrontendController::class, 'shop'])->name('shop');
 Route::get('/occasions', [FrontendController::class, 'occasions'])->name('occasions');
 Route::get('/product/{slug}', [FrontendController::class, 'productDetails'])->name('productDetails');
   
+Route::get('/privacy', [FrontendController::class, 'privacy'])->name('privacy');
+Route::get('/terms', [FrontendController::class, 'terms'])->name('terms');
 
 
 Route::post('/get-product-price', [ProductController::class, 'getPackDetails']);
@@ -54,6 +57,9 @@ Route::patch('update-cart', [CartController::class, 'update'])->name('update_car
 Route::delete('remove-from-cart', [CartController::class, 'remove'])->name('remove_from_cart');
 
 
+Route::post('/order-store', [OrderController::class, 'orderStore'])->name('order.store');
+
+Route::get('/order-confirmation/{id}', [OrderController::class, 'orderConfirmation'])->name('confirmorder');
 
 /*------------------------------------------
 --------------------------------------------
