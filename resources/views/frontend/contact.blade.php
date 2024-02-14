@@ -32,8 +32,8 @@
                 <div class="contact-block py-5">
                     <iconify-icon icon="ph:map-pin-light" width="1.2em" height="1.2em"></iconify-icon>
 
-                    <h3 class="statliches">Email
-                        <br> Address
+                    <h3 class="statliches">
+                        Address
                     </h3>
                     <p class="sub-title">
                         {{$companydetails->address1}}
@@ -43,8 +43,8 @@
             <div class="col-lg-4">
                 <div class="contact-block py-5">
                     <iconify-icon icon="fontisto:email" width="1.2em" height="1.2em"></iconify-icon>
-                    <h3 class="statliches">Contact <br>
-                        Number</h3>
+                    <h3 class="statliches"> 
+                        Email</h3>
                     <p class="sub-title">
                         {{$companydetails->email1}}
                     </p>
@@ -54,7 +54,7 @@
                 <div class="contact-block py-5">
                     <iconify-icon icon="carbon:phone-filled" width="1.2em" height="1.2em"></iconify-icon>
                     <h3 class="statliches">Contact <br>
-                        Details</h3>
+                        Number</h3>
                     <p class="sub-title">
                         {{$companydetails->phone1}}
                     </p>

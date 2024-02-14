@@ -10,9 +10,9 @@
     <meta name="google-site-verification" content="b3JBEB_Tp6NzGBZBo-wCS3L3RNdS1WNSiqZdCdt0gDw" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta property='og:title' content="Ashiqul Islam Emu Portfolio" />
-    <meta property='og:image' content='./images/ashiqulemu-vue-emu-js.jpg' />
-    <meta property='og:description' content='Ashiqul Islam Emu, frontend developer Jashore' />
+    <meta property='og:title' content="Lokomoko mocktails" />
+    <meta property='og:image' content='{{ asset('product/favicon.png')}}' />
+    <meta property='og:description' content='The Lokomoko mocktails' />
     <meta property='og:url' content='ashiqulemu.netlify.app' />
     <meta property='og:image:width' content='1200' />
     <meta property='og:image:height' content='627' />
