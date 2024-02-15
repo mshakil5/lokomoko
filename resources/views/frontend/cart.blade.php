@@ -100,8 +100,8 @@
                         <div class="d-flex justify-content-between noto-sans dashed-border-bottom pb-3 mb-3">
                             <div class=" "> Shipping </div>
                             <div class="text-end lh-lg ">
-                                Free Shipping <br>
-                                Shipping to <span class="fw-bold">Maharashtra</span> <br>
+                                Free Shipping <br>@if (session('country')) Shipping to <span class="fw-bold">{{ session('town') }} {{ session('state') }}-{{ session('postcode') }}, {{ session('country') }} </span>  @endif
+                                 <br>
                                 <a class="link" data-bs-toggle="collapse" href="#changeAddress" role="button" aria-expanded="false" aria-controls="changeAddress">Change address</a>
 
                                 <div class="collapse" id="changeAddress">
@@ -114,22 +114,22 @@
                                     <p class="form-input ">
                                         <select name="state" id="state" class="form-control theme-input">
                                             <option value="">State</option>
-                                            <option value="Karnataka">Karnataka</option>
-                                            <option value="Punjab">Punjab</option>
-                                            <option value="Delhi">Delhi</option>
-                                            <option value="Madhaya">Madhaya</option>
-                                            <option value="Pradesh">Pradesh</option>
-                                            <option value="West Bengal">West Bengal</option>
-                                            <option value="Assam">Assam</option>
+                                            <option @if (session('state')) @if (session('state') == "Karnataka") selected @endif @endif value="Karnataka">Karnataka</option>
+                                            <option @if (session('state')) @if (session('state') == "Punjab") selected @endif @endif value="Punjab">Punjab</option>
+                                            <option @if (session('state')) @if (session('state') == "Delhi") selected @endif @endif value="Delhi">Delhi</option>
+                                            <option @if (session('state')) @if (session('state') == "Madhaya") selected @endif @endif value="Madhaya">Madhaya</option>
+                                            <option @if (session('state')) @if (session('state') == "Pradesh") selected @endif @endif value="Pradesh">Pradesh</option>
+                                            <option @if (session('state')) @if (session('state') == "West Bengal") selected @endif @endif value="West Bengal">West Bengal</option>
+                                            <option @if (session('state')) @if (session('state') == "Assam") selected @endif @endif value="Assam">Assam</option>
                                         </select>
                                     </p>
                                     <p class="form-input ">
-                                        <input type="text" id="city" name="city" placeholder="City" class="form-control theme-input" placeholder="House number &amp; Street name">
+                                        <input type="text" id="town" name="town" placeholder="City" class="form-control theme-input" placeholder="Town &amp; City name" value="@if (session('town')) {{ session('town') }} @endif">
                                     </p>
                                     <p class="form-input  ">
-                                        <input type="text" placeholder="Zip code" class="form-control theme-input" placeholder="House number &amp; Street name">
+                                        <input type="text" id="postcode" placeholder="Zip code" class="form-control theme-input" placeholder="House number &amp; Street name" value="@if (session('postcode')) {{ session('postcode') }} @endif">
                                     </p>
-                                    <button type="button" class="btn-primary w-100 d-inline text-center py-3 d-block">
+                                    <button type="button" class="btn-primary w-100 d-inline text-center py-3 d-block" id="shippingAddress">
                                         update
                                     </button>
                                 </div>
@@ -174,8 +174,6 @@
                 // console.log(pid);
                 var currentVal = parseInt($("#qty"+packid).val());
                 var unitprice = $("#pack_price_per_unit"+packid).val();
-
-                
                 var subtotal = parseInt($("#subtotal").val());
                 var subcal = subtotal + parseInt(unitprice);
                 var priceperunit = (currentVal+1)*unitprice;
@@ -193,6 +191,24 @@
                     $("#totalShow").html("₹"+subcal);
                     $("#subtotal").val(subcal);
                 }
+
+                $.ajax({
+                    url: '{{ route('add_item_cart') }}',
+                    method: "patch",
+                    data: {
+                        _token: '{{ csrf_token() }}', 
+                        id: ele.parents("tr").attr("data-id"), 
+                        quantity: currentVal + 1,
+                        unitprice: unitprice,
+                        pack_price: amt
+                    },
+                    success: function (response) {
+                        console.log(response);
+                    }
+                });
+
+
+
             });
             // parent increase function end
 
@@ -228,11 +244,58 @@
                     $("#totalShow").html("₹"+subcal);
                     $("#subtotal").val(subcal);
                 }
+
+                $.ajax({
+                    url: '{{ route('minus_item_cart') }}',
+                    method: "patch",
+                    data: {
+                        _token: '{{ csrf_token() }}', 
+                        id: ele.parents("tr").attr("data-id"), 
+                        quantity: currentVal - 1,
+                        unitprice: unitprice,
+                        pack_price: amt
+                    },
+                    success: function (response) {
+                        console.log(response);
+                    }
+                });
+            });
+            // parent decrease function end
+
+
+            $("#shippingAddress").click(function()
+            {
+                var country = $("#country").val();
+                var state = $("#state").val();
+                var town = $("#town").val();
+                var postcode = $("#postcode").val();
+                
+                // console.log(state);
+                
+
+                $.ajax({
+                    url: '{{ route('shippingAddress') }}',
+                    method: "patch",
+                    data: {
+                        _token: '{{ csrf_token() }}', 
+                        country: country,
+                        state: state,
+                        town: town,
+                        postcode: postcode
+                    },
+                    success: function (response) {
+                        window.location.reload();
+                    }
+                });
             });
 
 
-            // parent decrease function end
+
+
         });
+
+        
+        
 </script>
 
 @endsection

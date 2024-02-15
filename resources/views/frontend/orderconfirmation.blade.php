@@ -13,10 +13,12 @@
 
     .table > tbody > tr > .no-line {
         border-top: none;
+        border-bottom: none;
     }
 
     .table > thead > tr > .no-line {
         border-bottom: none;
+        border-top: none;
     }
 
     .table > tbody > tr > .thick-line {
@@ -39,38 +41,40 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="invoice-title">
-                                <h2>Invoice</h2><h3 class="pull-right">Order #{{$data->invoiceno}}</h3>
+                                <h2>Invoice</h2> <h3 class="pull-right">Order #{{$data->invoiceno}}</h3>
+                                
                             </div>
                             <hr>
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    <address>
-                                    <strong>Billed To:</strong><br>
-                                        {{$data->name}}<br>
-                                        {{$data->house}} {{$data->street}} {{$data->city}} {{$data->postcode}}<br>
-                                    </address>
-                                </div>
-                                <div class="col-xs-6 text-right">
-                                    <address>
-                                        <strong>Contact Info:</strong><br>
-                                            Mail:   {{$data->email}}<br>
-                                            Mobile:   {{$data->phone}}<br>
-                                    </address>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    <address>
-                                        <strong>Payment Method:</strong><br>
-                                        {{$data->payment_type}}<br>
-                                    </address>
-                                </div>
-                                <div class="col-xs-6 text-right">
-                                    <address>
-                                        <strong>Order Date:</strong><br>
-                                        {{$data->date}}<br>
-                                    </address>
-                                </div>
+                            
+
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tbody>
+        
+                                        <tr>
+                                            <td class="no-line text-left">Bill To:</td>
+                                            <td class="no-line text-left" style="width: 33%">{{$data->name}}<br>
+                                                {{$data->house}} 
+                                                {{$data->street}}
+                                                {{$data->city}}
+                                                {{$data->postcode}}
+                                            </td>
+                                            <td class="no-line text-left" style="width: 20%"></td>
+                                            <td class="no-line text-left">Payment Method:</td>
+                                            <td class="no-line text-left" style="width: 13%">{{$data->payment_type}}</td>
+                                        </tr>
+        
+                                        <tr>
+                                            <td class="no-line text-left">Contact Mail: <br> Mobile:</td>
+                                            <td class="no-line text-left" style="width: 33%">{{$data->email}}<br>{{$data->phone}}</td>
+                                            
+                                            <td class="no-line text-left"></td>
+                                            <td class="no-line text-left">Order Date:</td>
+                                            <td class="no-line text-left" style="width: 13%">{{$data->date}}</td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
                             </div>
                 
                 
@@ -139,6 +143,7 @@
                                         </table>
                                     </div>
                                 </div>
+                                <a class="pull-right btn-primary my-1 fw-bold d-block text-center" href="{{route('download', $data->id)}}">Download</a>
                             </div>
                         </div>
                     </div>

@@ -54,7 +54,13 @@ Route::get('/checkout', [CartController::class, 'getCheckout'])->name('checkout'
 
 
 Route::patch('update-cart', [CartController::class, 'update'])->name('update_cart');
+Route::patch('add-item-cart', [CartController::class, 'add_item_cart'])->name('add_item_cart');
+Route::patch('minus-item-cart', [CartController::class, 'minus_item_cart'])->name('minus_item_cart');
+Route::patch('add-shipping-address', [CartController::class, 'shippingAddress'])->name('shippingAddress');
 Route::delete('remove-from-cart', [CartController::class, 'remove'])->name('remove_from_cart');
+
+
+Route::get('/download/{id}', [OrderController::class, 'invoice_download'])->name('download');
 
 
 Route::post('/order-store', [OrderController::class, 'orderStore'])->name('order.store');

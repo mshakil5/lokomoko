@@ -9,6 +9,7 @@ use App\Models\OrderAddress;
 use App\Models\OrderDetail;
 use Illuminate\Http\Request;
 use Mail;
+use PDF;
 
 class OrderController extends Controller
 {
@@ -16,6 +17,15 @@ class OrderController extends Controller
     {
         
         dd($request->all());
+        
+    }
+
+    public function invoice_download($id)
+    {
+        $data = Order::with('orderdetail')->where('id',$id)->first();
+        $orderdetails = OrderDetail::where('order_id',$id)->get();
+        $pdf = PDF::loadView('invoices.invoice', compact('data','orderdetails'));
+        return $pdf->download('invoice-'.$data->invoiceno.'.pdf');
         
     }
 
