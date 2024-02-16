@@ -63,6 +63,7 @@
         </div>
     </div>
 </section>
+
 <section class="quick-menu default d-flex align-items-center" style="background-image: url(./images/reservation-background.webp);background-size: 148% 125%;
 background-position: center;">
     <div class="container">
@@ -117,18 +118,16 @@ background-position: center;">
                 <div class="sub-title text-white text-center mx-auto mb-5">
                     Find your perfect party drink! Our non-alcoholic sparkling mixers come in four delicious
                     flavors, so
-                    you can find the perfect drink for any party. Whether you’re looking for something sweet, sour,
-                    or
-                    even a little bit spicy, we have a mixer that will suit your taste.
+                    you can find the perfect drink for any party.
                 </div>
-                <a href="" width="160px" class="btn-primary text-white d-inline-flex align-items-center">Explore
+                <a href="{{route('shop')}}" width="160px" class="btn-primary text-white d-inline-flex align-items-center">Explore
                     colection
                     <iconify-icon icon="bi:arrow-right" class="ms-2" width="1.2em" height="1.2em"></iconify-icon>
                 </a>
             </div>
         </div>
     </div>
-</section>
+    </section>
 
 
 

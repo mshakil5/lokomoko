@@ -26,8 +26,8 @@ style="background-image: url('{{ asset('product/about.jpg')}}');">
 
 <section class="py-5">
 <div class="container">
-    <div class="row">
-        <div class="col-lg-12">
+    <div class="row justify-content-md-center">
+        <div class="col-lg-8">
             <h1 class="statliches mb-4">About Us</h1>
             <h5 class="statliches mb-4">A BRIGHT IDEA TAKES PLACE</h5>
 
@@ -35,10 +35,10 @@ style="background-image: url('{{ asset('product/about.jpg')}}');">
                 What do you get when you mix a foodie and a techie?
                 A truly Litt entrepreneur!
             </p>
-            <p class="sub-title " style="max-width:90%;">
-                Meet Founder, Chairman & Managing Director Ravi Katwa, a New York Institute of Technology alumni
+            <p class="sub-title text-justify" style="max-width:90%;">
+                Meet Founder, Chairman & Managing Director x, a New York Institute of Technology alumni
                 and the brainchild behind Litt Non-alcoholic Sparkling Mixers. Apart from bringing a portable
-                lounge experience, Ravi Katwa wants to bring some real excitement to both drinking &
+                lounge experience, x wants to bring some real excitement to both drinking &
                 non-drinking people across India.
             </p>
             <p class="sub-title " style="max-width:90%;">
@@ -46,10 +46,7 @@ style="background-image: url('{{ asset('product/about.jpg')}}');">
                 subsidiary company of Katwa Group who has businesses in Cement, Construction, and Real Estate
                 for the last 3 decades.
             </p>
-            <a class="btn-primary mt-4 text-white d-inline-flex align-items-center" aria-current="page"
-                href="#">
-                Explore Product
-            </a>
+            
         </div>
     </div>
 </div>

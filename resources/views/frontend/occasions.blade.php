@@ -60,13 +60,8 @@ style="background-image: url('{{ asset('product/occasion.jpg')}}');">
                         Event
                     </h3>
                     <p class="sub-title">
-                        You need to act sober but enjoy the splendid variety of Litt non-alcoholic mixers. This
-                        finely crafted mix will ensure that you are on top of your game.
+                        Introducing Lokomoko Mocktails at corporate events fosters inclusivity and responsible enjoyment, catering to attendees who prefer non-alcoholic options or abstain from drinking.
                     </p>
-                    <a class="btn-primary mt-4 text-white d-inline-flex align-items-center" aria-current="page"
-                        href="#">
-                        Get Started
-                    </a>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -75,13 +70,9 @@ style="background-image: url('{{ asset('product/occasion.jpg')}}');">
                     <h3 class="statliches">Wedding <br>
                         Reception</h3>
                     <p class="sub-title">
-                        This is a perfect time for celebration. With exciting non-alcoholic mixes from Litt, you can
-                        be sure that everybody is in high spirits during the joyous moments.
+                        Incorporating Lokomoko Mocktails into wedding receptions offers a refined alternative to traditional alcoholic beverages, ensuring all guests, including non-drinkers and designated drivers, can partake in the celebration.
                     </p>
-                    <a class="btn-primary mt-4 text-white d-inline-flex align-items-center" aria-current="page"
-                        href="#">
-                        Get Started
-                    </a>
+                    
                 </div>
             </div>
             <div class="col-lg-4">
@@ -91,13 +82,9 @@ style="background-image: url('{{ asset('product/occasion.jpg')}}');">
                         Party
                     </h3>
                     <p class="sub-title">
-                        Birthday parties are always special and Litt non-alcoholic mixers will ensure that the
-                        atmosphere is charged with excitement and high-spirited conversation.
+                        Lokomoko Mocktails into birthday parties ensures all guests, including children and non-drinkers, can enjoy flavorful beverages without alcohol.
                     </p>
-                    <a class="btn-primary mt-4 text-white d-inline-flex align-items-center" aria-current="page"
-                        href="#">
-                        Get Started
-                    </a>
+                    
                 </div>
             </div>
         </div>
@@ -134,16 +121,15 @@ style="background-image: url('{{ asset('product/occasion.jpg')}}');">
             </div>
         </div>
         <div class="col-lg-6  d-flex align-items-center">
-            <div class="pt-5">
-                <h1 class="statliches display-4">Playful – Exciting – Friendly – Crazy</h1>
+            <div class="pt-5 text-justify">
+                <h1 class="statliches display-4">Let's enjoy with lokomoko.</h1>
                 <p class="sub-title" style="max-width: 100%!important;">
-                    Litt is a ready-to-serve Sparkling, Alcohol-Free non-alcoholic mixer. It is a fun lifestyle
-                    alternative – enjoy at every occasion!
+                    Lokomoko Drinks offers a delightful trio of flavors to suit any palate. Indulge in the crisp and refreshing taste of our Mojito, crafted with a blend of zesty lemon and invigorating mint. Savor the sweetness of summer with our Red Punch, bursting with the juicy flavors of ripe strawberries and succulent red grapes. For a taste of the tropics, dive into our Blue Ocean, featuring the tantalizing fusion of luscious blueberries and exotic Curacao liqueur. Experience the perfect harmony of flavors with Lokomoko Drinks, where every sip is a journey of delicious discovery.
                 </p>
-                <p class="sub-title" style="max-width: 100%!important;">
+                {{-- <p class="sub-title" style="max-width: 100%!important;">
                     Litt Non-alcoholic Mixers are crafted by India’s award-winning Mixologists who have been
                     passionately making the best-tasting drinks.
-                </p>
+                </p> --}}
 
             </div>
 
@@ -166,11 +152,9 @@ style="background-image: url('{{ asset('product/occasion.jpg')}}');">
             <div class="sub-title text-white text-center mx-auto mb-5">
                 Find your perfect party drink! Our non-alcoholic sparkling mixers come in four delicious
                 flavors, so
-                you can find the perfect drink for any party. Whether you’re looking for something sweet, sour,
-                or
-                even a little bit spicy, we have a mixer that will suit your taste.
+                you can find the perfect drink for any party.
             </div>
-            <a href="" width="160px" class="btn-primary text-white d-inline-flex align-items-center">Explore
+            <a href="{{route('shop')}}" width="160px" class="btn-primary text-white d-inline-flex align-items-center">Explore
                 colection
                 <iconify-icon icon="bi:arrow-right" class="ms-2" width="1.2em" height="1.2em"></iconify-icon>
             </a>

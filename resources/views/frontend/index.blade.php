@@ -32,14 +32,12 @@
                 Choose Your Flavour
             </div>
             <div class="sub-title text-center mx-auto">
-                Find your perfect party drink! Our non-alcoholic sparkling mixers come in four delicious flavors, so
-                you can find the perfect drink for any party. Whether you’re looking for something sweet, sour, or
-                even a little bit spicy, we have a mixer that will suit your taste.
+                Introducing a trio of tantalizing drink options: Red Punch, Mojito, and Blue Ocean. Each beverage offers a unique flavor experience, catering to diverse preferences and occasions. Whether you crave the fruity sweetness of Red Punch, the refreshing minty kick of Mojito, or the exotic allure of Blue Ocean, there's something for everyone. With their vibrant colors and exquisite tastes, these drinks are sure to elevate any gathering or celebration. Indulge in the deliciousness of our drink selection and embark on a journey of sensory delight with Red Punch, Mojito, and Blue Ocean.
             </div>
         </div>
-        @if ($products->count() > 0)
+        {{-- @if ($products->count() > 0)
         
-        @endif
+        @endif --}}
 
         <div class="row py-5">
 
@@ -67,9 +65,7 @@
                     Mocktails Revolution
                 </div>
                 <div class="sub-title text-center mx-auto mb-5  text-white">
-                    Litt non-alcoholic mixes are crafted by India’s award-winning Mixologists who have been
-                    passionately making the best-tasting mixers. Our non-alcoholic mixers are made with imported
-                    ingredients & natural sugar with fewer calories & Zero artificial Sweeteners.
+                    The mocktail revolution in India has transformed the drinking culture, offering innovative and alcohol-free alternatives for all occasions. With a growing focus on health and wellness, mocktails provide flavorful options that cater to diverse tastes while promoting responsible consumption. From refreshing fruity blends to sophisticated herbal concoctions, mocktails have become a popular choice, sparking a delightful revolution in India's beverage scene.
                 </div>
                 <a href="{{route('about')}}" width='160px' class="btn-default-dark text-white d-inline-flex align-items-center "> Read More
                     <iconify-icon icon="bi:arrow-right" class="ms-2" width="1.2em" height="1.2em"></iconify-icon>
@@ -99,7 +95,7 @@
                         <div class="info left">
                             <div class="text-center">
                                 <h3 class="statliches text-center">Private Party</h3>
-                                <p class="sub-title text-center mx-auto w-75">Who does not like to mix their drinks at a party? Become your own bartender and enjoy the most fascinating moktails mixes by Litt.</p>
+                                <p class="sub-title text-justify mx-auto w-75">Using Lokomoko Mocktails at private parties adds a touch of sophistication and excitement, providing guests with delicious alcohol-free options that cater to various tastes and preferences. </p>
                             </div>
                         </div>
                     </div>
@@ -113,7 +109,7 @@
                         <div class="info right">
                             <div class="text-center">
                                 <h3 class="statliches text-center">Wedding Reception</h3>
-                                <p class="sub-title text-center mx-auto w-75">This is a perfect time for celebration. With exciting non-alcoholic mixes from Litt, you can be sure that everybody is in high spirits during the joyous moments.</p>
+                                <p class="sub-title text-center mx-auto w-75">Incorporating Lokomoko Mocktails into wedding receptions offers a refined alternative to traditional alcoholic beverages, ensuring all guests, including non-drinkers and designated drivers, can partake in the celebration. </p>
                             </div>
                         </div>
                     </div>
@@ -127,7 +123,8 @@
                         <div class="info left">
                             <div class="text-center">
                                 <h3 class="statliches text-center">Corporate Event</h3>
-                                <p class="sub-title text-center mx-auto w-75">You need to act sober but enjoy the splendid variety of Litt non-alcoholic mixers. This finely crafted mix will ensure that you are on top of your game.</p>
+                                <p class="sub-title text-center mx-auto w-75">
+                                    Introducing Lokomoko Mocktails at corporate events fosters inclusivity and responsible enjoyment, catering to attendees who prefer non-alcoholic options or abstain from drinking. </p>
                             </div>
                         </div>
                     </div>
@@ -141,7 +138,7 @@
                         <div class="info right">
                             <div class="text-center">
                                 <h3 class="statliches text-center">Birthday Party</h3>
-                                <p class="sub-title text-center mx-auto w-75">Birthday parties are always special and Litt mixers will ensure that the atmosphere is charged with excitement and high-spirited conversation.</p>
+                                <p class="sub-title text-center mx-auto w-75">Lokomoko Mocktails into birthday parties ensures all guests, including children and non-drinkers, can enjoy flavorful beverages without alcohol.</p>
                             </div>
                         </div>
                     </div>
@@ -325,10 +322,7 @@
                 </div>
                 <div class="sub-title text-white text-center mx-auto mb-5">
                     Find your perfect party drink! Our non-alcoholic sparkling mixers come in four delicious
-                    flavors, so
-                    you can find the perfect drink for any party. Whether you’re looking for something sweet, sour,
-                    or
-                    even a little bit spicy, we have a mixer that will suit your taste.
+                    flavors, so you can find the perfect drink for any party.
                 </div>
                 <a href="{{route('shop')}}" width="160px" class="btn-primary text-white d-inline-flex align-items-center">Explore colection
                     <iconify-icon icon="bi:arrow-right" class="ms-2" width="1.2em" height="1.2em"></iconify-icon>
