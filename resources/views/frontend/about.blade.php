@@ -6,50 +6,48 @@
 
 
 
-<section class="banner d-flex align-items-center"
-style="background-image: url('{{ asset('product/about.jpg')}}');">
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 text-center flex-column d-flex align-items-center justify-content-center">
-            <div class="box text-uppercase fw-bold d-flex align-items-center fs-6">
-                <small><a href="{{route('homepage')}}" class="text-white text-decoration-none  fs-6 hover-primary">Home</a></small>
-                <iconify-icon icon="fluent:chevron-right-24-filled" class="text-white mx-2" width="1.2em"
-                    height="1.2em"></iconify-icon>
-                <small class="text-white fs-6">About</small>
+<section class="banner d-flex align-items-center" style="background-image: url('{{ asset('product/about.jpg')}}');">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center flex-column d-flex align-items-center justify-content-center">
+                <div class="box text-uppercase fw-bold d-flex align-items-center fs-6">
+                    <small><a href="{{route('homepage')}}" class="text-white text-decoration-none  fs-6 hover-primary">Home</a></small>
+                    <iconify-icon icon="fluent:chevron-right-24-filled" class="text-white mx-2" width="1.2em"
+                        height="1.2em"></iconify-icon>
+                    <small class="text-white fs-6">About</small>
+                </div>
+                <h1 class="statliches display-1 text-light">About Us</h1>
             </div>
-            <h1 class="statliches display-1 text-light">About Us</h1>
         </div>
-
     </div>
-</div>
 </section>
 
 <section class="py-5">
-<div class="container">
-    <div class="row justify-content-md-center">
-        <div class="col-lg-8">
-            <h1 class="statliches mb-4">About Us</h1>
-            <h5 class="statliches mb-4">A BRIGHT IDEA TAKES PLACE</h5>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-lg-8">
+                <h1 class="statliches mb-4">About Us</h1>
+                <h5 class="statliches mb-4">A BRIGHT IDEA TAKES PLACE</h5>
 
-            <p class="sub-title " style="max-width:90%;">
-                What do you get when you mix a foodie and a techie?
-                A truly Litt entrepreneur!
-            </p>
-            <p class="sub-title text-justify" style="max-width:90%;">
-                Meet Founder, Chairman & Managing Director x, a New York Institute of Technology alumni
-                and the brainchild behind Litt Non-alcoholic Sparkling Mixers. Apart from bringing a portable
-                lounge experience, x wants to bring some real excitement to both drinking &
-                non-drinking people across India.
-            </p>
-            <p class="sub-title " style="max-width:90%;">
-                Litt is a premium brand of ready-to-serve alcohol-free sparkling non-alcoholic mix. Litt is a
-                subsidiary company of Katwa Group who has businesses in Cement, Construction, and Real Estate
-                for the last 3 decades.
-            </p>
-            
+                <p class="sub-title " style="max-width:90%;">
+                    What do you get when you mix a foodie and a techie?
+                    A truly Litt entrepreneur!
+                </p>
+                <p class="sub-title text-justify" style="max-width:90%;">
+                    Meet Founder, Chairman & Managing Director x, a New York Institute of Technology alumni
+                    and the brainchild behind Litt Non-alcoholic Sparkling Mixers. Apart from bringing a portable
+                    lounge experience, x wants to bring some real excitement to both drinking &
+                    non-drinking people across India.
+                </p>
+                <p class="sub-title " style="max-width:90%;">
+                    Litt is a premium brand of ready-to-serve alcohol-free sparkling non-alcoholic mix. Litt is a
+                    subsidiary company of Katwa Group who has businesses in Cement, Construction, and Real Estate
+                    for the last 3 decades.
+                </p>
+                
+            </div>
         </div>
     </div>
-</div>
 </section>
 
 

@@ -39,16 +39,16 @@
                     Support
                 </h4>
                 <ul>
-                    <li><a href="{{route('homepage')}}" data-type="page" data-id="513">Privacy Policy</a></li>
+                    <li><a href="{{route('privacy')}}" data-type="page" data-id="513">Privacy Policy</a></li>
 
 
 
-                    <li><a href="{{route('homepage')}}" data-type="page" data-id="13">Return Policy </a>
+                    <li><a href="{{route('returnPolicy')}}" data-type="page" data-id="13">Return Policy </a>
                     </li>
 
 
 
-                    <li><a href="{{route('homepage')}}" data-type="page" data-id="514">Shipping
+                    <li><a href="{{route('shippingPolicy')}}" data-type="page" data-id="514">Shipping
                             Policy</a>
                     </li>
 

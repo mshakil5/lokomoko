@@ -67,4 +67,18 @@ class FrontendController extends Controller
 
         return redirect()->back();
     }
+
+    public function return_policy()
+    {
+        return view('frontend.return_policy');
+        
+    }
+
+    public function shipping_policy()
+    {
+        return view('frontend.shipping_policy');
+        
+    }
+
+
 }

@@ -30,16 +30,9 @@ style="background-image: url('{{ asset('product/occasion.jpg')}}');">
             <div class="col-lg-4">
                 <h1 class="statliches mb-4">Delicious for Every <br> Parties</h1>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-8">
                 <p class="sub-title " style="max-width:90%;">
-                    Litt non-alcoholic mixers were born for the very purpose of bringing the Revolution in the home
-                    parties. To provide a quick, simple & easy way to make drinks for anyone who has never made any
-                    mixer drinks before.
-                </p>
-            </div>
-            <div class="col-lg-4">
-                <p class="sub-title " style="max-width:90%;">
-                    Litt non-alcoholic mixers were born for the very purpose of bringing the Revolution in the home
+                    Lokomoko non-alcoholic mixers were born for the very purpose of bringing the Revolution in the home
                     parties. To provide a quick, simple & easy way to make drinks for anyone who has never made any
                     mixer drinks before.
                 </p>
@@ -127,7 +120,7 @@ style="background-image: url('{{ asset('product/occasion.jpg')}}');">
                     Lokomoko Drinks offers a delightful trio of flavors to suit any palate. Indulge in the crisp and refreshing taste of our Mojito, crafted with a blend of zesty lemon and invigorating mint. Savor the sweetness of summer with our Red Punch, bursting with the juicy flavors of ripe strawberries and succulent red grapes. For a taste of the tropics, dive into our Blue Ocean, featuring the tantalizing fusion of luscious blueberries and exotic Curacao liqueur. Experience the perfect harmony of flavors with Lokomoko Drinks, where every sip is a journey of delicious discovery.
                 </p>
                 {{-- <p class="sub-title" style="max-width: 100%!important;">
-                    Litt Non-alcoholic Mixers are crafted by India’s award-winning Mixologists who have been
+                    Lokomoko Non-alcoholic Mixers are crafted by India’s award-winning Mixologists who have been
                     passionately making the best-tasting drinks.
                 </p> --}}
 

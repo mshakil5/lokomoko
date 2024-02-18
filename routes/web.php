@@ -43,6 +43,8 @@ Route::get('/occasions', [FrontendController::class, 'occasions'])->name('occasi
 Route::get('/product/{slug}', [FrontendController::class, 'productDetails'])->name('productDetails');
   
 Route::get('/privacy', [FrontendController::class, 'privacy'])->name('privacy');
+Route::get('/return-policy', [FrontendController::class, 'return_policy'])->name('returnPolicy');
+Route::get('/shipping-policy', [FrontendController::class, 'shipping_policy'])->name('shippingPolicy');
 Route::get('/terms', [FrontendController::class, 'terms'])->name('terms');
 
 
