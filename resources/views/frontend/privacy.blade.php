@@ -29,7 +29,7 @@
 
                 
                 <p class="sub-title text-justify" style="max-width:90%;">
-                    All the services rendered through the website www.thelokomoko.com ( hereafter known as Platform) are provided by Katwa Globe(OPC) Pvt Ltd. This privacy policy (“Policy”) applies to your use of the Platform and all the services that are provided by the name lokomoko mocktails (together, the “Service” or “Services”). The Policy is intended to inform you about how we collect and use information so you can make an informed decision about using the Platform/Services. Please read it carefully before using the Platform/Services or submitting any information to us. If you do not agree to any part of this Policy, then you should stop accessing the Services.
+                    All the services rendered through the website www.thelokomoko.com ( hereafter known as Platform) are provided by Velanka Food And Beverages. This privacy policy (“Policy”) applies to your use of the Platform and all the services that are provided by the name lokomoko mocktails (together, the “Service” or “Services”). The Policy is intended to inform you about how we collect and use information so you can make an informed decision about using the Platform/Services. Please read it carefully before using the Platform/Services or submitting any information to us. If you do not agree to any part of this Policy, then you should stop accessing the Services.
                 </p>
 
 
@@ -166,7 +166,7 @@
                 
                 
                 
-                <p>If you have any questions or comments about this Policy or the practices relating to our Services, or you wish to verify, correct or delete any Personal Information we have collected, please contact us at&nbsp;info@littcocktails.com</p>
+                <p>If you have any questions or comments about this Policy or the practices relating to our Services, or you wish to verify, correct or delete any Personal Information we have collected, please contact us at&nbsp;info@thelokomoko.com</p>
                 </div>
 
 

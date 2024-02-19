@@ -42,11 +42,11 @@
                 
                 
                 
-                <p>To return an item, please e mail support@littcocktails,com to obtain a Return Merchandise Authorization (RMA) number. After receiving a RMA number, place the item securely in its original packaging and [include your proof of purchase / the return form provided / other], and mail your return to the following address:</p>
+                <p>To return an item, please e mail support@thelokomoko.com to obtain a Return Merchandise Authorization (RMA) number. After receiving a RMA number, place the item securely in its original packaging and [include your proof of purchase / the return form provided / other], and mail your return to the following address:</p>
                 
                 
                 
-                <p>Katwa Globe (OPC) Pvt Ltd</p>
+                <p>Velanka Food And Beverages.</p>
                 
                 
                 
@@ -54,7 +54,7 @@
                 
                 
                 
-                <p>Katwa Globe (OPC) Pvt. Ltd. Katwa Crystal, Plot No 782, 7th Cross Bhagyanagar, Belgaum – 590006<br></p>
+                <p>601/b Gp No-4453 Near Indian Petrol Pump, Jyoti Nagar,jamboti Road Machhe, Belgaum-590014<br></p>
                 
                 
                 
@@ -78,11 +78,11 @@
                 
                 
                 
-                <p>+91-733-850-9404</p>
+                <p>+91-886-765-7154</p>
                 
                 
                 
-                <p>support@cocktails.com</p>
+                <p>support@thelokomoko.com</p>
                 </div>
 
 

@@ -64,7 +64,7 @@
     
     
     
-    <p>If you have entered a wrong or incorrect shipping address, and if your order has not been dispatched then you can update us with your correct shipping address immediately by emailing us at support@littcocktails.com</p>
+    <p>If you have entered a wrong or incorrect shipping address, and if your order has not been dispatched then you can update us with your correct shipping address immediately by emailing us at support@thelokomoko.com</p>
     
     
     
