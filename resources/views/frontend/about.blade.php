@@ -30,20 +30,13 @@
                 <h5 class="statliches mb-4">A BRIGHT IDEA TAKES PLACE</h5>
 
                 <p class="sub-title " style="max-width:90%;">
-                    What do you get when you mix a foodie and a techie?
-                    A truly Litt entrepreneur!
+                    Do you like alcohol-free fruit drinks?<br>
+                    You must like lokomoko drinks.
                 </p>
                 <p class="sub-title text-justify" style="max-width:90%;">
-                    Meet Founder, Chairman & Managing Director x, a New York Institute of Technology alumni
-                    and the brainchild behind Litt Non-alcoholic Sparkling Mixers. Apart from bringing a portable
-                    lounge experience, x wants to bring some real excitement to both drinking &
-                    non-drinking people across India.
+                    Meet Anthony Vodino, the visionary founder behind Lokomoko, a renowned company specializing in crafting exquisite fruit juices. With a passion for flavor and a commitment to quality, Anthony has curated a lineup of tantalizing options that cater to diverse tastes. At Lokomoko, innovation meets tradition, as Anthony combines classic ingredients like lemon and mint to create refreshing Mojito juice, or blends the sweetness of strawberries and red grapes for the irresistible Red Punch. And let's not forget the tropical allure of Blue Ocean, where blueberry and Curacao harmonize for a truly exotic experience. Under Anthony's leadership, Lokomoko has become synonymous with premium fruit juices that captivate the senses and elevate every occasion.
                 </p>
-                <p class="sub-title " style="max-width:90%;">
-                    Litt is a premium brand of ready-to-serve alcohol-free sparkling non-alcoholic mix. Litt is a
-                    subsidiary company of Katwa Group who has businesses in Cement, Construction, and Real Estate
-                    for the last 3 decades.
-                </p>
+                
                 
             </div>
         </div>
