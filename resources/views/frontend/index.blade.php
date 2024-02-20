@@ -95,7 +95,7 @@
                         <div class="info left">
                             <div class="text-center">
                                 <h3 class="statliches text-center">Private Party</h3>
-                                <p class="sub-title text-justify mx-auto w-75">Using Lokomoko Mocktails at private parties adds a touch of sophistication and excitement, providing guests with delicious alcohol-free options that cater to various tastes and preferences. </p>
+                                <p class="sub-title text-justify mx-auto w-100">Using Lokomoko Mocktails at private parties adds a touch of sophistication and excitement, providing guests with delicious alcohol-free options that cater to various tastes and preferences. </p>
                             </div>
                         </div>
                     </div>
@@ -109,7 +109,7 @@
                         <div class="info right">
                             <div class="text-center">
                                 <h3 class="statliches text-center">Wedding Reception</h3>
-                                <p class="sub-title text-center mx-auto w-75">Incorporating Lokomoko Mocktails into wedding receptions offers a refined alternative to traditional alcoholic beverages, ensuring all guests, including non-drinkers and designated drivers, can partake in the celebration. </p>
+                                <p class="sub-title text-center mx-auto w-100">Incorporating Lokomoko Mocktails into wedding receptions offers a refined alternative to traditional alcoholic beverages, ensuring all guests, including non-drinkers and designated drivers, can partake in the celebration. </p>
                             </div>
                         </div>
                     </div>
@@ -123,7 +123,7 @@
                         <div class="info left">
                             <div class="text-center">
                                 <h3 class="statliches text-center">Corporate Event</h3>
-                                <p class="sub-title text-center mx-auto w-75">
+                                <p class="sub-title text-center mx-auto w-100">
                                     Introducing Lokomoko Mocktails at corporate events fosters inclusivity and responsible enjoyment, catering to attendees who prefer non-alcoholic options or abstain from drinking. </p>
                             </div>
                         </div>
@@ -138,7 +138,7 @@
                         <div class="info right">
                             <div class="text-center">
                                 <h3 class="statliches text-center">Birthday Party</h3>
-                                <p class="sub-title text-center mx-auto w-75">Lokomoko Mocktails into birthday parties ensures all guests, including children and non-drinkers, can enjoy flavorful beverages without alcohol.</p>
+                                <p class="sub-title text-center mx-auto w-100">Lokomoko Mocktails into birthday parties ensures all guests, including children and non-drinkers, can enjoy flavorful beverages without alcohol.</p>
                             </div>
                         </div>
                     </div>
@@ -191,70 +191,7 @@
 
 
 
-<section class="flavour default pb-4" style="display: none">
-    <div class="container">
-        <div class="row">
-            <div class="section-title text-center">
-                Choose Your Flavour
-            </div>
-            <div class="sub-title text-center mx-auto">
-                Find your perfect party drink! Our non-alcoholic sparkling mixers come in four delicious flavors, so
-                you can find the perfect drink for any party. Whether you’re looking for something sweet, sour, or
-                even a little bit spicy, we have a mixer that will suit your taste.
-            </div>
-        </div>
 
-
-        
-
-        <div class="row pt-5">
-
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                <div class="flavour-box">
-                    <img src="{{ asset('assets/frontend/images/profiles/2.jpg')}}" width="100" class=" rounded-circle" alt="">
-                    <div class="title">Blue Lagoon</div>
-                    <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam fugiat harum
-                        nesciunt quasi recusandae accusamus adipisci dicta nemo tenetur voluptatibus modi architecto
-                        inventore, cum facilis?</div>
-                    <div>
-                        <h6 class="text-center statliches">Profile Name</h6>
-                        <p>Customer</p>
-                    </div>
-                </div>
-            </div>
-            
-
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                <div class="flavour-box">
-                    <img src="{{ asset('assets/frontend/images/profiles/2.jpg')}}" width="100" class=" rounded-circle" alt="">
-                    <div class="title">Cosmopolitan</div>
-                    <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam fugiat harum
-                        nesciunt quasi recusandae accusamus adipisci dicta nemo tenetur voluptatibus modi architecto
-                        inventore, cum facilis?</div>
-                    <div>
-                        <h6 class="text-center statliches text-uppercase  ">Profile Name</h6>
-                        <p>Customer</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                <div class="flavour-box">
-                    <img src="{{ asset('assets/frontend/images/profiles/3.jpg')}}" width="100" class=" rounded-circle" alt="">
-                    <div class="title">Virgin Mojito</div>
-                    <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam fugiat harum
-                        nesciunt quasi recusandae accusamus adipisci dicta nemo tenetur voluptatibus modi architecto
-                        inventore, cum facilis?</div>
-                    <div>
-                        <h6 class="text-center statliches">Profile Name</h6>
-                        <p>Customer</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        
-    </div>
-</section>
 
 <section class="occation default">
     <div class="container">
