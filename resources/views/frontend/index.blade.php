@@ -109,7 +109,7 @@
                         <div class="info right">
                             <div class="text-center">
                                 <h3 class="statliches text-center">Wedding Reception</h3>
-                                <p class="sub-title text-center mx-auto w-100">Incorporating Lokomoko Mocktails into wedding receptions offers a refined alternative to traditional alcoholic beverages, ensuring all guests, including non-drinkers and designated drivers, can partake in the celebration. </p>
+                                <p class="sub-title text-center mx-auto w-100">Lokomoko Mocktails into wedding receptions offers a refined alternative to  alcoholic beverages, ensuring all guests, including non-drinkers and also can partake in the celebration. </p>
                             </div>
                         </div>
                     </div>
@@ -131,6 +131,8 @@
 
                 </div>
             </div>
+
+
             <div class="col-lg-6">
                 <div class="photobox">
                     <div class="photo">
