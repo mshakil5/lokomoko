@@ -46,7 +46,7 @@
                 <div class="flavour-box">
                     <img src="{{ asset('images/product/'.$item->image)}}" class="w-100 " alt="">
                     <div class="title">{{ $item->name }}</div>
-                    <div class="desc">{!! $item->description !!}</div>
+                    <div class="desc" style="height: 380px">{!! $item->description !!}</div>
                     <a href="{{route('productDetails', $item->slug)}}" class="btn-primary fw-bold">know more</a>
                 </div>
             </div>

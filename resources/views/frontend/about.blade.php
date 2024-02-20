@@ -26,14 +26,14 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-lg-8">
-                <h1 class="statliches mb-4">About Us</h1>
-                <h5 class="statliches mb-4">A BRIGHT IDEA TAKES PLACE</h5>
+                <h1 class="statliches mb-4 text-center">About Us</h1>
+                <h5 class="statliches mb-4 text-center">A BRIGHT IDEA TAKES PLACE</h5>
 
                 <p class="sub-title " style="max-width:90%;">
                     Do you like alcohol-free fruit drinks?<br>
                     You must like lokomoko drinks.
                 </p>
-                <p class="sub-title text-justify" style="max-width:90%;">
+                <p class="sub-title text-justify" style="max-width:100%;text-align: justify;">
                     Meet Anthony Vodino, the visionary founder behind Lokomoko, a renowned company specializing in crafting exquisite fruit juices. With a passion for flavor and a commitment to quality, Anthony has curated a lineup of tantalizing options that cater to diverse tastes. At Lokomoko, innovation meets tradition, as Anthony combines classic ingredients like lemon and mint to create refreshing Mojito juice, or blends the sweetness of strawberries and red grapes for the irresistible Red Punch. And let's not forget the tropical allure of Blue Ocean, where blueberry and Curacao harmonize for a truly exotic experience. Under Anthony's leadership, Lokomoko has become synonymous with premium fruit juices that captivate the senses and elevate every occasion.
                 </p>
                 
