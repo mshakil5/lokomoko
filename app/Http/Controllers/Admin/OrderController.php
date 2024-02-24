@@ -15,6 +15,36 @@ class OrderController extends Controller
         return view('admin.order.index', compact('data'));
     }
 
+    public function getProcessingOrder()
+    {
+        $data = Order::where('status','1')->orderby('id','DESC')->get();
+        return view('admin.order.index', compact('data'));
+    }
+
+    public function getDispatchedOrder()
+    {
+        $data = Order::where('status','3')->orderby('id','DESC')->get();
+        return view('admin.order.index', compact('data'));
+    }
+
+    public function getReturnsOrder()
+    {
+        $data = Order::where('status','4')->orderby('id','DESC')->get();
+        return view('admin.order.index', compact('data'));
+    }
+
+    public function getDeliveredOrder()
+    {
+        $data = Order::where('status','0')->orderby('id','DESC')->get();
+        return view('admin.order.index', compact('data'));
+    }
+
+    public function getCancelOrder()
+    {
+        $data = Order::where('status','2')->orderby('id','DESC')->get();
+        return view('admin.order.index', compact('data'));
+    }
+
     public function getOrderDetails($id)
     {
         

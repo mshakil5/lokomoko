@@ -82,6 +82,11 @@ Route::group(['prefix' =>'admin/', 'middleware' => ['auth', 'is_admin']], functi
     
     // order
     Route::get('/order', [OrderController::class, 'getAllOrder'])->name('admin.order');
+    Route::get('/order-processing', [OrderController::class, 'getProcessingOrder'])->name('order.processing');
+    Route::get('/order-dispatched', [OrderController::class, 'getDispatchedOrder'])->name('order.dispatched');
+    Route::get('/order-returns', [OrderController::class, 'getReturnsOrder'])->name('order.return');
+    Route::get('/order-delivered', [OrderController::class, 'getDeliveredOrder'])->name('order.delivered');
+    Route::get('/order-cancel', [OrderController::class, 'getCancelOrder'])->name('order.cancel');
     Route::get('/order/{id}', [OrderController::class, 'getOrderDetails'])->name('admin.orderDeatils');
     
     Route::get('/change-order-status', [OrderController::class, 'changeStatus']);

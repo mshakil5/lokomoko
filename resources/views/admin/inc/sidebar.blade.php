@@ -88,13 +88,61 @@
         </a>
       </li>
 
-      <li class="nav-item">
+      {{-- <li class="nav-item">
         <a href="{{route('admin.order')}}" class="nav-link {{ (request()->is('admin/order*')) ? 'active' : '' }}">
           <i class="nav-icon fas fa-th"></i>
           <p>
             Orders
           </p>
         </a>
+      </li> --}}
+
+      <li class="nav-item {{ (request()->is('admin/order*')) ? 'menu-open' : '' }}">
+        <a href="#" class="nav-link">
+          <i class="nav-icon fas fa-edit"></i>
+          <p>
+            Order
+            <i class="fas fa-angle-left right"></i>
+          </p>
+        </a>
+        <ul class="nav nav-treeview">
+          <li class="nav-item">
+            <a href="{{route('order.processing')}}" class="nav-link {{ (request()->is('admin/order-processing')) ? 'active' : '' }}">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Processing</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{route('order.dispatched')}}" class="nav-link {{ (request()->is('admin/order-dispatched')) ? 'active' : '' }}">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Dispatched</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{route('order.return')}}" class="nav-link {{ (request()->is('admin/order-returns')) ? 'active' : '' }}">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Returns</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{route('order.delivered')}}" class="nav-link {{ (request()->is('admin/order-delivered')) ? 'active' : '' }}">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Delivered</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{route('order.cancel')}}" class="nav-link {{ (request()->is('admin/order-cancel')) ? 'active' : '' }}">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Cancelled</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{route('admin.order')}}" class="nav-link {{ (request()->is('admin/order')) ? 'active' : '' }}">
+              <i class="far fa-circle nav-icon"></i>
+              <p>All Order</p>
+            </a>
+          </li>
+        </ul>
       </li>
       
       
