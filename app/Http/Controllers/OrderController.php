@@ -191,4 +191,6 @@ class OrderController extends Controller
         $orderdetails = OrderDetail::where('order_id', $id)->get();
         return view('frontend.orderconfirmation', compact('data','orderdetails'));
     }
+
+    
 }

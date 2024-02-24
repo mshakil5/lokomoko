@@ -24,4 +24,31 @@ class OrderController extends Controller
         // dd($data);
         return view('admin.order.orderdetails', compact('data','orders'));
     }
+
+    public function changeStatus(Request $request)
+    {
+        $user = Order::find($request->id);
+        $user->status = $request->status;
+        if($user->save()){
+            if ($user->status == 1) {
+                $stsval = "Processing";
+            }elseif($user->status == 0){
+                $stsval = "Complete";
+            }elseif($user->status == 3){
+                $stsval = "Dispatched";
+            }elseif($user->status == 4){
+                $stsval = "Returns";
+            }else {
+                $stsval = "Decline";
+            }
+            
+            
+            $message ="<div class='alert alert-success'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>Status Change Successfully.</b></div>";
+            return response()->json(['status'=> 300,'message'=>$message,'stsval'=>$stsval,'id'=>$request->id]);
+        }else{
+            $message ="There was an error to change status!!.";
+            return response()->json(['status'=> 303,'message'=>$message]);
+        }
+
+    }
 }

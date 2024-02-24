@@ -84,5 +84,7 @@ Route::group(['prefix' =>'admin/', 'middleware' => ['auth', 'is_admin']], functi
     Route::get('/order', [OrderController::class, 'getAllOrder'])->name('admin.order');
     Route::get('/order/{id}', [OrderController::class, 'getOrderDetails'])->name('admin.orderDeatils');
     
+    Route::get('/change-order-status', [OrderController::class, 'changeStatus']);
+    
 });
   
