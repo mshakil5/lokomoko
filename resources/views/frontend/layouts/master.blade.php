@@ -11,14 +11,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta property='og:title' content="Lokomoko mocktails" />
-    <meta property='og:image' content='{{ asset('product/img1.jpg')}}' />
+    <meta property='og:image' content='{{ asset('product/favicon.png')}}' />
     <meta property='og:description' content='The Lokomoko mocktails' />
     <meta property='og:url' content='ashiqulemu.netlify.app' />
     <meta property='og:image:width' content='1200' />
     <meta property='og:image:height' content='627' />
     <meta property="og:type" content='website' />
     <title>Lokomoko</title>
-    <link rel="icon" href="{{ asset('assets/frontend/images/favi.png')}}">
+    <link rel="icon" href="{{ asset('product/favicon.png')}}">
 
     <!-- css -->
     <link href="{{ asset('assets/frontend/css/bootstrap-5.2.3.min.css')}}" rel="stylesheet">
