@@ -7,7 +7,16 @@
     <meta charset="utf-8">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="google-site-verification" content="b3JBEB_Tp6NzGBZBo-wCS3L3RNdS1WNSiqZdCdt0gDw" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta property='og:title' content="Lokomoko mocktails" />
+    <meta property='og:image' content='https://www.thelokomoko.com/product/img1.png' />
+    <meta property='og:description' content='The Lokomoko mocktails' />
+    <meta property='og:url' content='ashiqulemu.netlify.app' />
+    <meta property='og:image:width' content='1200' />
+    <meta property='og:image:height' content='627' />
+    <meta property="og:type" content='website' />
     <title>Lokomoko</title>
     <link rel="icon" href="https://www.thelokomoko.com/product/img1.jpg">
 
