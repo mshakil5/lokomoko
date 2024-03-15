@@ -10,13 +10,20 @@
     <meta name="google-site-verification" content="b3JBEB_Tp6NzGBZBo-wCS3L3RNdS1WNSiqZdCdt0gDw" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta property='og:title' content="Lokomoko mocktails" />
+    <meta property='og:image' content='https://www.thelokomoko.com/product/img1.png' />
+    <meta property='og:description' content='The Lokomoko mocktails' />
+    <meta property='og:url' content='ashiqulemu.netlify.app' />
+    <meta property='og:image:width' content='1200' />
+    <meta property='og:image:height' content='627' />
+    <meta property="og:type" content='website' />
     
 <!-- CSRF Token -->
-    <meta http-equiv="cache-control" content="max-age=0" />
+    {{-- <meta http-equiv="cache-control" content="max-age=0" />
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="expires" content="0" />
     <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
-    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" /> --}}
 <!-- CSRF Token -->
 
 
