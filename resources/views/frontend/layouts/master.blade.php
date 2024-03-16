@@ -38,6 +38,8 @@
     <!-- slick css -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/css/slick.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/css/slick-theme.css')}}" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
 
     <!--js animation -->
     <script type="text/javascript" src="{{ asset('assets/frontend/js/wow.min.js')}}"></script>
@@ -73,6 +75,7 @@
     <!-- latest js bootstrap-5 -->
     <script src="{{ asset('assets/frontend/js/bootstrap-5.2.3-bundle.min.js')}}"></script>
     <script src="{{ asset('assets/frontend/js/app.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
 
     @yield('script')
 

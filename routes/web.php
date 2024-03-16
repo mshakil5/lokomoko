@@ -7,6 +7,7 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PhonepayController;
   
 /*
 |--------------------------------------------------------------------------
@@ -66,8 +67,14 @@ Route::get('/download/{id}', [OrderController::class, 'invoice_download'])->name
 
 
 Route::post('/order-store', [OrderController::class, 'orderStore'])->name('order.store');
-
 Route::get('/order-confirmation/{id}', [OrderController::class, 'orderConfirmation'])->name('confirmorder');
+
+
+// phonepe payment
+Route::post('phonepe',[PhonepayController::class,'phonePe'])->name('order.phonepe');;
+Route::any('phonepe-response',[PhonepayController::class,'response'])->name('phonepe.response');
+Route::get('refund/{id}',[PhonepayController::class,'refundProcess']);
+
 
 /*------------------------------------------
 --------------------------------------------

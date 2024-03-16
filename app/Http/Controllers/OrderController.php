@@ -30,8 +30,6 @@ class OrderController extends Controller
     }
 
     public function orderStore(Request $request){
-
-        // dd($request->all());
         
         session(['first_name' => $request->first_name]);
         session(['last_name' => $request->last_name]);

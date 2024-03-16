@@ -56,6 +56,95 @@
     </div>
 </section>
 
+<section class="occation mb-5">
+    <div class="container">
+        <div class="photo-gallery">
+            <div class="container">
+                <div class="intro">
+                    
+                    <div class="section-title text-center ">
+                        Different flavour of lokomoko moktails
+                    </div>
+                </div>
+                <div class="row photos">
+                    <div class="col-sm-6 col-md-4 col-lg-3 item">
+                        <a href="{{ asset('product/model1.jpg')}}" data-lightbox="photos"><img class="img-fluid" src="{{ asset('product/model1.jpg')}}"></a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 item">
+                        <a href="{{ asset('product/model2.jpg')}}" data-lightbox="photos"><img class="img-fluid" src="{{ asset('product/model2.jpg')}}"></a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 item">
+                        <a href="{{ asset('product/model3.jpg')}}" data-lightbox="photos"><img class="img-fluid" src="{{ asset('product/model3.jpg')}}"></a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 item">
+                        <a href="{{ asset('product/model4.jpg')}}" data-lightbox="photos"><img class="img-fluid" src="{{ asset('product/model4.jpg')}}"></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+{{-- <section class="occation default">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center ">
+                <div class="section-title text-center ">
+                    Different flavour of lokomoko moktails
+                </div>
+            </div>
+
+            
+            <div class="row  justify-content-md-center">
+                <div class="col-lg-8">
+                    <div class="row">
+
+
+                        <div class="col-lg-6">
+                            <div class="photobox">
+                                <div class="photo">
+                                    <img src="{{ asset('product/model1.jpg')}}" class="img-fluid" alt="">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="photobox">
+                                <div class="photo">
+                                    <img src="{{ asset('product/model2.jpg')}}" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="photobox">
+                                <div class="photo">
+                                    <img src="{{ asset('product/model3.jpg')}}" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="photobox">
+                                <div class="photo">
+                                    <img src="{{ asset('product/model4.jpg')}}" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+
+
+        </div>
+    </div>
+</section> --}}
+
 
 <section class="revolution py-5 d-flex align-items-center">
     <div class="container ">
