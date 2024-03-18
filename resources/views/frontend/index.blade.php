@@ -68,16 +68,16 @@
                 </div>
                 <div class="row photos">
                     <div class="col-sm-6 col-md-4 col-lg-3 item">
-                        <a href="{{ asset('product/model1.jpg')}}" data-lightbox="photos"><img class="img-fluid" src="{{ asset('product/model1.jpg')}}"></a>
+                        <a href="{{ asset('product/model1.jpg')}}" data-lightbox="photos"><img class="img-fluid" src="{{ asset('product/model1.jpg')}}" style="height: 430px;"></a>
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-3 item">
-                        <a href="{{ asset('product/model2.jpg')}}" data-lightbox="photos"><img class="img-fluid" src="{{ asset('product/model2.jpg')}}"></a>
+                        <a href="{{ asset('product/model2.jpg')}}" data-lightbox="photos"><img class="img-fluid" src="{{ asset('product/model2.jpg')}}" style="height: 430px;"></a>
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-3 item">
-                        <a href="{{ asset('product/model3.jpg')}}" data-lightbox="photos"><img class="img-fluid" src="{{ asset('product/model3.jpg')}}"></a>
+                        <a href="{{ asset('product/model3.jpg')}}" data-lightbox="photos"><img class="img-fluid" src="{{ asset('product/model3.jpg')}}" style="height: 430px;"></a>
                     </div>
                     <div class="col-sm-6 col-md-4 col-lg-3 item">
-                        <a href="{{ asset('product/model4.jpg')}}" data-lightbox="photos"><img class="img-fluid" src="{{ asset('product/model4.jpg')}}"></a>
+                        <a href="{{ asset('product/model4.jpg')}}" data-lightbox="photos"><img class="img-fluid" src="{{ asset('product/model4.jpg')}}" style="height: 430px;"></a>
                     </div>
                     
                 </div>

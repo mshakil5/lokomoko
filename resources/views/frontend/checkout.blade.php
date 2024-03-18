@@ -333,16 +333,14 @@
                         </p>
                         <div class="payment">
                             <div class="accordion" id="accordionExample">
-                                <div class="accordion-item">
+                                {{-- <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
                                         <button class="accordion-button fw-bold fs-6 text-black cursor-pointer d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="outline: 0; box-shadow: none;">
                                             <label for="card" class="d-flex align-items-center">
                                                 <input type="radio" name="payment" value="phonepe"
                                                     class="form-check-input me-2" id="card">
                                                 <small>Pay securely with Credit or Debit Cards | Phonepe</small>
-                                                <img width="25px" class="ms-3"
-                                                    src="https://im-testing.im-cdn.com/assets/images/favicon.6d3d153d920c.png"
-                                                    alt="">
+                                                <img width="25px" class="ms-3" src="https://im-testing.im-cdn.com/assets/images/favicon.6d3d153d920c.png" alt="">
                                             </label>
                                         </button>
                                     </h2>
@@ -350,12 +348,11 @@
                                         aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <small class="text-dark">
-                                                {{-- Pay securely with Credit or Debit Cards | Internet Banking | UPI | Google Pay | EMI Option | Bhim --}}
                                                 Pay securely with Credit or Debit Cards | Phonepe
                                             </small>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                                 {{-- <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
                                         <button class="accordion-button collapsed fw-bold" type="button"
